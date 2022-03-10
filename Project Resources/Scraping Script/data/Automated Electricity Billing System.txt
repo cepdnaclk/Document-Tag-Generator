@@ -1,0 +1,42 @@
+Automated Electricity Billing System
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Automated Electricity Billing System
+Team
+E/14/018, ANURADHA WIJEWICKRAMA, e14018@ce.pdn.ac.lk
+E/14/068, DE SILVA N.G.M.H.K, e14018@ce.pdn.ac.lk
+E/14/243, Name, e14018@ce.pdn.ac.lk
+Table of Contents
+Introduction
+Solution Architecture
+Hardware & Software Designs
+Links
+Introduction
+In present world embedded systems have become essential as every electronic and
+electrical day to day devices use the particular system for it's functionality.
+Here our target is to achieve an automated and centralized electricity billing system with more security and efficiency.
+Functionalities of the new system
+* Accurate meter reading
+* Can get update about the connection frequently
+* Digital display for customers
+* Customer can identify the trend of usage of the electricity
+Solution Architecture
+CO321
+-
+It's planned to implement a new device to measure the current,
+to transmit the data to the regional office and to display the certain facts to the customer using embedded systems.
+CO324
+-
+Data is to be transmitted to the regional office and from regional units then to a centralized server.
+CO325
+-
+Data has to be secured as a third party or the customer may try to alter. Device also has to be secured.
+Hardware and Software Designs
+Implementation of current measuring system
+When setting up the unique id display shows some relevent detalis
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

@@ -1,0 +1,35 @@
+Automated Book Management System - Automated Book Carrying Robot
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Automated Book Management System - Automated Book Carrying Robot
+Team
+E/15/016, ANOJAN S., e15016@eng.pdn.ac.lk
+E/15/171, KAPILRAJH R., svkapilvs@gmail.com
+E/15/351, THAKSHAJINI S., tsuhumar8@gmail.com
+Table of Contents
+Introduction
+Solution Architecture
+Hardware & Software Designs
+Links
+Introduction
+In libraries, We have planned to implement a book carrying robot to help the workers.Our embedded system will have Arduino,IR sensors,DC motors,power batteries and voltage regulator etc.It will work as a line following robot.Wi-fi module is used to communicate with a robot.We use RFID tag for books to use a web application,a database and a server to store the book details as well as the location details about the book shelfs for each and every book.
+Solution Architecture
+Making an automated book picking robot to help the workers in the library.
+The robot saves time and reduces human effort.
+It reduces human error and manages the books in an efficient and effective way.
+It is always available in the library.
+It is reliable.
+It ensures the security of the library and keeps the book safe.
+Hardware and Software Designs
+#### Basic Circuit Design for the Line Following Robot.
+#### Final Product
+Links
+Documents
+Project Report
+Project Proposal
+Other Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

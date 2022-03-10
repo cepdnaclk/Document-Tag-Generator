@@ -1,0 +1,29 @@
+Smart shopping systemSearch this siteSmart shopping systemHomeProject introduction Shopping cartMobile/web appDesktop appDesignsSolution ArchitectureBackend
+and cloud deploymentTestingHardwareHardware programmingIntegrated SystemBudget TeamSmart shopping systemHomeProject introduction Shopping cartMobile/web appDesktop appDesignsSolution ArchitectureBackend
+and cloud deploymentTestingHardwareHardware programmingIntegrated SystemBudget TeamMoreHomeProject introduction Shopping cartMobile/web appDesktop appDesignsSolution ArchitectureBackend
+and cloud deploymentTestingHardwareHardware programmingIntegrated SystemBudget TeamSmart shopping cart with automatic bill system.-
+Let's
+have a better shopping
+experience
+Our MissionOur mission
+is to
+provide a more advanced
+shopping
+experience without
+congestion.Introduction definitions of the problem:Cashier takes time to billing so long queues at the counters in super markets.So that shoppers have to wait lot of time near the counter.Our the solution:smart shopping cart with automatic bill systemApp for online shoppingNowadays, shopping has become a mandatory part of everyone's life. The
+most unpleasant experience we have to face there is having to wait a long time in long queues
+to pay . Due to this , the congestion in the supermarket has also increased.
+As a solution to this, our team
+is introducing
+a smart shopping cart
+and a mobile app . The Smart shopping cart
+has the special ability of
+calculating its bill automatically .This is done by adding the value of the item to the current bill through the RFID readers in the cart when customers take it from the item rack and put it in the cart.The bill calculated in this manner has been given the opportunity to be paid in several ways . These include cash payments, credit or debit card payments and app payments . This saves customers time and gives customers a more convenient and attractive shopping experience . It also makes the supermarket a more pleasant place as it reduces congestion.
+In addition,customers can view product details ,get discount/ offers notifications ,make a shopping list ,view recent bill payments ,place online orders and do the bill payment through our mobile and web apps.
+We also provide a desktop application that allows supermarket management to add new items to the supermarket database ,manage customer online orders ,make customer bill payments and much more.Questions?Contact members with email,Ekanayake J.E.M.D.Y.
+:
+e16096@eng.pdn.ac.lk Parackrama G.T.W.
+: e16267@eng.pdn.ac.lk Prabodha U.A.K.
+: e16290@eng.pdn.ac.lk Visit our github repo
+,
+github repo Copyright © Hi5 | All Rights ReservedPage updated Google SitesReport abuse

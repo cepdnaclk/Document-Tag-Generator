@@ -1,0 +1,113 @@
+Qurantine Tracker
+Quarantine Tracker
+A third year students project University of Peradeniya
+Home
+Team
+Introduction
+Solution Architecture
+Designs
+Testing
+Budget
+Conclusion
+Team Details
+Team Members :
+Nimashi Uthpala
+E/16/039 e16039@eng.pd.ac.lk
+Sachini Dissanayaka
+E/16/087 e16087@eng.pd.ac.lk
+Tharushi Suwaris
+E/16/364 e16364@eng.pd.ac.lk
+Advisors :
+Dr. Isuru Nawinna
+Dr. Zian Maraikkar
+Department of Computer Enginnering
+Faculty of Enginnering
+University of Peradeniya
+Introduction
+Backgound
+The COVID19 pandemic, also known as the coronavirus pandemic, is an ongoing global pandemic of coronavirus disease 2019 (COVID19), caused by severe acute respiratory syndrome coronavirus 2 (SARSCoV2). The outbreak was first identified in December 2019 in Wuhan, China. The World Health Organization declared the outbreak a Public Health Emergency of International Concern on 30th January 2020 and a pandemic on 11th March. The first case of the virus was confirmed in Sri Lanka on 27th January 2020, after a 44-year-old Chinese woman from Hubei Province in China was admitted to the National Institute of Infection Diseases.
+As of 16 August 2020, 2,890 confirmed cases have been reported in the country with 11 deaths. On 3rd March 2020, the first reported case involving a Sri Lankan origin outside Sri Lanka was reported in Italy. As of 23 March, forty-five quarantine centers have been built in the country by the Sri Lanka Army as a preventive measure to tackle the coronavirus pandemic. Nearly 3,500 people have been under quarantine in 45 quarantine centers which also include 31 foreigners from 14 countries.
+As of 25 March 2020, Sri Lankan authorities have tracked down over 14,000 people who had contacted the identified patients and had ordered self-quarantine for such people.
+Motivation
+When putting a person under self-quarantine, medical officers and the police will come to the house where that person lives and advise that person not to go out. Even though the person under self-quarantine is advised not to go out the medical officers cannot be guaranteed that the person will not go out because they do not have a proper method to monitor the people under self-quarantine. If people under self-quarantine do not obey the rules and go out of the home and interact with other people, there will be a risk of exposing other people to the virus if those self-quarantined people are infected
+Real world Apllication of the Quarantine Tracking Device
+The device is designed to be used by the medical authorities to track if the person who is under quarantine (wearing the device) is breaking the law and also to track his/her health; to check if he/she would implementing the symptops of the illness
+using thier smart phone and reduce the spreading of the virus as much as possible.
+Solution Architecture
+As a solution we present a band which is wearable by the person who are unde quarantine such that the corresponding data such as body temperaure, the movements of the person and the location
+will be gathered and send to the mobile app which is used by the medical authority. so they can track and moniter the person keeping their distance and as well as improve the quality of their job.
+Features of the device
+Location tracking
+Can set a virtual fence
+Detect and monitor the body temperature
+Unauthorized removal notifications
+Low battery notification
+Hardware And Software Designs
+Hardware Design
+Components
+Node MCU 12e module
+ublox NEO-6M GPS md0153 Module
+LM 35 temperature module
+MAX30100 Pulse Oximeter and Heart-Rate Sensor
+NiMH rechargeable batteries
+3V mini buzzer
+LEDs
+Power Requirement
+The node mcu works with 3.3 v so we supply power of 7.4v(power supply) from the betteries to the Vin pin of the node mcu.
+since the node mcu has an in built voltage regulator we can supply a voltage range of 7-12Vs to Vin
+Circuit Diagram
+PCB Design
+Product view
+Product Dimension : 59x65x20 mm (WxLxH)
+Software Design
+Mobile Application And Website
+User Interfaces of Website
+Technology front end : HTML,CSS,Javascript
+Technology back end : Nodejs
+User Interfaces of Mobile app
+Technology : React Native
+Additional Libraries : React NAtive Vector icons, Animated API, Custom Fonts from Google fonts
+For navigation: React navigation library
+Stack navigation: For login and signup screens
+Drawer navigation : All the other screens
+For better user experience two kinds of navigations have been used to navigate though the different tabs of the mobile app.
+Data Handling
+Database
+Technology : MongoDB
+Testing
+Data validation testing and UI testing is done in frontend of the website in manual basd procedure.
+User is only allowed to enter data within the given restrictions. They are all indicated to the user when they use
+the website.
+In validation of data, the limitations are as follows:
+All kinds of Names, ID numbers only should be 25 of character length in maximum.
+One line an address can be 30 in character length maximally.
+Contact number should be exactly 10 characters long
+Password should be more than 8 characters
+These values were selected based on the database configuration in Backend, making sure the intergrity of data.
+In frontend it is tested that the user enters the data as expected and do not allowed to proceed through otherwise.
+During the tests, nearly 5 test cases were used t ckeck in individual case.
+The summery of the tests conducted as follows :
+UI testing were conducted testing performance of the website, mainly checked whether the buttons of the pages are working properly and also the links are directed as they are supposed to be.
+Budget
+Component
+Price (LKR)
+Supplier
+NodeMCU
+665
+SKYTRONIKS(PVT)LTD
+Neo 6m GSP Module
+1350
+SKYTRONIKS(PVT)LTD
+LM 35 temperatuer sensor
+110
+SKYTRONIKS(PVT)LTD
+MAX 30100 pulse rate sensor
+450
+SKYTRONIKS(PVT)LTD
+3V mini buzzer
+20
+SKYTRONIKS(PVT)LTD
+TOTAL
+3535
+Conclusion
+Github repo link

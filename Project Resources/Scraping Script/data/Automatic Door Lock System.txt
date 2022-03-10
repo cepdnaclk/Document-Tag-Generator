@@ -1,0 +1,39 @@
+Automatic Door Lock System
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Automatic Door Lock System
+Team
+E/15/119, D.L. D. Hasanika, dinithiliyanage.95@gmail.com
+E/15/202, D.P. Liyanage, preethi.du1995@gmail.com
+E/15/208, G.G.R. D. Madhushani, roshanidilhara7@gmail.com
+Table of Contents
+Introduction
+Solution Architecture
+Hardware & Software Designs
+Testing
+Detailed budget
+Conclusion
+Links
+Introduction
+Today, security has become the most important thing to be considered. People need a security system to prohibit unauthorized access to their property. Our target is to implement an automatic door lock system which allows the access only for authorized people. It helps to safeguard property from unauthorized people.
+Solution Architecture
+Data Flow and Infrastructure
+RFID Door Lock System
+Mechanism of RFID Reader
+Fingerprint Sensor
+Face Recognition
+Hardware and Software Designs
+Node 1 : RFID Door Lock System PCB design
+Node 2 : Completed PCB Design
+Testing
+PDF document Group_4_Automatic_Door_Lock_System_test_plan.pdf
+Conclusion
+Special Note:
+We decided to use IR sensors instead of PIR sensors. Because PIR sensors detect all the motions in a wide range. So it was difficult to use in this project.
+We removed the face recognition part from our node 2. Because for the high security, recognizing only the fingerprint is sufficient.
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

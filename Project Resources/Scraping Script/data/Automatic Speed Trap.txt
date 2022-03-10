@@ -1,0 +1,34 @@
+Automatic Speed Trap
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Automatic Speed Trap
+Team
+E/14/349, THILAKARATHNA B.R.M., e14349@ce.pdn.ac.lk
+E/14/238, PATHIRAJA P.M.R.I., e14238@ce.pdn.ac.lk
+E/14/352, THILAKAWANSHA B.M.C.P., e14352@ce.pdn.ac.lk
+Table of Contents
+Introduction
+Solution Architecture
+Hardware & Software Designs
+Links
+Introduction
+Nowadays the transpotation is achieving developments in every alongside. Building highways and developing vehicles with new technologies are two side of developments. As a result of that, the vehicles could be achieved more speed than back days and this highspeed might causes unexpected accidents and might damage human life.
+So in this project we are expected to track the vehicle speed and if there any vehicle that travelling with more than maximum speed allowed, take a clear photo of the specific vehicle and send that to authorities to take further action.
+Solution Architecture
+CO321 - Using the embedded system we are expected to measure current speeed of the vehicles. And according to the pre-specified speed limit, check whether the vehicle travels with high speed and if then, using a specific carmera take a clear picture of the vehicle.
+CO324 - The photo that took on a specific vehicle, transmitted to a centralized server with the vehicle speed when it was captured. In addition to that few more details will be sent, such as date, time etc.
+CO325 - All the transmition are happeninig via encrypted method. Then any other parties cannot access and change the value.
+Hardware and Software Designs
+The overall design can be drawn as below.
+Here we have used an amplification system Doppler Sensor Module. That is because the output of the sensor is not enough to measure. The designed circuit and implementation
+are shown below.
+Documents
+Project Design
+User’s Manual
+Project Report
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

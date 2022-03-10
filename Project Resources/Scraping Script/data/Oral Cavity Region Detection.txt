@@ -1,0 +1,34 @@
+Oral Cavity Region Detection Tool
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Oral Cavity Region Detection Tool
+Team
+e17058, Devindi G.A.I, e17058@eng.pdn.ac.lk
+e17090, Francis F.B.A.H, e17090@eng.pdn.ac.lk
+e17190, Liyanage S.N, e17190@eng.pdn.ac.lk
+Table of Contents
+Introduction
+Solution Architecture
+Software Design
+Testing
+Conclusion
+Links
+Introduction
+This project contains a web-based application that can be used to upload images of the oral cavity and identify the known regions which are normal. For example: The tool will process an image uploaded by the clinician and apply masks to easily recognize a specific region of the oral cavity which does not indicate any abnormality.
+Why
+If known regions are quickly detected using a methodology, without patient having to endure prolonged invasions to the oral cavity, the dentists can easily identify the abnormal regions and pay more attention to the undetected oral lesions/ suspected regions in a matter of seconds.
+On the other hand, AI detection systems that are used to detect oral cancers require oral cavity images with only the lesion component. Therefore, the output masks of our tool can be used to filter out the lesion part and feed it to the cancer detection tools.
+Solution Architecture
+Software Design
+User Interface
+See the prototype
+of the web interface. (in progess)
+Use Case Diagram
+Testing
+Conclusion
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

@@ -1,0 +1,231 @@
+Digital Signage Based User Targeted Advertising
+PROJECT BLOG
+About
+Design
+Progress
+3Dmodels
+Services
+Places
+Contact Us
+Digital signage based user targeted advertising
+A novel approach...
+Find Out More
+Problem and Solution
+Most of the advertisements displayed in the digital screens are not relevant for the targeted audience. So,ninety percent of the advertisements displayed using the currently existing digital signages are not very effective. Also the provided digital signage solutions are expensive to afford for most of the SMEs(Small and Medium Enterprises).
+To overcome these kind of issues our proposed solution consists of an upgraded version with additional hardware/software which can do User Targeted Advertising. Here our aim is while showing content that changes dynamically, when a particular crowd (male/female/children) is identified in front of the screens it will change the current content flow and show some relevant,interesting advertisement for the targeted audience that might catch their attention.
+The buyer(shop owner) of the digital signage unit can upload their advertisements using the provided user authenticated web application or the mobile application. Also add some specific advertisements categorized by gender and age group. When a user in front is detected specific content will be visible to the targeted audience.
+Watch Product Video
+Design Architecture
+Design Technologies
+The digital signage control unit consists of raspberry pi 3 which acts as the heart of the system.
+The digital display is connected to raspberry pi using HDMI and the user detecting and identifying unit is attached to the digital display. This user detecting and identifying unit mainly consists of a Raspberry Pi camera module
+Firebase is used as the back-end and cloud firestore NoSQL database to store,sync and query data.
+Flutter is used as the mobile app framework for the front-end development. Dart is used as the programming language where the same code base can be used to develop both android and ios applications.
+As an additional improvement, a smart power supply unit which can control the digital screen on/off through the mobile application will be implemented.
+ER Model - Database Structure
+Main Entities Of The Database are ADMINISTRATION, CUSTOMER(Shop owner who is willing to buy signage unit), ADVERTISEMENT and WORK_TIME. Main relationships are REGISTERS, UPLOADS and SCHEDULES.
+ADVERTISEMENT entity has a unique id as the primary key. Advertisements can be in three types.
+-Image,
+Ticker(Text),
+Video
+CUSTOMER table has a composite key, Customer_id along with Device_id. Having a composite key here is useful when same customer is buying more than one signage unit. Here,Device_id refers to the MAC address of the NIC of digital signage controlling unit.
+1:n relationship exists between ADMINISTRATION and CUMSTOMER, beacause a customer only has one ADMINISTRATION and ADMINISTRATION has many customers. And we can see total participation in both sides because everyone should be registered to use the system.
+As digital screen can be turned on and off only within the working hours because of our smart power supply unit, customer can schedule the time slots for each day. That data is stored in WORKING_TIME entity. It is a weak entity that does not have a primary key. Here, we have got a weak key 'Day' and same key can be repeated.
+Simplified Circuit Diagrams
+Components Needed
+Digital Signage Controlling Unit
+Raspberry Pi - $ 35
+RPi Power Supply - $ 9
+SD card - $ 10
+Cooling Fan - $ 4
+HeatSink - $ 1
+LED Push Button - $ 4
+Cover - $ 7
+User Identifying and Detecting Unit
+Raspberry Pi - $ 35
+RPi Power Supply - $ 9
+SD card - $ 10
+Cooling Fan - $ 4
+HeatSink - $ 1
+Camera Module - $ 10
+LED Push Button - $ 4
+Cables - $ 5
+LEDs, Resistors(220Ω) - $ 0.5
+Cover - $ 7
+Smart Power Supply Unit
+NodeMCU esp8266 - $ 5
+Relay Module - $ 3
+Rocker Switch - $ 5
+Plug socket & Top - $ 5
+Cables - $ 3
+LED, Diodes, Resistors(100kΩ) - $ 1
+Cover - $ 7
+Flow Chart
+Data Flow
+User is supposed to upload the advertisements using the mobile app.
+Those advertisements are uploaded into the selected google slides page according to age and gender. Default advertisement lists are uploaded to the RPi SD card.
+Image of the person who is infront of the screen is captured by the camera module and processed in the RPi to extract the face by running haar-cascade classifiers
+That image is processed with pre trained deep learning model to predict the gender and age group of the person.
+The age,gender details are updated in firestore database in realtime and signage control unit listens and query these new data.
+According to the received results, matching google slides presentation is selected and displayed on the digital screen.
+Software Architecture
+Data Flow
+User information and shop details are stored in Firebase(in Cloud Firestore database).
+Users can upload advertisements using the mobile app after login into their account.
+Advertisements are uploaded as google slides which are stored inside google cloud. Because of using google slides, we could minimize the cloud storage of our system. And users can easily create and edit advertisements using google slides.
+Detected persons age and gender prediction values are realtime updated in firebase firestore.
+Screenly API (in RPi) fetches the matching(to age and gender) google slides presentation link and display the advertisements in the screen.
+User Detecting & Analysing Unit
+Real Implementation and Design
+This unit mainly consists of a RaspberryPi board and a camera module.
+Image of people in front of the screen
+is processed inside the RPI for predicting the gender and the age.
+Haar Cascade classifier is used to detect faces from the captured images.
+To obtain results, OpenCV libraries are used with a trained cnn model.
+Predicted age and gender information is updated real-time in firebase.
+Trained Data Model
+Age and gender detection in our system is mainly done with Convolutional Neural Networks.
+We have used the CNN models trained by Gil Levi and Tal Hassner (two Israel researchers) using caffe framework and we have used the OpenCV’s dnn package which stands for “Deep Neural Networks”.
+To detect faces from images,webcam and to import neural network trained models, opencv libraries such as haarcascade,dnn packages are used in our implementation for predicting gender and age.
+CNN consists of 8 values for 8 age classes (“0–2”, “4–6”, “8–13”, “15–20”, “25–32”, “38–43”, “48–53” and “60-100”) and two values for two gender clases ("Male" and "Female.")
+As you can see in these pictures, this model accurately predict the gender and the age group.
+Link for Github Files
+Test To Check Accuracy When Multiple Faces Appears
+Test
+Check if image predicted correctly when there is more than one face appearing.
+Test Type
+Unit Testing(We did Black Box Testing)
+Tool
+Unit Test Library In Python
+Results
+Smart Power Supply Unit
+Overall Design
+Components and Procedure
+MQTT messaging protocol is used to design the smart power supply unit.
+Mobile app (MQTT client) publishes user given messages (ON or OFF) to a unique topic for that power supply unit.
+Mac address of the Node MCU is used as the topic to make the topic unique for that power supply unit.
+Node MCU(ESP8266) subscribes to the certain topic and recieves user given message through the broker.
+EMQX broker is used in our implementation.
+After recieving the user given message, a signal is given to 5V relay module by the NodeMCU. According to the message,the relay triggers and screen will turn on or turn off.
+Hardware Design
+Demonstration Video
+Safety Factors
+5A fuse is included in the plug to protect the relay module from high currents.
+Heat sink is added to protect the device if it becomes overheated.
+Earthing is used here to protect the user from an electric shock.
+Special Concerns
+If a wifi failure happens, you can disconnect the smart power supply unit by the switch and switch on or off manually.
+If there is a power failure, you don’t have to worry. It will execute the last message given by the user.
+Using WifiManager library, ESP8266 can be connected to Wifi router without hardcoding router SSID and password in the code.
+Digital Signage Controlling Unit
+Actual Implementation & Design
+Demonstration Video
+This unit mainly consists of a Raspberry Pi Board.
+SD card is inserted into the Raspberry Pi board.
+Screenly OSE is installed in RPI.
+Screenly API fetches the correct google slide according to the gender and age of the person.
+When
+more than one person is appeared, generic advertisements are displayed.
+App Frontend Design...
+1. Login/Authentication
+2. Dashboard/Drawer Bar
+3. Signage Control/Add assets
+4. Create/Edit Advertisements
+5. Power Supply Control
+6. Customize Profile
+App Features and Functionality
+1. Login/Authentication
+Two factor authentication for login
+First login through PhoneAuth then Google Sign-In
+Provide personal and shop details for initial profile setup
+Shared preferences are used to save credentials after inital login for easy access to app
+2. Dashboard/Drawer Bar
+Drawer bar consists of Dashboard, User Targeted Signage, Smart Power Supply and Profile pages
+Dashboard contains current playlist previews of the actual digital screen
+Customer analytics are included for strategies
+3. Signage Control/Add assets
+Choose Signage device to control from the drop down menu and rename features included
+Select age and gender category to select a specific advertisement(asset) list
+Add assets and Watch Previews
+User targeting turn on/off as per the users choice
+4. Create/Edit Advertisements
+Create,Edit assets through google slides by accessing from add assets button
+Latest advertisment updates are realtime synced and displayed
+Preview advertisment playlists anytime inside the app through google slides
+5. Power Supply Control
+Add multiple power supply units and rename feature to enhance user friendliness.
+Choose a power supply to control from drop down menu
+Digital screen on/off button for easy control of the power supply
+6. Customize Profile
+Maintain user profile and preview details
+Customize details as per the users choice
+Log in through different account by logging out of current account.
+Unit testing for app and backend
+Results and Findings
+cloud firestore mocks and flutter test dependencies are used for several testing in both app and the backend firebase
+User entry validations performed to provide a better user experience. Invalid user inputs captured and informed properly. Added mac addresses by users are realtime synced to the menus and testing done for device adding and deleting procedures in app.
+Firestore is used as the backend databse and collections are used to organize data structure of users and devices.
+Mac addresses are used for document topics in firestore to identify each device. Testing perfomed with this structure for correct retrieval and deletion of devices through app by the user.
+Results from tests optimized the structure of the firestore for categorizing users and also providing analytics by realtime counts of people captured for user targeting in each gender category.
+Test Summary
+Digital Signage Control Unit Designs...
+Outer view
+Inner components
+Inner design
+Outer back view
+Top view
+Vertical view
+User Detecting & Identifying Unit Designs...
+Outer view
+Inner components
+Inner Design
+Stand front view
+Stand back view
+Stand design
+Smart Power Supply Unit Designs...
+Outer view
+Inner components view
+Inner design
+Outer back view
+Cover and Box
+Outer/Inner view
+Design Decisions for Fabrications
+Digital Signage Control Unit
+Maximum space utilization within the box
+Holes to get air into the fan are designed such that small objects are not get into the box
+User Detecting and Identifying Unit
+The length between jaws can be easily adjusted according to the table
+Adjustable hand to change the angle of the camera
+Fits properly with the RPi cover
+Smart Power Supply Unit
+Compact structural design (box dimensions - 17.5cm x 8cm x 4cm)
+All components screwed for solidity and easy replacement.
+Air vents added to optimize airflow
+Clearance space for connecting wires and cables
+What we provide...
+Dynamic real-time content changes
+upload content to display anytime
+Easy set up and User friendly
+register with an account to discover features
+Upload advertisements through mobile app
+display promotions,sales,new arrivals
+Shows relevant content to audience
+detects person in front and show interesting,eye catching ads
+Where we can see digital signage...
+Shopping malls
+Outdoor
+Restaurants
+Supermarkets
+Clothing-retail
+Airports
+Find more details from our github project repository
+Visit now!
+Get In Touch!
+Feel free to visit our github accounts or email us for further details!
+Viraj Dhanushka
+Sumudu Lakmali
+Hans Thisanke
+smviraj@gmail.com
+sumuduliyanage888@gmail.com
+hansthisanke@gmail.com
+End of page

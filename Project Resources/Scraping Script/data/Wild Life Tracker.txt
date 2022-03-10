@@ -1,0 +1,404 @@
+Wild Life Tracker
+Wild Life Tracker
+Home
+About
+Design
+Budget
+Timeline
+Contact
+Menu
+Video by NickyPe from Pixabay
+3rd year project
+Wild Life Tracker
+Project Repositry
+Introduction
+Problem Overview
+The traditional method of wildlife researching in Sri Lanka, and many other developing as well as developed countries in the world is to stay in wild areas for a long time, observe animals randomly, and identify areas that animals are most active. This method is ineffective because some animals hide when they sense humans. They don't behave naturally around humans. Thus, it consumes a lot of time to observe their natural behavior. Researchers have to stay in the wild throughout this long period. So, this is a formidable process. Sometimes their life is in danger because there is a possibility to face an attack by wild animals while they are in the jungle. An immense amount of time, money, and human resources are spent in vain for traditional tracking of wild animals for researchers.
+Solution
+Our solution to this problem is a,
+Remotely controlable
+Real time
+Efficent and effective
+tracking system.
+This system consists of three major components, A hardware unit, a cloud server, and a web App. The hardware unit consists of camera traps, PIR sensors, and a location tracker. One unit of these three components makes a station. Researchers need to set up this station in the researching area. One researcher can have more than one station established in different places according to their choice. The sensors in a station can detect animals when they are in the sensing range and it will trigger the camera. A real-time photo is captured at that moment and they are stored in the station itself and also sent to the cloud server. Then the researcher can analyze these observed data through the web app.
+Remotely controlable
+Researcher can monitor the station through the web app after it is successfully established in researching area.
+High Performance Camera Module
+A powerful camera unit to capture perfect photos in any lighting condition.
+Also provides video recording facilities, recorded videos are stored in the own memory of station.
+Tracking System
+Pinpoint the exact location of the station.
+The most active station can be observed by the Web App.
+Solar Power
+The stations are powerd by battaries.
+A solar cell system is used to recharge them.
+Durable
+Can be set up in any environment. Made with highly durable and waterproof materials so that animals
+and unforgiving weather can't damage it.
+Self Storage In Stations
+Data obtained by the system is stored in itself when there is no connection with the database.
+NEXT GENERATION OF WILDLIFE RESEARCHING!
+**********************
+Project Design
+Web Application
+Organization of the Web App
+Home
+Registration
+Login
+Password recovery
+User Dashboard
+Admin Dashboard
+Previous
+Next
+Here are the two registration pages in our web application.
+01. The user registration Page
+02. The admin registration Page
+Form validations and feedbacks are used to give a better user experience.
+Clients have to fill all the fields correctly in the forms to enable the submit button.
+The button provided in left top corner directs user to the home page.
+Previous
+Next
+Here are the two login pages in our web application.
+01. The user login Page
+02. The admin admin Page
+02. The error message if the credentials are not valid.
+Form validations and feedbacks are used to give a better user experience.
+The user have to provide the correct credential to login to the system.
+If the credentials are not matching it will display the error message. With error message, links back to the login page or
+password recovery are provided.
+Also in the login pages we have provided a link to password recovery. Users can reset their password using this link.
+Previous
+Next
+These are the pages in user dashboard.
+There is a home tab, photos tab, location tab and a contact tab.
+In photos tab user can see the photos taken by devices connected to his profile. Also there is a option to connect new devices
+with the profile.
+The map provided in location tab pinpoints all the location of devices connected to users profile.
+Previous
+Next
+Here are the pages in admins dashboard. The user tab will show all the user requests to the system.
+Admin can see details and the letter uploaded by each user by clicking on a request in the list.
+Then they can submit or reject the request. If they are rejecting the request, they have to provide the reason for the rejection
+in given text box.
+This is the home page of our web application. Clients can login to there accounts by click on the log in button.
+The get started button directs clients to user registration form.
+The button provided in the right bottom corner provides a link to contact us via emails.
+Previous
+Next
+There are two pages for password recovery process. The first one is for reqest a password recovery.
+Here, user have to enter the email of his account and submit.
+If the entered email is valid, it will show up the success message. Else, it will showup the error message.
+Database Schema
+We use MongoDB as our database managment system. Because of its scalability,
+its powerful querying capabilities and the fexibility it provides for modele and
+manipulate data structures.
+Cloud Deployment
+We have used AWS EC2 instance to deploy our web application. NGINX is used as the load balancer And
+revers proxy of our frontend because of its capability of handling high volume of connections. This helps our
+web application to handle number of clients at once. Since we have used NodeJS to implement the backend of our
+web aplication we have used PM2 process manager to keep our nodeJS application alive at all the times.
+Because of the limitations of AWS Educate accounts we were not able to use R3 services to get a domain name.
+Therefore we had to use seld signed certificate to serve HTTPS.
+We have used MongoDb Atlas as our database managment system. Therefore we have connected the database to server
+running in EC2 instance.
+Devices are sending data to AWS IoT core using MQTT. These data are stored in a S# bucket. Then the server running in
+EC2 instance is accessing these data. We were not able to implement this part yet because the AWS educate account dont have permissions
+to use IAM services. Therefore, at this point we have created the file structure in the server itself.
+Hardware
+Organization of the Hardware System
+Algorithm that runs in the camera unit
+Hardware Implementation
+Camera And Sensor unit
+Connection And GPS unit
+Power unit
+Data processing unit
+This unit handles the sensing and taking snapshots of wild animals
+accordingly.
+It is consist of ESP32 Cam Board, PIR motion sensor(HC-SR501), Flash
+LED and a LDR.
+PIR sesor is capable of sensing motions within 7 meters and 120° range.
+This sensor will trigger the camera
+to take photo and then a 30 second video is captured.
+ESP32 cam board is consist of a powerfull image processing
+unit that allows to take very clear photos
+and a SD card slot. The PIR sensor is directly connected to the ESP32
+cam board. The captured photos are
+stored in the SD card before send to the cloud database. Videos are not
+sent to cloud database they will be stored
+in the SD card.
+The LDR is used to monitor light conditions and according to
+those readings the LED flash will automatically turn on.
+This allow us to capture clear photos in bad light conditions.
+The connection and GPS unit is consist of SIM800L module and
+GPS module.
+The GPS module is used to get the best possible position information.
+User can check the exact
+position of the device through the web app. The data observed by this
+GPS module is used to
+pinpoint the location.
+SIM800L module is used to communicate with the AWS server.
+This module allows for GPRS
+transmissions without Wi-Fi. This module is very suitable for long range
+connections.
+The main components in this unit are 3.7V 1800mAh batteris,
+Solar panel, voltage regulator and battery charger.
+Solar cell recharges the batteries when there is optimal sunlight.
+This generated power can be used to power the system very efficiently in
+harsh environments.
+ESP32-SIM800L module is the main component in this unit. It
+interconnects all the units
+and gathering data from other units to send to the AWS IoT core. This
+module consist of inbuilt
+SIM800L module which capable of sending and receiving GPRS data without
+WiFi.
+All MQTT certificate and GPS data are stored in inbuilt 4MB
+flash of ESP32-SIM800L module.
+Stored GPS data are used to check whether there is a defferance between
+new readings.
+If there is a difference GPS data is sent to the cloud.
+Security Features
+Our system handles really sensitive information about wildlife. Therefore, the CIA triad (Confidentiality, Availability, Integrity) of the application is maintained in the best way possible.
+JsonWebTokens (JWT) are used for the authorization of users. These tokens are stateless, portable, high performing and decentralized which improves the security and scalability of the web application as well.
+HTTPS protocol is used for secure communication.
+A special system of user registration is introduced to ensure the users of our web app are researchers.
+Testing Plan
+Unit Testing
+Test functionality of each page of the web app
+Test login, registration and form validations
+Test sensors and hardware components
+Integration Testing
+Test front end and back end intergration.
+Test database and back end intergration.
+Test web app and hardware device intergration.
+End to End Testing
+Test overall functionality of the web app and hardware device.
+Check user registraton, registration aproval.
+Check data flow from devices to user profiles.
+Check data flow from devices to cloud.
+Testing Tools
+Front End Testing
+We use selenium automated testing framework to test the front end of our web app.
+Main reasons to pick selenium is it supports different browsers and platforms. Also,
+it supports testing scripts written in multiple languages.
+We are planing to use selenium to test, form submissions, form validations
+,response handling functionalities in our web app.
+Back End Testing
+We use insomnia API testing tool to test the back end of the web application.
+insomnia allows us to send HTTP requests using a graphical user interface.
+insomnia acts as the client and it is possible to analyze server responses
+to HTTP requests.
+We are using insomnia to test, routings implemented in backend, authentication and authorization,
+error handlings and sending responses in the API.
+Testing Procedure and Results
+Unit Testing
+Front end testing
+As an unit test we tested the functionality of the front end of our web application.
+This is very important because the front end is used by our clients. So, it must provide all the expected outcomes correctly to give a
+better user experiance. Therefore, we needed to make sure that the front end of our web application works fine.
+We have used the automate testing tool selenium to test front end. The first test we have done is the navigation test. We wrote a
+script to click the all possible links inour web application and the we have checked whether it navigate to expected page. Form validations are
+another important aspect in UI. So, we wanted to test whether our app provides correcet feed backs when the client fill a form. For this also we
+wrote a selenium script. In this script, we tested all of our forms with invalid data to make sure they are giving correct feed back. Also, we tested
+the froms with valid data to make sure that the forms are not giving any invalid feedback wheth client inputs valid data.
+The scripts are attached here.
+The testing results are listed below.
+Back end testing
+Prior to the intergration of frontend and backend, we wanted to make sure that our rest API returns correct responses to
+clients requestes. We use 'Insomnia' to test the API. We have implemented lot of routes in our API to do various tasks and to handle various
+requests from the frontend of our web application. It is very important to make sure that the API is providing correct responses. Because the
+security of the web application is depends on these responses. Using insomnia we have tested each route in our API for valid and invalid data.
+We have tested whether the API responds with correct status codes, data and error messages for different data sets. Also as an security test,
+we have passed wrong credentials to the API using insomnia and checked whether it rejects those requests. We have used JWT tokens to authorize clients.
+It is very important to make sure tha API is rejecting invalid tokens. Therefore we have tested whether the API is rejecting invalid tokens by sending
+invalid token using insomnia. All of these tests are conducted manually. The below figure contains all the cases we have tested using insomnia.
+Integration Testing
+To test the integration of the backend, frontend and the database, we used selenium. We have tested the response from the server to
+logins, user registrations, password recoveries and invalid inputs to make sure that the data flow from front end to back end and from back end to
+data base is fine. We have wrote scripts to enter valid and invalid credentials in login pages and check the response of the server.
+If these compnent intergrations are fine, the logins for valid credentials must be successfull. We have tested whether the
+request with correct credentials directs the client to the dashboards in the scripts. We had to check the database manually to make sure all the
+data entered by the script is recorded in database correctly.
+Also, we have tested the same script for three popular browsers. Google Chrome, Microsoft edge and Operamini to make sure our web
+application is ccompatible with different platfoorms.
+The testing scripts are attached here.
+Testing Results
+Results of tests by Selenium
+Test run No 1: Chrome Browser
+Passed: 6
+Faild: 1
+Test run No 2: Chrome Browser
+Passed: 7
+Faild: 0
+Test run No 1: Microsoft Edge Browser
+Passed: 7
+Faild: 0
+Test run No 2: Microsoft Edge Browser
+Passed: 6
+Faild: 1
+Test run No 1: Operamini Browser
+Passed: 6
+Faild: 1
+Test run No 2: Operamini Browser
+Passed: 7
+Faild: 0
+Test Case
+Chrome
+Edge
+Opera
+Navigations to all the pages
+passed
+passed
+passed:1 Faild:1
+Form validations for incorrect inputs
+passed:1 Faild:1
+passed:1 Faild:1
+passed
+Form validations for correct inputs
+passed
+passed
+passed
+User login and dashboard function
+passed
+passed
+passed
+User registration test for valid and invalid data
+passed
+passed
+passed
+Admin login and dashboard function test
+passed
+passed
+passed
+Password recovery test for valid and invalid emails.
+passed
+passed
+passed
+Results of tests by Insomnia
+Test Case
+Returned Status Code
+Expected Status Code
+Observation
+Faild / Passed
+User and Admin login for correct credentials
+200
+200
+Backend responds with status code 200 and send a token to client
+passed
+User and Admin login for incorrect credentials
+401
+401
+Responds with status code 401 and rejects the request. Just recived credentials invalid message.
+passed
+User and Admin Registration for emails that are already registered in system
+409
+409
+Rejects registration for same emails.
+passed
+Password recovery for emails that are not registered in system
+401
+401
+Rejects password recovery for invalid emails.
+passed
+Password recovery for emails that are registered in system
+201
+201
+Recived message indicating that the password recovery email is sent to entered email.
+passed
+Try to reset password for second time using a link used before.
+401
+401
+Recived message indicating that the password recovery link is invalid or expiered.
+passed
+Try to reset password of a accont using a token sent to another email
+401
+401
+Recived message indicating that the password recovery link is invalid or expiered.
+passed
+Try to register as an admin using a link that already used to register.
+401
+401
+Recived message indicating that the link is invalid or expiered.
+passed
+Try to log in to the admin dashboard using a token recived for user login
+401
+401
+Recived message indicating that the client is not an admin. Redirection rejected.
+passed
+Confirm or Reject request with admin token.
+200
+200
+With admin token. Possible to confirm or reject client request.
+passed
+Confirm or Reject client request with user token.
+401
+401
+With user tokens. Cannot confirm or reject requests. Recieved message unauthorized.
+passed
+Project Budget
+(Budget is made for 1 Hardware unit only)
+Hardware Component
+Amount
+Price(Rs)
+Place
+Infrared PIR motion Sensor
+1
+235.00
+tronics.lk
+ESP32 Cam Board
+1
+1890.00
+tronics.lk
+FTDI connector
+1
+470.00
+tronics.lk
+ESP32-SIM800L module
+1
+3250.00
+tronics.lk
+Ublox NEO_6M GPS module
+1
+985.00
+tronics.lk
+1W LED
+1
+25.00
+tronics.lk
+LDR
+1
+10.00
+tronics.lk
+Solar Panel (>6V) 165mA
+1
+560.00
+duino.lk
+Battery Charger
+1
+90.00
+tronics.lk
+3.7V 4800mAh batteris
+2
+700.00
+nilambaraelectronics.com
+Other Expenditures
+-
+1500.00
+TOTAL
+9715.00
+Project Timeline
+Supervisors
+Dr. Isuru Nawinne
+Dr. Mahanama Wikramasinghe
+Group Members
+Group 9
+E/17/176
+Kumara W.M.E.S.K
+E/17/006
+Alahakoon A.M.H.H
+E/17/338
+SRIMAL R.M.L.C
+Project Repositry
+Project Page
+Department Of Computer Engineering
+University of Peradeniya
+A Project by, group of 3rd year computer engineering undergraduates, University of Peradeniya, Sri Lanka

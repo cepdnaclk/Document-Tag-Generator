@@ -1,0 +1,27 @@
+An Efficient System For Waste Collection
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+An Efficient System For Waste Collection
+I.U. Sudasinghe	E/15/347
+K.A.R.L. Alwis	E/15/010
+U.L.R.R. Perera	E/15/265
+Team
+E/15/347, I.U. Sudasinghe, isuru.sudasinghe@eng.pdn.ac.lk
+E/15/010, K.A.R.L. Alwis, alwisruchika@gmail.com
+E/15/265, U.L.R.R. Perera, risithperera@eng.pdn.ac.lk
+Table of Contents
+Introduction
+Solution Architecture
+Links
+Introduction
+This Project aims to implement an Efficient Waste
+Collection System in urban areas. Its is a very well known fact to the public that the waste collection in our country is done in a very primitive manner. Since the waste collecting vehicles has no awareness regarding the content level of the garbage cans, everyday they follow the same routine even though sometimes they arrives at garbage cans which are basically empty. This waste a considerable amount of time, money and fuel regardless to the traffic created by those vehicles. Since the use of garbage cans separately for basic types of waste (food, paper, plastic & polythene) has already began in our country, the process of collection of waste could be make very effective if there’s a method to notify the shortest route that covers all the completely filled garbage cans to the driver of the waste collection vehicle. Our goal will be to implement the above solution using Embedded Systems, the knowledge of Networking and web application design.
+Solution Architecture
+Client Side
+Server Side
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

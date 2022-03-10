@@ -1,0 +1,76 @@
+Smart Shopping Cart
+Smart Shopping Cart
+Home
+About
+Solution Architecture
+Implementation
+Team
+Supervisors
+More..
+budget
+Timeline
+Mobile App
+Desktop App
+Testing
+Get Started
+Better Experiance with Smart Shopping Cart
+Make your shopping more easy
+Get Started
+Watch Video
+Introduction
+Smart Shopping Cart is an innovative consumer purcjasing product that is designed to help shoppers' fast-track their shopping experince. The concept of this smart cart will revolutionize the purchasing experience
+of every buyer.
+Problem
+Long waiting queues
+Waste time on searching products
+Forget to buy products
+Safety and health during a pandemic
+Difficult to display offers
+Lot of labour for scanning and billing process
+Our Solution
+Customer can purchase the product by just scanning the barcodes printed on the products before adding it to cart
+Mobile app keeps adding the items in list and the total amount is updated accordingly
+Customers can scan and remove any item
+LCD will show the improved bill at each instance
+Billing will be done automatically
+Customers can do the bill payment through their preferred payment method
+Customers will be able to view their digital receipts via app
+Solution Architecture
+Solution based on our project idea
+Data Path
+In our system have many data transfer process this is the data transfer flow in software, hardware and server
+Overview
+These are our implementations for our project
+Mobile App
+Mobile Application developed for the Customer who uses our smart shopping cart
+Web App
+Web Application developed for the Admin and staffs they can manage the activity and transactions.
+Hardware
+Our Hardware system will be placed on the shopping cart
+Testing
+Software and Hardware tesing
+BUDGET
+Timeline
+Our project plan timeline
+Timeline
+We planed to improve the project in this time flow
+Team
+We are the members who develop this projects
+Rilwan M.M.M
+E/17/292
+Studing at university of peradeniya
+Kavinaya Y
+E/17/159
+Studing at university of peradeniya
+Piriyaraj s
+E/17/256
+Studing at university of peradeniya
+SUPERVISORS
+The supervisors who give guidance for the project
+Dr. Isuru Nawinne
+Senior Lecturer
+Dr. Mahanama Wickramasinghe
+Senior Lecturer
+© Copyright SMART SHOPPING CART. All Rights Reserved
+Designed by
+KRP ROCKERS

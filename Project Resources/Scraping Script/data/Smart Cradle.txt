@@ -1,0 +1,172 @@
+Smart Cradle
+Home
+Introduction
+Solution Architecture
+Software Design
+Hardware Design
+Security AND SAFETY
+Testing
+Budget
+TimeLine
+Team
+Contact Us
+Smart Cradle
+"Because you and baby deserve care!"
+PROBLEM
+As we are very well familiar with the hurdles faced by Parents to nurture their infant and especially in case if both the Parents are working.
+To give 24 hours of time in such cases is next to impossible.
+However they still need to look after their babies,thereby increasing workload and stress.
+They either send their babies to their parents or hire a baby caregiver while they are working.
+Some parents worry about the safety of their babies in the care of others.Thus they go home to check on their babies during their free time,
+such as lunch or tea break.
+A baby Monitoring System that can monitor the babies' condition real time is proposed to solve these problems.
+A baby monitoring System consisting of a vedio camera and microphone without limitations of coverage.It can send data and immediately notify the
+parents about urgent situations,thereby shortening the time needed to handle such scenarios.
+OUR SOLUTION
+The proposed solution involves live monitoring of the child through a mobile application remotely.Noice Sensor for the detection of the child's
+crying activity.When detect crying, cradle send a message to parent,plays a song.The Thermal sensor notifies the parent about the envioremental
+temperature near the baby and switch on the fan automatically with temperature.
+The proposed system uses the cloud service for remotely monitoring the child.
+Learn more
+SOLUTION ARCHITECTURE
+There is a cry detection mechanism which detects cry of the baby and send instant mobile app notifications to the user, at the same time some music will be played to soothe the baby.User can use play music option using their mobile application according to their wish at any occation even if a cry is not detected in order to soothe the baby.
+Using the temperature sensors, room temperature is delected and if it exceed 30 celcius ,mini fan will be turned on automatically.Turn on and off functions of the mini fan can be fully controled using the mobile application also according to the need of the user.Swing of the cradle is fully controlled by the Mobile application.
+Central server(AWS ) is used to maintain a database to keep a track of registrations and logins.Whenever the user log in to the system, mobile application will conect to the server and verify authentications.
+Hardware Control Flow
+Software Control Flow
+ER Diagram
+EER Diagram
+SOFTWARE DESIGN
+Mobile application is designed in a more user friendly manner.Graphics and picture are used to repesent the functionalites/options of the smart cradle.This will clearly deliver the content to the user and they can easily navigate to their requirements without much frustration.
+Basic functionaites of the mobile application:
+Monitor the baby
+Swing the Cradle
+Check the room temperature
+Play Music
+Switch on the Fan
+Get Notifications
+User have to first register giving their basic information,thereafter whenever they use the application,
+they can login giving their user name and the passward.This will assure our users that their information is protected and secure.
+Since real time visual monitoring of the baby option is available in the mobile application, assuring the privacy of the users as well as thier babies is more important.
+Because of high protection over the all the user information and the passwords,users can be make user that no unauthorized person can see their baby and no third party people can access the control of the smart cradle
+UI Design
+Front End Validation
+All the user inputs are checked before sending them to the server
+SignUp and Login
+When adding, removing and selecting a device
+Backend Validation
+Alert Boxes are displayed according to the resposnses recieved from the server
+SignUp
+Login
+Select a device
+Music
+Swing
+Settings
+Add a Device
+Remove Device
+Mobile App Demostration
+Technologies used
+HARDWARE DESIGN
+Hardware Components
+NodeMCU
+GPIO pins + WIFI module inbuilt
+Operating Voltage: 3.3V
+Input Voltage: 7-12V
+Flash Memory: 4 MB
+SRAM: 64 KB
+Clock Speed: 80 MHz
+Sound sensor
+Operating Voltage: 3.3V to 5V DC
+LM393 comparator with threshold prest
+Induction distance: 0.5 Meter
+Operating current:
+4~5 mA
+Microphone Sensitivity (1kHz): 52 to 48 dB
+Small, cheap and easily available
+Motor Driver
+Power Supply: DC 5 V - 35 V
+Operating current range: 0 ~ 36mA
+On-board +5V regulated Output supply
+Thermal sensor
+Working voltage: DC 3.3-5V
+can measure : -55°C to 150°C
+±0.5°C
+Accuracy
+Drain current is less than 60uA
+Low cost temperature sensor
+Small and hence suitable for remote applications
+Servo Motor
+Torque: 5.5kg/cm (at 4.8V)
+Working Voltage: 4.8V-6V
+Current Usage: <1000mA
+Camera Shield
+Voltage: 2.5V to 3.0V
+Lens Size: 1/6" , Vision Angle: 25 degree
+High sensitivity for low-light operation
+Color saturation level auto adjust
+Mini fan
+DC Mode: 450 ~ 2150 RPM
+Operating Voltage: DC 5V～13.2V
+speaker
+Schematic Circuit Diagram
+PCB Design
+3D Model
+SECURITY AND SAFTY
+When we consider about a product like cradle ,security and safety is the most important thing.Security features of this product
+are achieved by using the above technologies.
+AWS :
+This is the cloud based serever that we use.We have choosen it ,because it provides secure services.
+It uses certificates to authenticate machine to machine communication and provides policies to control the
+actions of the devices.
+Amazon RDS :
+We create our own database server in cloud, and amzon RDS is the storage service that we use.We have choosen it because
+it supports MySQL and it is secure.It uses data encryption to secure data.The data stored in the disk is encrypted.
+The data which is transmited via the network is also encrypted.
+JSON Web Token (JWT) : This is used for the authetication.Once the user login to the system the server sends this token to the user.
+Passward Hashing : The orginal password is not stored in the database.Hashing performs a one-way
+transformation on a passward, turning the passward into another string.
+Sending JSON Web Token at the login.
+Store hashed passwords in the MySQL database.
+TESTING
+POSTMAN is a scalable API testing tool.
+HTTP requests that are sent to the server in each api call, are tested using this tools.
+Mobile application testing is done using APPIUM
+This enables testers to write test scripts against multiple platforms such as iOS and Android using the same API.
+Flutter test package is used for unit testing
+Front end validation is done using this
+API testing with POSTMAN
+Frontend And Backend Testing
+Testing Summary
+WHY we tested,
+signup and login : It is important to make sure that the system is only accessible by authorized users with accurate user details.
+add device and remove device : It is important to make sure that the ‘device’ and the ‘ownership’ tables in the database are correctly updated.
+select device : It is important to make sure that the devices are
+only accessible by their
+owners.
+swing , paly music ,fan , temperature monitor and settings : It is important to make sure that the basic functionalities of the mobile application are working properly
+backend : It is important to make sure that the all API endpoints are working correctly.
+BUDGET
+TIMELINE
+TEAM
+Our Team Members
+Madush Dilshan
+E/17/040
+Shashini Upekha
+E/17/356
+Hasara Wijesooriya
+E/17/407
+Our Advisors
+Dr.Isuru Nawinne
+Dr.Mahanama
+Contact Us
+University of Peradeniya.
+Phone: +94 81 239 33 00
+Email: vc@pdn.ac.lk
+Web-site: http://www.pdn.ac.lk/
+Faculty of Engineering.
+Phone: +94 81 239 33 02
+Web-site: http://eng.pdn.ac.lk/
+Computer Engineering Department.
+Phone: +94 81 239 39 14
+Web-site: http://www.ce.pdn.ac.lk/
+© Untitled. All rights reserved.Design: e17-3yp-Smart-Cradle_UOP

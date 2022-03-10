@@ -1,0 +1,153 @@
+Project Page - Remote Billiard Game | Home
+Home
+About
+Solution
+Design
+Solution
+Infrastructure
+Software
+Budget
+Team
+Github Repository
+Remote Billiard
+We have combined
+the live game play of billiard with a online platform. You can experience the Excitement
+of the live billiard game with a opponenent who is not in the same room!
+INTRODUCTION
+"Remote Billiard" is a project which provides usual Billiard game experience via online platform.Not all the players could be in the same place to play a billiard game now a days. Project "Remote Billiard" solves this problem. Players can play their game physically at their own places individually.
+PROBLEM
+Usually if a pool game is supposed to
+be played, the players should physically be present. But the issue is not everyone has the luxury
+of time to attend a game due to various reasons. In this case, the least thing that they could do is
+play the game online via a mobile or a PC with their friends. But if you ask such players
+whether the experience was satisfying, they would definitely say no! So to avoid this issue we
+have planned to give the player the so called Physical experience at their own comfort zones.
+According to our plan we will be solving a lot of problems such as the issue with time,
+travelling issue, could reduce expenses and will be able to provide the player the real physical
+experience which would be a great chance to enhance their skills at the same time would be
+more fun than online games. Therefore in overall , Remote-Billiard project solves these
+problems.
+OUR SOLUTION
+Simple Solution
+Solution Techniques
+Solution Architecture
+Simple Solution demonstrated between two players.
+Lets cosider two players who are at two different locations as PLAYER A and PLAYER B
+Lets assume PLAYER A makes the first shot.
+When the first shot is made, the ball arrangement of the table of player A is captured by the device.
+This captured image is then processed and sent to the device of player B.
+This processed image is then projected onto the table of PLAYER B.
+Player B then has to arrange the balls based on the projected image and will have to play his shot.
+Techniques used for our solution.
+BALL DETECTION
+First the image of the Player A is captured.
+Next Using QR tags which are already pasted on the 04 corners of the pool table, the captured image is aligned.
+IMAGE PROCESSING
+Then this aligned image is processed.
+This processed image is sent to the device of player B.
+BALL PROJECTION
+If projection happens for the first time, the projecting area of table of plyaer B is calculated. For this,
+first a set of QR tags are projected on to the table, the cordinates of these QR tags are matched with the existing QR tags which were already pasted on the table.
+Once the projecting area is calculated the processed image is processed on to the table of player B.
+Solution Architecture of how two or more players connect.
+The camera module and the projector of one player is connected to the microcontroller.
+The microcontroller of one player is connected to another players microcontroller via the internet which goes accross a web server.
+Mobile applications of each players are connected with each other via the the internet which goes accross the web server.
+DESIGN
+3D MODEL OF OUR PRODUCT
+Solution Overview
+CLOUD DEPLOYMENT
+APPLICATION DESIGN
+MOBILE APP DEMONSTRATION
+SIGNUP and SIGN IN functionalities for multiple clients.
+REGISTERED PLAYERS
+MULTIPLAYER FUNCTIONALITY
+( Shows only the players who are online at the moment , and if the player is available for a game then a game invitation can be sent.)
+TOSS FUNCTIONALITY
+(As soon as the players connect , they have the ability to toss in and decide who is going to play first. The toss is generated randomly.)
+CALL FOR FOUL FUNCTIONALITY
+(while the game is on going , if a player notices a foul made by his opponnent through the live stream then he can call for a foul. And if it was a foul then the oponnent can either accept it or decline the call.)
+CHOOSE POCKET FUNCTIONALITY
+(Players can choose a pocket before they make their shot. The chosen pocket number will be displayed to the opponent.)
+REAL TIME CHAT FUNCTIONALITY
+(While the game is ongoing the players can chat real time).)
+Flow Chart
+Circuit Diagram
+Data Control Flow
+Flow Chart
+ER Diagram
+Circuit Diagram
+Circuit Diagrom
+SOLUTION INFRASTRUCTURE
+Control Unit
+Projector
+Supporter
+QR Tag
+Control Unit
+Following Components are included
+Raspberry pi 3 model B Microcontroller
+Camera module
+SD card(16 GB)
+Distance sensor
+Cooling fan
+Indicators
+Projector used to project the ball positions onto the table
+Supporter
+The projector and the control unit can be mount with the help of the supporter.supporter is an adjustable one. So that we can adjust the height between the table and the device
+which is really important to focus the device perfectly on to the pool table.
+QR tags are used to detect the perfect alignment of the picture.
+T
+MOBILE APP TESTING
+UNIT TESTING
+Login Validation
+CLIENT AND SERVER CONNECTION TESTING
+INTEGRATION TESTING
+Multiple client connection
+SignUp and Login testing
+Currently online players list
+Displays all registered users
+Sends game invitation to another player who is online
+Random Toss generation
+Foul call
+Pocket selection
+Real-time messaging between players
+EMBEDDED SYSTEM TESTING
+Connecting the Remote-Billiard device (pi module) to the mobile app via bluetooth
+Based on the ball movements the device sends SIGNALS to the opponents mobile application.
+IOT device to IOT device communication TESTING
+Raspberry pi module is taken as one IOT device and the PC is taken as the other IOT device
+Both the devices are subscribed to the same topic.
+Using OpenCV implementations ball movements is detected and once the balls stop movements, Image is captured and the raw image is processed inside pi.
+This processed image is then published to the relevant topic. (Test : Raspberry pi to PC)
+OpenCV Implementations
+1. Supporter adjusment
+With the use of hight adjusting supporter and the aruco markers on the board we can calculate real world height from supporter plate to
+The board.When the height reached required value, a in openCV code a signal will generate. With that flag signal a indicator will light on the microcontroller. This is helpful for the accuracy of capturing the playing area
+and to do the final projection.
+For this height detection function, camera calibration matrix and distortion values are needed as inputs.
+.
+2. Projection area adjusment
+Four aruco tags will be attached near corners of poolboard.
+And their coordinates are taken with their ID. Link to the implementation
+Then another set of aruco tags are projected on to the table, the cordinates of these aruco tags are matched with the existing aruco tags which were already pasted on the table.
+If the projection alignment is right a signal will sent to the microcontroller to light up a LED.
+3.Board area isolation and wrapping
+To get the board area from the captured image. Corners were identified and using corner coordinates image was wraped.
+Link to the implementation
+4.Ball colour detection isolation and generate processed image
+OpenCV trackbars are used to get the accurate colour levels of balls.
+Link to the implementation
+Using those hsv valuse ball location were identified and locations are drawn on a white backbround. Final processed image is ready to sent.
+Link to the implementation
+5.Ball Movement Identification
+To identify whether the balls still moving or stopped moving first the video was captured from OpenCV
+then grabed the video frame by frame. If the previous frame is exact with the current frame this means the video vision is still. Ball moving or not moving signal is genereated using this concept.
+Link to the implementation
+BILL OF MATERIAL
+OUR SUPERVISERS
+Dr. Isuru Nawinne
+Dr. Mahanama Wickramasinghe
+OUR TEAM
+M.I.Rishard
+S.P.D.D.S.Weerasinghe
+A.M.F.Shalha

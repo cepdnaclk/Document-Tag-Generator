@@ -1,0 +1,166 @@
+Automated Railway Ticketing System
+PROJECT BLOG
+About
+Design
+System Info
+Circuits
+Software
+Testing
+Demonstration
+Documents
+Benefits
+Budget
+Contact
+Automated Railway Ticketing System
+Travel Easy
+Get Started
+Problem
+In srilanka people waste there valuable time by spending in long queues in railway stations. Eventhough people do not get better experience when travelling. This problem effects badly on every aspects in day to day life of passengers.
+And another thing is using cardboard tickets for entrances increases environmental pollutions and keeping several officers for ticket issueing increase the government expenses.
+Solution
+Introducing fully automated system which consisting automatic gates and realtime web services with a one card for every travel.
+This reduces the time wastage as passengers have several entrances and no unefficient human involvements for ticketing. No environmental pollution any more as no tickets in the system. This will make the life easier.
+Solution Architecture
+Every passenger should enroll to the department and when he/she enroll will get a plastic card which has a key to his/her account. Passenger can recharge their account at the cashier or using their bank accounts. When he/she enters to the platform he/she only
+have to swipe the card and the starting point will be added to the database.
+Then they can seated anywhere he/she like Ticket checker will swipe their card again and class(1,2,3) will be added to the database. Finally passenger should swipe their card at the destination station. Then the cost will be deducted from their account.
+The gate at the destination will be closed until this procedure for each passenger.
+All money transactions and travelling history can be tracked and a database can be managed. All of the details related to passengers account can be managed by using app or website.
+Physical Design
+CAD Designs
+Design for handheld device
+Previous
+Next
+Design for Gate device
+Previous
+Next
+System Flow
+Initially a passenger should register to our system by purchasing a swipe card from the railway department. Then that person will be elligible to use our traveling system by using their card. Card owner can recherge their account on their own by using their bank accounts. Otherwise
+Payment methods are added to recharge from the counter at the railway station. When the person who travels, should swipe their card at the entrance gate. Then by checking theri account status gate will be activated.
+If there is no error and if there is no any illegal activity at his entrance, then he can enter to the train. When entering to the train his/her account will be holded
+until he/she leaves destination after swiping their card. In the train, ticket checker checks
+about the passenger class & will update the person's class(class 1, class 2). Any persons' default class will be "class 3".
+Then at the exit, passenger should swipe the card and system releases the holded accuont. At that time all the calculations will be happened and travel cost will be reduced from his/her account.
+and if the passenger don't swipe
+the card then their account will be transfered in to a freezed state. In the freeze state what happens is, he can't enter again from an entrance gate without paying his last travel cost.
+All these activities will be recorded in to a database. If a passenger wants to see their travel details, that person can register to our web application using his/her user id. That user id will be provided when that person
+initially register to our travelling system.
+Entity Relationship Diagram
+Circuit Diagrams
+Gate Circuit
+Handheld Device Circuit
+Previous
+Next
+Gate controlling Software
+This is the software used for the physical opertions of the system. This contain the software handlers at the gates(entrances and exits).
+This software system is also conneted with the central server and is running on the stations PCs mounted in each station. This is capable of all the
+functionalities needed.Entering, Exiting, Authenticating & Error checking are some such funtions.This is written in Java and some hardware functionalities
+are also displayed using the GUI.
+User Web application
+This web application can be used by both admins(officers incharged by railway department) and the users. Users can get smart facilities like
+account balance details checking, Rechgarge their account, travel details checking etc. Admins can do better performances using this web application. All the security actions
+are taken here to enhance the better performances. Front end consists of html, css, java script where use react.js and backend consists of java script
+where use node.js.
+Hands on experience
+To use as a user
+User ID: user001
+Password: user001
+To use as an admin
+User ID: admin001
+Password: admin001
+click here to tryout!
+Database Point of View
+Both Gate Controller Software & Web Application connected to a central server written in javascript where node.js, express is used. As the Database MongoDB Atlas cloud used
+due to security aspects and scalability. There are more things offering us by Mongo. Specially it takes less time to read/write to the database.
+Testing
+several main functionalities of the web application was tested.
+For the testing purpose we used unit testing on the middlewares and some integration testings.
+Testing gives the clear overview of outcomes of the functionalities.It is very helpful in debugging and diagnosing.
+so these are helpful to enhance the code. Doing these test with
+development saves the cost and enhance the security aspects.
+It automatically uplift the product quality and ensure the customer satisfaction.
+For testing the backend(Nodejs) of our server, we used Mocha, Jest and chai.They give the clear understanding about the details about
+the end points in out api. The main usage was using unit testing we were able to find the bugs in the authentication purpose of the admin and users.
+The full details about our testing results were given on the github repo of out project.
+#
+Test Type
+What Tested
+Importance
+Way of test done
+Results & Findings
+1
+Unit testing
+Middleware :
+Post method for user logging
+Correctness of the user name was tested
+Someone can enter any password and can enter to the system using several bruteforce checkings.
+Our system always gives security for the incorrect user names.
+Using mocha,chai,supertest
+Tools
+Incorrect user names were given as json objects and system gives correct outputs as we expected.
+What we expected was given and sometimes expectation and output was differ and using those tools able to identify the code statements needed to be modified.
+2
+Unit testing
+Middleware :
+Post method for user logging
+Correctness of the user password was tested
+Using bruteforcing someone can enter the correct password.
+System works corrently for the password issues.
+Using mocha,chai,supertest
+Tools
+Incorrect passwords were given as json objects and system gives correct outputs as we expected.
+Here password formats and other types were changed and tested and system worked correctly.
+What we expected was given and sometimes expectation and output was differ and using those tools able to identify the code statements needed to be modified.
+3
+Unit testing
+Middleware :
+Get method for admin authentication
+By changing admin usernames and passwords
+System gave authentication fails warning correctly
+Using mocha,chai,supertest
+Tools
+Incorrect passwords and admin names were given as json objects and system gives correct outputs as we expected.
+Here password formats and other types were changed and tested and system worked correctly.
+What we expected was given and sometimes expectation and output was differ and using those tools able to identify the code statements needed to be modified.
+4
+Unit testing
+Middleware :
+Get method for user details cheking after logged as an admin
+Giving different usernames try to get user details. Have to have authenticate the admin correctly otherwise this didn’t work. Have to have correct tokens.
+Try to acces user details without logging as admin system gives authentication fails warnings. Tried different tokens gave authentication fails.
+Expected was given and sometimes expectation and output was differ and using those tools able to identify the code statements needed to be modified.
+5
+Unit testing
+Middleware :
+Post method for user logging
+Check correctness of tokens
+System generate unique tokens and it is the one responsible for activities done on the server after logging. If someone can cheat then security fails.
+Change the tokens and try different aspects in the web and try do things inside the web
+Gives authentication fails warnings and some functionalities were accessed so were able to identify them.
+Some Test Results
+Full Demonstration of the System
+Download Documents from here👇
+Design Manual
+User Manual
+Benefits for the man kind
+Best passenger experiance
+User friendly Interactive App
+Save more Time to User
+More Security Provided
+Future Enhancements
+We hope to extend our payment methods far beyond.
+Introduce our cross platform mobile app
+Maximize performances with the help of Artificial Intelligence & Machine Learning
+For more details
+Visit our github project repository
+Visit Now
+Connect With Us
+Deshan L.A.C
+Madushan K.H.G.H
+Madushanka H.M.K
+deshanch9678@gmail.com
+hasindumadushan325@gmail.com
+kavindumadushanka972@gmail.com
++94 71 1204836
++94 76 4825922
++94 77 2894172

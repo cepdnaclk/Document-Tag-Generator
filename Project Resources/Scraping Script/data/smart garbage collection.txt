@@ -1,0 +1,361 @@
+Smart Garbage Collector
+TrashCube
+Home
+About
+Architecture
+Features
+Data Flow
+Data Generation
+Flow Chart/ Algorithms
+Diagrams
+Design
+Circuit
+3D Model
+UI /UX
+Progress
+Timeline
+Budget
+Team
+Contact
+Smart Garbage Collector
+For A Proper Garbage Management For Smart Cities
+Project Repository
+why
+Why do we need a Smart Garbage Collector?
+Proper garbage collection & disposal has been a continuous struggle. Main issue that we identified is that there is no way to get an overview of fill levels of the bins. Therefore, authorities in charge of collecting garbage do not
+know when and where to collect garbage. This leads to inefficiency in assigning garbage collectors. And also time and fuel consumption are hight when collecting garbage, due to lack of a proper system. People tend to burn plastic/polythene
+because of the lack of a proper household garbage collection system and it gives rise to severe environmental polution. Furthermore, overflowing garbage bins which can be seen very often in public areas affect on public health
+negatively and scenic beauty of the environment is also destroyed.
+Solution Overview
+What is Smart Garbage Collector?
+Smart garbage collection system provides a platform to manage garbage collecting in a large area with proper coordination between the responsible authorities and the workers assigned to collect garbage while utilizing the available
+resources effectively. And also the people who are in need of a proper system to dispose garbage will be benefited by the system. The system can be implemented in cities, grounds, parks and any large public areas and it will make
+a high positive impact on public health & environment as well.
+Architecture
+Solution Architecture
+The main device of our system is the Smart Garbage Bin.
+Inside the Garbage bin the main controller is ATmega328p microcontroller. From this controller,
+we implement three main features. They are User Alerting system, Fill Level Detection System
+and Compaction mechanism. Considring compaction mechanism, it has seperate security system to
+detect the compation mechanism. The main power supply of the system is solar panel unit. There
+is also a bin location identification system inside the smart garbage bin.
+The Smart Garbage Bin can be connected to the AWS server
+via the GSM module and GPS module. In order to communicate with the server, there will be a web
+application as well as a mobile application. When garbage is put in to the bin, the LED indicators in
+Fill Level Detection Unit will be turned on according to the fill level. And, if the Garbage Bin is
+already full, Bin sends the fill level information to the server. Then, the server is responsible for
+updating details in both mobile application and web application. According to the compaction process
+details in the web server, the garbage bin will be automatically compacted. Otherwise, web application
+will send the request to Garbage Bin Collector through the mobile application. He/ she can view all
+the locations of assigned bins using the Google map in the mobile application.
+Features
+Check Our Special System Features
+FEATURES OF GARBAGE BIN
+Fill Level Detection
+Can decide on the priority to collect garbage
+LED Indicators
+Users can know whether to dispose or not & night visibility
+Compaction
+Reduce number of times garbage should be collected, max space utilization
+FEATURES OF WEBSITE
+Get Overview
+Can decide on priority, can stop overflowing bins efficiency
+Set Parameters
+Parameters to detect fill levels change as prefered
+View on a Map
+Easy to keep track of the procedure
+Add/Remove Bins
+Expanding the system with more units
+FEATURES OF Mobile App
+Handle Requests
+Can cancel or accept requests based on availability
+Get Overview
+Can get an idea on how much garbage is there to be collected
+Locate on a Map
+Can easily find the best route to collect the garbage bins assigned, increased efficiency
+Website
+Used for administration purpose by the adminintrator
+Mobile App
+Used by the garbage collectors
+Garbage bin
+Used by the general public
+Data Flow
+Data Generation
+Smart Garbage Collector system's block diagram consists of following four units
+Input Unit
+Controlling Unit
+Processing Unit
+Output Unit
+The input unit acts as the power supply unit in the system. Here the solar panel
+collects power from the sun’s rays.
+It is a monocrystallic panel, containing solar photovoltaic cells which convert the sun
+rays into electricity. The Dc power from the solar panel is then stored in the 12 volts battery
+used to operate all the electronic components in the controlling unit and processing unit.
+Then the controlling unit consists of relay switch [5V dual channel], ardino UNO [ATmega328 8-bit], ultra- sonic sensor
+and LED indicators.
+These components are used to control the complete processing unit. The ultra- sonic sensor senses the garbage
+accumulated in the container bin at the constrained level (say about 5cm from the top of the container bin) and sends signal
+to the micro chip. The micro chip is programmed to actuate the GSM module which sends a message to the administrator
+when the constrained level of garbage is accumulated in the garbage bin. It also controls the relay switch to actuate the DC motor.
+And considering the fill level information, LEDs are turned on by the micro chip.
+Next, the processing Unit has the DC motor. The Dc motor is connected to relay switch which
+actuates the scissor mechanism to compact the garbage in
+the garbage bin at constrained level. The relay switch with a H-bridge arrangement is used to control the Dc motor. This
+relay switch as two switch s1 and s2. When s1 is ON’s, the motor terminals with a positive polarity, thus the direction of
+rotation of the lead screw connected to the motor is in clockwise direction to extend the mechanism, similarly when s1 is
+off and s2 is actuated the lead screw will rotate in counter-clockwise direction to retract the mechanism. Next, the output unit
+consists of a GSM module, when the ultra-sonic sensor senses the level of garbage in the container bin, therefore actuating the
+scissor mechanism for compaction of waste and when the garbage
+reaches about 3cm at top of the container bin, the ultra sonic sensor sends signal to the GSM module via mocro chip,
+thereby it sends the message stating that the bin is going to be filled and need to dispose the wastes. Tha data and control flow can be observed in the diagram.
+Block Diagram
+×
+Data and Control Flow
+×
+Flow Diagram
+Firstly, the GSM module and other ports are initialized.
+Then, we check whether garbage bin is used by someone. If it is used, the fill height is sensed
+and fill level is calculated. If the fill level is lower than 50%, Green colored LED is turned on,
+if the fill level is in between 50% - 80%, yellow LED is turned on. Otherwise, red LED is turned on.
+If red LED is turned on, it s checked wheth bin needs to be compacted or not by using the number
+of compaction processes. If number of compaction processes are lower than 3, then the compaction
+process is automatically turned on. When compaction is going, if someone tries to put garbage
+in to the garbage bin, it will be automatically stopped. If it is not, compaction process will be
+completed. After that the number of compaction processes will be updated.
+×
+Algorithm
+Automation Algorithm
+For What?
+How Implemented?
+Initial Condition
+To stop assigning
+same location to two Garbage Collectors.
+Check the database whether another bin in the unit related to
+bin in which the request is sent has been assigned to another garbage collector.
+Assign the request to that same Garbage Collector.
+First Criteria
+To distribute the workload evenly among Garbage Collectors.
+Define an amount of tasks for one round.
+Store the number of active tasks of every garbage collector in the database.
+Find round number for each collector using amount of active tasks and tasks per round.
+Select collector who has the lowest round number.
+Second Criteria
+To assign the nearest collector to the bin.
+Get smallest distances from collectors to bins
+using locations.
+Select collector who has the smallest distance to the bin.
+Third Criteria
+When the Garbage Collecting starts, everyone can start from the same round and same location.
+To assign the bins next to each other in the same zone to a collector by Preventing two bins
+that are too far apart from, being assigned to the same collector.
+Every red bin must be assigned to relevant collector in the zone.
+Access database and find any relevant collector in the zone corresponding to the bin
+where the request came from.
+Diagrams
+Check our Database System
+This is the Conceptual Schema of the relational databse of our system.
+Each entity can be explained as given below.
+ADMIN - The administrator of whole Garbage Colllection and Disposal System can register to
+our system and they will be provided an unique id.
+COLLECTOR - The Garbage Collector also can register to the system and he/she will be provided an
+unique id which is given for only garbage collector.
+ZONE - A zone has units and it has a n unique id. The Collectors are allocated to zone.
+SYSTEM - The Garbage Collection system settings can be changed by the administrator. The administrator
+can change bin height and fill level details (Green range, Yellow range and Red range)
+BIN - A Smart Garbage Bin is registered to the system by using an id and the category,
+battery capacity, compaction cycles and fill level details are the main attributes of the Bin.
+UNIT - One Unit consists of bins. Each unit has an id and the location details.
+Conceptual Schema
+×
+Logical Schema
+×
+Circuit Designs
+Check our Circuit Diagrmas
+POWER SUPPLY UNIT
+Solar panel absorbs sunlight with the help of photovoltaic cells which convert the sun rays into electricity.
+Battery Charge controller is used to control the rate at which electri current is added from electric batteries and it prevents overcharging.
+Then electric power stored in the battery which is used to operate all the electric components.
+View Circuit Diagram
+FILL LEVEL DETECTION UNIT
+The ultrasonic sensor senses the waste in the bin at the constrained level and send signals to the microcontroller.
+0-50% of fill level - on Green LED
+50-80% of fill level - on Yellow LED
+Greater than 80% of fill level - on Red LED
+View Circuit Diagram
+COMPACTION UNIT
+Microcontroller turn on the relay switch, once the bin is full and compaction times are less than 4 to actuate the DC motor.
+DC motor activates the scissor jack mechanism to compact the waste in the bin.
+When the compaction begins, buzzer will be turned on and User activity can be monitored using IR sensor.
+View Circuit Diagram
+3D Model Designs
+Check our Smart Garbage Bin Designs
+UI /UX Design
+Web Apllication UI Designs
+Once the administrator creates an account and login to
+this application, he/she can,
+Get a full Overview of the entire Bin Systemwith the fill levels and other Details.
+Search certain Units by Unit ID.
+Toggle between the views(Table View and Graph View).
+Add/ Remove Bins to the System.
+Change System parameters(Bin Height, Fill Level Ranges).
+View accepted/declined requests by Garbage Collectors.
+Mobile Apllication UI Designs
+Once the Garbage Collector creates an account and login to
+this mobile application, he/she can,
+Accept/Decline all garbage collecting requests.
+Accept one/more than one request.
+See all locations of accepted Garbage bins.
+Filter requests.
+Previous
+Next
+Previous
+Next
+Security
+System Security Concerns
+JSON Web Token(JWT) - JWT is used to securely transmit messages
+of communication between
+Garbage bin and Administrator and communication between Garbage Collector and Administrator. By using JWT, the messages
+can be verified and trusted as they are digitally signed.
+Password Hashing - When Administrator login to the website by entering username and
+password, we use passwoord hashing to verify the integrity of the password. From this the actual password would never
+be stored in the database.
+AWS RDS/EC2 Security Features - We use SSL/TLS to communicate with AWS resources. And we setup the API
+and logging details using AWS CloudTrail.
+Progress
+Web App Completed Video
+Mobile App Completed video
+Cloud Deployment
+AWS Cloud Deployment
+AWS Deployment of the system is done by according the given AWS architectute. All the steps are given below.
+And We connect the backend of our system to AWS and tested it through POSTMAN tool.
+Testing
+Check Our Testing
+View Our Testing Codes
+Timeline
+Our Project Timeline
+05th July, 2021 - 19th July, 2021
+Presenting the Project Proposal
+Thinking innovative ideas for the project and presenting one specific idea with
+a project proposal.
+20th July, 2021 - 27th July, 2021
+Frameworks and Technologies
+Getting familiarized with the frameworks and technologies.
+27th July, 2021 - 10th August, 2021
+Front End Development
+Website Basic Front End Development.
+Mobile App Basic Front End Development.
+10th August, 2021 - 24th August, 2021
+Designing 3D Model
+For Smart Garbage Collector, the 3D model is designed. See 3D model from here.
+24th August, 2021 - 03rd September, 2021
+Progress Review - Milestone 2
+Presenting detailed soultion architecture.
+Presenting Technology familiarity.
+Demonstrating progress of software applications.
+Presenting testing methods which are used in system development.
+03rd September, 2021 - 17th October, 2021
+Back End Development
+Website Back End Development.
+Mobile App Back End Development.
+17th October, 2021 - 20th October, 2021
+Software Testing
+Web and Mobile App UI Testing by using Appium.
+REST API Testing by using Postman.
+Server Loading Testing by using JMeter.
+20th October, 2021 - 25th October, 2021
+AWS Deployment
+Storage and backups - Amazon S3
+Database - Amazon RDS MySQL
+Hosting - Amazon EC2
+25th October, 2021
+Progress Review II
+Presenting System Functional completeness.
+Presenting the software testing plan.
+Presenting 3D Model.
+Our Budget
+Bill of Materials
+Component
+Quantity
+Unit Price (LKR)
+Price (LKR)
+ATMEGA328P Microcontroller
+1
+600
+600
+GSM Module
+1
+1950
+1950
+GPS Module
+1
+1250
+1250
+Solar Panel (20W, 12V) with Polycarbonate shield
+1
+6000
+4500
+PWM Charge Controller(12V, 20A)
+1
+4200
+4200
+Battery(12V)
+1
+2499
+2499
+Ultrasonic Sensor
+2
+190
+380
+IR Sensor
+1
+110
+110
+LED
+3
+11
+33
+Buzzer
+1
+35
+35
+DC Motor(12V)
+1
+1000
+1000
+Dual-Channel Relay Module
+1
+250
+250
+Outer Cover with Scissor Jack
+1
+2000
+2000
+Total
+18772
+Our Team
+Developers
+Isara Tillekeratne
+E/17/352
+Hashini Wijerathne
+E/17/398
+Vidurangi Kalpana
+E/17/148
+Advisors
+Dr. Isuru Nawinne
+Senior Lecturer
+Dr. Mahanama Wickaramasinghe
+Senior Lecturer
+Smart Garbage Collector
+Call Us
+Messsage Us
+Quick Links
+Smart garbage Collector is an IoT system which facilitates the management of Garbage Collection and disposal.
++94 77 764 8682 (Isara)
++94 77 269 3120 (Hashini)
++94 70 327 2396 (Vidurangi)
+e17352@eng.pdn.ac.lk
+e17398@eng.pdn.ac.lk
+e17148@eng.pdn.ac.lk
+University of Peradeniya
+Faculty of Engineering
+Department of Computer Engineering

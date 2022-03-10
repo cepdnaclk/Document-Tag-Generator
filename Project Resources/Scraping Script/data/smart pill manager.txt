@@ -1,0 +1,24 @@
+Home - BrandSmart Pill ManagerProblem & SolutionServicesProduct DesignSolution ArchitectureHardware Design & ComponentsNetwork ArchitectureUsed TechnologyTestingBuget ReportTeam
+Smart Pill Manager
+Fun and secure way to take your medicinesGitHub Repo link
+Real life Problem and the Solution!Most of the people forget to take their medicines according to the prescription details. Due to those reasons following problems occur.Drug OverdoseDrug IntoleranceDisease get worse Can caused deathThis device will inform you when to take medicines and which amount of pills you need to take at that time More about Problem & SolutionServicesWhat We OfferWeb applicationYou can enter all the medicine and routine details using the web applicationPush notificationGet a email whether your loved ones are taking medication properlyAuthenticationEvery patient has to authenticate himself before taking the medicines Medicine TrackingGet a full medicine history
+Design
+Product Design
+Architecture
+Solution Architecture
+Hardware & Components
+Circuit Design
+Hardware Components
+Arduino Mega 2560
+RFID Receiver
+Fingerprint Scanner
+Speaker
+ESP8266 WI-FI chip
+480x320 LCD Display
+More about Hardware
+CAD DESIGNThis is our Fusion design of the smart pill manager device.INSIDE VIEWThe inside of the device has two parts. First one is circuit part. It is in the in front of the device. And second one is containers set.FRONT VIEWThe display of the device is  touch display. The inside of the device has two parts. First one is circuit part. It is in the in front of the device. And second one is containers set.CONTAINERS VIEWThis is the containers view. In our device has maximum 12 containers . There are in the backward of the device. Every container has LED Identifier.PCB Design
+Architecture
+Network Architecture
+TechnologyReact React is a lightweight front end library and it has own build packNodeJS we use the API as the node js backend. Node js is very easy to handle.MongoDB For the database, we use the mongodb database. It is no sql database. Therefore we can easily make request and responce to apiAzureWe deploy the our front end and back end in azure cloud platform.TestingMore about TestingEmbedded Testing
+Budget Report
+Team UNIVERSITY OF PERADENIYAAruna Nuwanthaco-founderBSc. Computer Engineering(undergraduate), University of Peradeniyae16261@eng.pdn.ac.lkChandula JPDMco-founderBSc. Computer Engineering(undergraduate), University of Peradeniya e16061@eng.pdn.ac.lkIsuru Lakshanco-founderBSc. Computer Engineering(undergraduate), University of Peradeniya e16203@eng.pdn.ac.lkADVISORSDr. Isuru NawinneSenior lecturerMr. Ziyan MarikkarSenior LecturerRelated LinksDepartment of Computer EngineeringFaculty of EngineeringUniversity of PeradeniyaGitHub RepositoryHomeServicesAboutTermsPrivacy PolicyCopyright  © smart pill manager 2021

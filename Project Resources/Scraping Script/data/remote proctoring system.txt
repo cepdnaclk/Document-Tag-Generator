@@ -1,0 +1,329 @@
+Remote Proctoring Device
+Home
+About
+Solutions
+Progress
+Timeline
+Designing overall system
+Frontends Implementations
+Students' UI
+Proctors' UI
+Administrators' UI
+Backend Implementation
+Hardware Implementation
+Testing and Integration
+Features
+Budget
+Team
+Contact
+Connexa
+REMOTE PROCTORING DEVICE
+Project Repository
+SEE OUR PRODUCT VIDEO
+Web Application
+Explore the Connexa space
+What is the Remote Proctoring Device?
+A single device which integrates the hardware and software components needed to conduct an examination in the currently implemented system, which will provide a seamless process for the proctors and students involved in an examination.
+why
+Why do we need a seperate device?
+When conducting examinations where the skills of the students should be evaluated in a limited timeframe, it's crucial to manage the external factors affecting the performance of the students at a satisfactory level. However it could be
+challenging to manage these factors in an online environment.
+Currently, multiple hardware devices and software tools are used to conduct online examinations while ensuring the quality of the examinations. We have noticed that this method can cause a lot of distractions and unnecessary
+burdens to students as well as proctors.
+System Overview
+What Are The Technology We Use
+System
+The device on the student's side is capable of capturing the video and audio stream from students continuously even incase of a power failure. The proctor will be able to monitor the video and audio streams captured
+from all the students facing an examination through the browser application in the proctor's side.
+High-Level System Overview
+Method used to ensure secure video/audio streaming:HTTPS protects the user from “Man-in-the-Middle” attacks where hackers can use vulnerabilities in public networks to steal data transmitted to the viewer. Using HLS
+encryption to mask a user's connection with the website can prevent this sort of attack.
+Technology Stack
+The system consists of three main endpoints...
+Web browser in Proctor's end
+Desktop application in Student's end
+Database and server application hosted on the Cloud
+Timeline
+The completion of the product will undergo 5 phases
+Phase 1
+Phase 2
+Phase 3
+Phase 4
+Phase 5
+Phase 1
+2 Weeks : Determine the design architecture and connections of overall infrastructure.
+System overview
+High-Level System Overview
+Technology Stack
+Aproximate Budget
+See more >>
+Phase 2
+7 Weeks : Develop the frontend (Both web and desktop apps)
+Students' User Interface
+Proctors' User Interface
+Admins' User Interface
+See more >>
+Phase 3
+8 Weeks :
+Develop the backend and server side programs
+ER-diagram
+See more >>
+Phase 4
+5 Weeks : Hardware implementation
+Proctoring device circuit
+Power supply unit circuit
+See more >>
+Phase 5
+6 Weeks : Testing and Integration
+Software testing plan
+Hardware testing plan
+See more >>
+Progress
+Our Progress So Far
+Student App Unit Testing
+See more details >>
+Electron application unit testing
+Spectron and Mocha
+Proctors' Web App Unit Testing
+See more details >>
+React application unit testing
+React testing libraries and Jest
+API testing
+See more details >>
+API request testing
+Authentication testing
+Access control testing
+Jest and Postman
+Your browser does not support HTML video.
+Students' Desktop App
+See more details >>
+See course details
+See exam schedule
+Join examination
+Upload locally saved videos
+Your browser does not support HTML video.
+Admin Portal
+See more details >>
+Add proctors to the system
+Add students to the system
+Add courses to the system
+Add exam schedule using master sheets
+Remove exam schedules
+Your browser does not support HTML video.
+Proctors' Web App
+See more details >>
+See course details
+See exam schedule
+Invigilate an examination
+See disconnections of students
+Get the link of the students saved videos
+API call documentation
+See more details >>
+Authentication
+Access control
+Student App Unit Testing
+See more details >>
+Electron application unit testing
+Spectron and Mocha
+Proctors' Web App Unit Testing
+See more details >>
+React application unit testing
+React testing libraries and Jest
+API testing
+See more details >>
+API request testing
+Authentication testing
+Access control testing
+Jest and Postman
+Your browser does not support HTML video.
+Students' Desktop App
+See more details >>
+See course details
+See exam schedule
+Join examination
+Upload locally saved videos
+Your browser does not support HTML video.
+Admin Portal
+See more details >>
+Add proctors to the system
+Add students to the system
+Add courses to the system
+Add exam schedule using master sheets
+Remove exam schedules
+Your browser does not support HTML video.
+Proctors' Web App
+See more details >>
+See course details
+See exam schedule
+Invigilate an examination
+See disconnections of students
+Get the link of the students saved videos
+API call documentation
+See more details >>
+Authentication
+Access control
+Student App Unit Testing
+See more details >>
+Electron application unit testing
+Spectron and Mocha
+Proctors' Web App Unit Testing
+See more details >>
+React application unit testing
+React testing libraries and Jest
+API testing
+See more details >>
+API request testing
+Authentication testing
+Access control testing
+Jest and Postman
+Your browser does not support HTML video.
+Students' Desktop App
+See more details >>
+See course details
+See exam schedule
+Join examination
+Upload locally saved videos
+Your browser does not support HTML video.
+Admin Portal
+See more details >>
+Add proctors to the system
+Add students to the system
+Add courses to the system
+Add exam schedule using master sheets
+Remove exam schedules
+Your browser does not support HTML video.
+Proctors' Web App
+See more details >>
+See course details
+See exam schedule
+Invigilate an examination
+See disconnections of students
+Get the link of the students saved videos
+API call documentation
+See more details >>
+Authentication
+Access control
+Demonstration
+User Interface Implementation
+Your browser does not support HTML video.
+Security
+Security is a key concern in our product since we deal with highly sensitive data related to examinations and personal security.
+We ensure security using 3 main methods.
+Isolation
+Encyrption
+Authorization and authentication
+Security
+Data Encryption
+Encryption in Server and Database
+The secure MongoDB, Atlas cluster ensures secure data encryption both at transit and rest using TSL and AES-256 standards
+Encryption in Jitsi-Meet server
+Jitsi-Meet provides end-to-end and hop-to-hop encryption for multiparty conferences.
+The meeting rooms are password protected and ephemeral.
+Encrypting locally stored videos
+To ensure that students or any other third party cannot tamper locally stored recordings, they are encrypted using AES-256.
+Node.js's built-in cipher class File-encrypter is used to encrypt the recordings.
+AWS Key Management Service is used to control and manage the encryption keys.
+Features
+Check Our Amazing Features
+All
+For The Proctor
+For The Student
+video/audio feed
+Get video/audio feed from multiple students
+One-on-one interaction
+One-on-one interaction with students
+Detect disconnections
+Detect disconneted students immediately
+Detect unauthorized activities
+Detect unauthorized activities by warning messages
+Notify examinations
+Notify students about up coming examinations
+Capture the video & audio
+Capture the video & audio stream from student's environment
+Record and Upload
+Continuously record the video in case of a power failure and store it locally
+Backup Power
+Continuous power supply even incase of a power failure
+Easily mountable
+can easily mountable on a surface
+Display remaining time
+See the remaining time on the screen
+Budget
+Bill of Materials
+COMPONENT
+PRICE (Rs.)
+PLACE
+FOR THE MAIN CIRCUIT
+Rasberry pi board 3B+
+9500
+microchip.lk
+Rasberry pi power cable and adapter
+800
+microchip.lk
+Touch screen 5' with integrated speaker
+6350
+tronic.lk
+Speaker
+50
+microchip.lk
+PAM8406 Digital Amplifier
+350
+microchip.lk
+Cooling Fan
+260
+microchip.lk
+Camera module
+1800
+microchip.lk
+USB Microphone
+485
+tronic.lk
+Flash drive (SD card) 32gb
+1800
+microchip.lk
+Total for the RPI
+21395
+FOR THE UPS
+Lithium Battery 18650 1200mAH
+200
+microchip.lk
+LM2596 Buck Converter
+650
+microchip.lk
+BMS 18650 balanced charger with protection
+350
+microchip.lk
+Capacitor 220 microF
+10
+12V power inout barrel jack
+15
+Micro USB jack
+40
+Nilambara Electronis
+Miscellaneous
+500
+TOTAL
+23160
+Our Team
+Developers
+Isuri Devindi
+E/17/058
+Sashini Liyanage
+E/17/190
+Savindu Wannigama
+E/17/369
+Advisors
+Prof. Roshan Ragel
+Professor
+Dr. Isuru Nawinne
+Senior Lecturer
+Dr. Mahanama Wickaramasinghe
+Senior Lecturer
+Contact
+Contact Us
+Email:
+connexa.info@gmail.com
+Call:
+Isuri- +94713713686
+Sashini- +94713585988
+Savindu- +94776259252

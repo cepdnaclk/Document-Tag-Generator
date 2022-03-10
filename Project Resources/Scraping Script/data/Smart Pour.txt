@@ -1,0 +1,219 @@
+Smart pour
+Home
+About
+Features
+Architecture
+Design
+Processing Unit
+Circuit Diagram
+E-R Diagram
+UI/UX
+Demos
+Mobile App Demo
+Backend Demo
+3D Model
+Data Flow
+Testing and Security
+Others
+Budget
+Timeline
+Team
+Now you can feel the Energy
+Coffee Making
+at your fingertips
+Project
+Repository
+Smart Pour
+An automated coffee machine that is controlled by an app
+The Smart Pour is an improvement for traditional coffee makers.
+Traditional coffee making is inconvenient with today's hectic
+lifestyle. We, as a team, came up with a more convenient coffee
+making system that can be controlled by an app.
+Features
+Make your life easier with Smart Pour
+Scheduling
+You can schedule your coffee at anytime and enjoy a hot coffee
+whenever you want
+Ingredient tracking
+You can know the ingredient amounts from the mobile application
+and shortages by notifications.
+Customizing user’s preference
+Smart Pour can store the recipes of the users.So you can
+experience your favourite coffee without any effort
+User friendly interface
+Smart Pour mobile application is very easy to handle and it's
+with simple structure which anybody can understand
+High Security
+Smart Pour is high security product only users with password can
+operate through the mobile application
+Durability
+Smart Pour device can be used for a long time and it will
+provide you a satisfied service
+Solution Architecture
+Mobile Application
+An Android mobile application is available for SmartPour coffee
+machine to allow users to remotely make coffee in a scheduled
+manner as well. The mobile application sends a notification when
+the coffee is made and reminders for scheduled coffee.Users can
+log in to the mobile app anytime to check the availability of
+the ingredients to make coff.The app is designed using Flutter.
+Web Server
+AWS server is used as the web server for the SmartPour System.
+Signals from sensors are passed to the mobile application as
+well as control information from mobile applications are passed
+to the machine and response mechanisms through this server.
+Database which is used to store favourite recipes,
+availabilityof the ingredients and logs of the system is hosted
+at the server.
+SmartPour Machine
+The coffe making is done in the machine. The pouring of coffee,
+ingredient seperation, ingredient tracking is identified through
+sensors. It will consist of wireless sensors suchas ultra-sonic
+sensors, reflective optical sensors, valves and servo motors.
+NodeMCU is used as the microcontroller of the SmartPour and
+ESP8266 WiFi modules are used for wireless sensors.
+Processing Unit
+The Processing Unit handles all the data processing and remote
+communications. The storage containers have the ultra-sonic
+sensor to track the ingredients availability. The valve is used
+to seperate liquid and servo motors are used to seperate dry
+ingredients from the storage containers. A reflective optical
+Sensor is there to detect the availability of a cup before
+pouring the coffee. The machine consists of storage containers
+to store ingredients. A heater and motor are used to boil water
+and stir the ingredients respectively. The power supply is given
+via current electricity.
+The processing unit also consists of inbuilt Wi-Fi via an
+ESP8266 Development board. Through this the consumer can
+directly connect our device to the internet through their home
+router and send data to our server
+Circuit Diagram
+E-R Diagram
+UI / UX
+Previous
+Next
+App Demo
+The mobile aplication is implemented using Flutter technology and Dart language.
+All the features and functionalities have been completed. Some unit testings and validation
+tests have been done for the application using Flutter test cases. To enhance the
+user experience, a simple design with a user friendly interface has been used.
+Back End
+For the backend, springboot and mysql technologies are used.
+The whole backend is deployed on Amazon Web Services(AWS) cloud as EC2 instances.
+Backup services, S3 services and security services given by AWS are
+used for this process. This demo shows the relational database implemented for
+the project accessed through EC2.
+3D Model
+This is the expected prototype view. Dimensions can be slightly varied
+due to the components of the real hardware.
+Dataflow
+Previous
+Next
+Testing and Security
+Previous
+Next
+Budget
+Item Name
+Quality
+Unit Price(LKR)
+Total Cost(LKR)
+Nodemcu ESP8266 12E
+1
+985
+985
+Heater
+1
+400
+400
+DC Motor
+1
+95
+95
+Relay
+3
+60
+180
+Valves
+2
+690
+1380
+Servo Motor
+2
+350
+700
+TCRT5000L Reflective Optical Sensor
+1
+175
+175
+Ultra-sonic Sensor
+3
+165
+495
+Containers
+4
+250
+1000
+12V 1A Full Wave Transformer
+1
+550
+550
+Others
+1000
+Total
+6960
+Timeline
+Week 1
+Idea Selection
+Week 3
+Software and Component Selection
+Week 4
+UI & Circuit Design
+Week 5
+Front End Development
+Week 7
+Back End Development
+Week 8
+Cloud Development
+Week 9
+Hardware Development
+Week 10
+Integrate Software and Hardware​
+Week 11
+System Testing & Debugging​
+Week 12
+Performance Evaluation
+Team
+Shazna Isthikar
+E/17/122
+Odasara Karunachandra
+E/17/153
+Mishel Rossmaree
+E/17/294
+About Us
+An automated coffee machine that is controlled by an application
+Copyright ©
+2022
+All rights reserved | Smart Pour
+Newsletter
+Stay update with our latest
+Follow Us
+Let us be social
+Home
+About
+Features
+Architecture
+Design
+Processing Unit
+Circuit Diagram
+E-R Diagram
+UI/UX
+Demos
+Mobile App Demo
+Backend Demo
+3D Model
+Data Flow
+Testing and Security
+Others
+Budget
+Timeline
+Team

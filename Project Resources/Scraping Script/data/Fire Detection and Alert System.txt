@@ -1,0 +1,31 @@
+Fire Detection and Alert System
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Fire Detection and Alert System
+Team
+E/15/154, JAYASOORIYA J.K.C.N., e15154@eng.pdn.ac.lk
+E/15/187, KULANJITH G.D., devingallage@gmail.com
+E/15/142, JAYALATH A.H.G.D., ganindudananja@gmail.com
+Table of Contents
+Introduction
+Solution Architecture
+Links
+Introduction
+According to National Fire Protection Association (NFPA), there were 1,319,500 fire cases were reported only in USA in 2017. Nearly 40% of them are structure fires. Moreover, following statements are highlights from NFPA report.
+In 2017, 22 fires in the United States resulted in losses of at least $10 million each, for a cumulative total of $12.5 billion in direct property losses. These fires resulted in the deaths of 52 civilians and one firefighter, and injuries to 213 civilians and 20 firefighters.
+The other 20 large-loss fires in 2017 involved structures and resulted in a total property loss of $747.7 million.
+Smoking materials were the leading cause of home fire deaths in 2012-2016.
+Intro
+Solution Architecture
+There are two ways a fire can be happened.
+Sudden fire
+Slowly growing fire
+We are going to implement a set of devices with the capability of detecting smoke and CO particles so that, the device will detect both the above mentioned fire types and the users will get warnings only if neccessary through an alarm on the device itself and an alert will be sent to the users of the mobile app and the web application. If the fire is massive or danger enough the intensity of the alarm will get increased and if the option for emergency is enabled, the emergency authorities will get notifications about the fire disaster.
+How the device works?
+There are two types of devices come with Ignio and they are “Ignio node” and the “Ignio relay”. The Ignio node is integrated with the sensors and an alarm so that it takes data from sensors and pass down to the Ignio relay through wi-fi which is connected to the ISP directly via a home network or an enterprise network. The sudden fires will get detected by the Ignio node itself through the sensors by detecting the passing of particular bandwidths for particle density and CO emission rate. And, the other type of fires will be predicted by analysing the periodic data on the microservice architectured API.
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

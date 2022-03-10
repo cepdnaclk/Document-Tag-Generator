@@ -1,0 +1,25 @@
+Automated Fishing Bot
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Automated Fishing Bot
+Team
+E/14/222, MEDAWATTE R.C., e14222@ce.pdn.ac.lk
+E/14/317, SENANAYAKE S.M.A.J., e14317@ce.pdn.ac.lk
+E/14/390, WIJEKOON D.W.M.M.P., e14390@ce.pdn.ac.lk
+Table of Contents
+Introduction
+Solution Architecture
+Hardware & Software Designs
+Links
+Introduction
+Fishery Industry has not always been friendly to fishermen. Identifying high density fishing areas, reaching there and spending hours to find and capture fish is just too much for a human being. Therefore, we are going to introduce a fishing bot. This bot will be able to handle above said difficulties and will help fishermen to expand fishing areas and monitor fishing information gathered which will eventually help the industry.
+Solution Architecture
+Hardware and Software Designs
+Hardware : includes Bots, Relay nodes and the Central Server
+Software : includes the website, Database, and a local interface for the relay node
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

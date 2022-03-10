@@ -1,0 +1,371 @@
+Milk-Testing-&-Collecting-System
+MilkTab
+Introduction
+Solution Architecture
+Designs
+Designs
+Mobile User Interfaces
+Admin Panel Interfaces
+Hardware Designs
+Security
+Others
+Others
+Testing
+Timeline
+Budget
+Team
+Git Repository
+Milk-Testing & Collecting-System
+Introducing technology oriented milk collecting platform with a better way of testing milk.
+Easy usage
+Portabale
+Low Power consumption
+Detects milk adulterants
+Get Started
+Introduction
+View Introduction video
+The Problem
+In dairy industry, dairy collectors measure only few parameters when buying milk from dairy farmers. But, they usually don't measure quality parameters like fat content, acidity etc of milk at that spot. Also the financial deals are happening
+in a traditional way. The quality is very important in dairy related products. Currently small scale manufacturers do not use technology based methods to measure the quality of milk. They just use organoleptic tests such as smell and
+visual observation for that. The quality of raw milk is the primary factor determining the quality of milk products. Good-quality milk products can be produced only from good-quality raw milk. Milk testing and quality control should
+be carried out at all stages of the dairy chain
+Milk Adulterants
+There are many milk adulterants that are added to raw milk by supplier in order to get some financial benefits.
+Some of the major milk adulterants which cause serious adverse health effects are urea, formalin, detergents, ammonium sulphate, boric acid, caustic soda, benzoic acid, salicylic acid, hydrogen peroxide, sugars and melamine.
+Preservatives are special adulterants which increase the shelf life of milk.
+Eg: Formalin, Salicylic acid, Boric acid, Hydrogen Peroxide
+Water:
+Water is added to raw milk to increase milk volume. This is a common adulterant which is not harmful but decreases the milk quality.
+Urea:
+Urea, being a natural constituent of milk, constitutes the major portion of non-protein Nitrogen in milk. Maximum allowable limit for urea in milk is 70 mg/100 mL.
+Milk Adulterants
+Check here for more details
+Food Industry
+Quality is an important thing in food industry. Due to bio-chemical activities, there are changes in food time to time. Therefore, preservation is so impotant in food industry. Further, wastage of food happens due to expiration and many other reasons.
+In the case of diary industry, above problem becomes considerable because the wastage can be increased because of adding milk adultarents. It can be seen that almost all the dairy products we can see in the market are
+produced under the brand names of large scale companies. In Sri Lanka, it can observed that there are only few dairy products which are produced as rural domestic products like buffalo curd. Also a higher proportion
+of the dairy requirements are imported from other countries such as Australia and New Zealand because the domestic milk production is not sufficient. This is a good opportunity for small scale manufacturers to supply
+dairy products to catch up with the demand.
+Primary supply chain in Dairy industry
+Some restrictions for starting dairy related production;
+Not having an easy method to test the quality
+Not having knowledge of quality parameters and testing
+inability to buy laboratory equipments for testing.
+Find more details on 'Opportunities for dairy sector growth in Sri Lanka' here.
+Our Solution
+Our system can be used to measure and record important quality parameters of milk when the deal happens between the dairy collector and farmer to ensure milk is healthy and also it can be used to calculate financial value of milk according
+to those parameters and manage the financial records in a cloud based system.
+Whom do we target?
+MILK COLLECTORS
+LIQUID MILK SALES OUTLETS
+HOTELS & RESTAURANTS
+SMALL SCALE PROCESSORS
+Detection of Milk Adulterants
+Required Quality
+pH : 6.5 - 6.7
+Density : 1.026-1.032 g/ml
+Fat Content :
+Cow's milk (3.5-4.5)%
+Buffalo's milk (6-7)%
+Water
+Milk collectors use lactometer to measure the density of raw milk as a traditional method to detect if additional water is added to the raw milk. But, this method does not give an accurate result if the temperature
+is not considered, since the density varies according to the temperature.
+Water+Ammonium Sulphate
+Ammonium sulphate is added to increase the lactometer reading by maintaining the density of diluted milk.
+Urea
+Adding urea causes the increase of fat content. Since urea is basic, the PH value of raw milk can be used to detect this adulterant. Because urea is harmful, milk is unhealthy to consume when urea is added to
+it.
+Expected Outcomes
+Collectors
+Reducing wastage
+Get rid of traditional methods
+Reducing the need of high level laboratory testing
+Easy to expand production level
+Farmers
+Ability to get higher value & demand for good milk
+A smart way to access financial records
+Solution Architecture
+Measurements
+Using our hardware unit, following measurements of milk can be taken.
+1.PH value
+2.Fat rate
+3.Volume
+4.Weight
+5.Temperature
+Using these measurements as primary measurements, quality parameters which are focused on software sector are calculated.
+1.PH value
+2.Fat rate
+3.Corrected density
+Density can be calculated using weight and volume at the measured temperature. Then, that value is converted to the parameter 'corrected density' considering the temperature deviation from room temperature. Simply, the density is mapped for room temperature.
+PH value
+pH value is a important parameter in our system, which gives a better understanding about milk adulterants. The output voltage (analog) of the sensor is proportional to the pH value of the milk. The sensor is first calibrated using
+a standard sample (distilled water).
+Fat rate
+A high intensity LED is used as a light source and a LDR is placed to detect the amount of light passing through the milk. The more the fat content in the milk, more amount of light will be scattered by that milk.
+Corrected density
+Data communication
+Bluetooth is a popular communication method which is half duplex.
+We choosed bluetooth for communication because of the portable behaviour of the system.
+Milk Grading System
+What we do;
+Before the launching, we test fresh milk samples without any adultarents and get necessary data to observe the required range for each parameter. Then parameter values are tested after adding water content and graph it with
+additional water percentage as the independent variable and parameter values as dependent variables.
+How it works;
+According to the parameter values of a sample, a graphical visualization of each parameters can be obtained to get a better understanding about tested milk. Further, a grade will be displayed according to the quality as A/B/C/D.
+Main objective
+The grading system gives not only a grade for milk but also it is very useful to manage milk storage. It is recommended to store only milk with same grade in the same container, in order to reduce the possible wastages.
+Possible improvements
+This system can be improved so as to get an approximate value for fat percentage of milk which is called SNF value. Since the buyers are not interested in that type of parameters, the proposed grading system is sufficient for
+the targeted problem.
+Background Mechanism of Grading
+SNF - Solid Non Fat , CLR - Corrected Lactometer Reading
+The Solids-Not-Fat (SNF) means a collection of proteins, lactose, minerals, acids, enzymes and vitamins contents of the milk. It is the total solid content minus the fat content. The total milk solids are the sum of Fat and
+SNF. SNF can be calculated using following formula:
+SNF = (CLR/4) + (Fat x 0.21) + 0.36
+Our system is not highly focusing on SNF percentage or fat percentage. But what this formula shows is Fat and SNF percentages are factors which affects the milk quality. Hence, deviations from fresh milk is considered in our
+system to generate the Grade.
+Future Improvements with Machine Learning
+After the basic circuit is built up, a fresh milk sample is tested for all parameters with respect to additional adulterant percentages. This data set is used as the training data set to build a data model. Then, this model
+can be used to predict approximate adulterant percentage and notify to the user using a mobile notification. Since AWS supports jupyter notebook, after integrating this feature, user can get a better understanding about
+milk that he is going to purchase.
+Billing System
+According to the grade of tested milk, here is a mechanism to change the price for unit volume (1 litre) by the buyer(collector). For each grade he can assign a value in descending order as grade varies from A to D.
+History record of how the values varied is also displayed.
+Technologies
+Flutter
+Flutter is an open-source framework developed by Google and it is one of the most popular mobile development frameworks used by developers worldwide. It comprises all the essential elements, including cross-platform
+and native development models required to build high-performing and feature-rich applications in minimal time.
+Laravel
+Laravel is the best PHP framework to use and build efficient applications in any scale. Laravel application maintenance process is easier and also it provides high-security features such as token authentication.
+Laravel speeds the application development process by utilizing databases efficiently
+AWS
+AWS is designed to allow application providers, ISVs, and vendors to quickly and securely host the applications – whether an existing application or a new SaaS-based application. AWS is made up of so many different
+cloud computing products and services. AWS utilizes an end-to-end approach to secure and harden our infrastructure, including physical, operational, and software measures.
+Mobile Application User interfaces
+Previous
+Next
+Admin Panel User interfaces
+Admin dashboard home page
+Admin dashboard devices page
+Admin dashboard collectors page
+Price graph
+Volume graph
+Login page
+Admin change password page
+Admin change password page
+Admin change password page
+Previous
+Next
+3D Designs of model
+Milk container
+Main unit
+Sensor holder
+Container with main unit
+Register
+Login
+Configure
+Connect
+Analyze
+Buy
+Select as collector
+Enter a valid Email address
+Enter a strong password and re-type
+Click next to proceed
+Enter a valid mobile number
+Type your address
+Select your role
+Milk collector
+Small scale proceesor
+liquid outlet
+Hotel/Restaurent
+Sumbit your details
+Enter your email & password
+If you don't remember password, there is an option to reset it.
+If you still do not have an account, you can use guest mode
+Sign in to get the experience
+You can use this page to manage your profile
+Your basic details are displayed here
+Use edit options to change them if you want
+Use change price rate option to handle your deals
+In the home screen connect button will turn on bluetooth connection
+You can see the names of all connections
+Use lower text input to provide the name of the connection from the device
+Then each time, the conection will be automatically set.
+This page can be used to update your price values
+Only restriction is to enter values in descending order
+This values are public for other users
+This screen shows requests from farmers to buy milk from them
+After accepting both parties can contact each other.
+You can see contact details and locations of them
+Everytime before testing, you can select your seller
+A list of people you already connected, will be displayed
+If he/she does not use the app enter his/her nickname and select milk type you buy from him/her
+Sumbit your details
+After receiving data from the device parameter values will be displayed
+Upper box displays the grade and curret price value for a unit volume you have set.
+Then you have to enter the total volume of the milk, your sample belongs to
+After analyzing the report you can add or reject.(It is not recommanded to buy milk of Grade D)
+Anytime past details can be seen in a timeline
+There is the record for a specific farmer for a date
+You can see all the details aout the deal
+Features
+Low power consumption
+In this project, since the hardware unit is consumed less, the power usage is really effective. (Hardware use rechargeable batteries to get power)
+Portabale milk tester
+Our system is designed with the ability of using it as a portable device. In a milk collecting center also, it is applicable.
+Easy connection
+System can be used easily with bluetooth connection using your mobile phone as a smart way to test milk.
+Cloud based
+Users can experience an effective cloud based business environment and get rid of traditional testing and biling systems
+Calender based schedule
+All the records can be viewed in a timeline with an easy environment to see past records
+Customize your options
+Changing user details, price rate values can be done whenever you want.
+Synchronizable
+With the price changes in industry, it is easy to update the price rates.
+Testing
+Software Testing Tools
+Postman
+Postman is a scalable API testing tool which is a popular API workflow in testing and development. It has nice features like ability of creation of tests, ability of automated testing & etc.
+Testing unit
+What is tested
+Results
+Conclusion
+sign-up
+If any mandotary field is null
+Errors without allowing to submit
+email verification
+Successfull email notifications
+password verification
+check strength before submitting
+contact number verification
+sign-in
+If email is wrong
+login failed!
+If password is wrong
+login failed!
+If any field is null
+Errors without allowing to submit
+Appium
+Appium is an open source automation tool for running scripts and testing native applications, mobile-web applications and hybrid applications on Android or iOS using a webdriver.
+JMeter
+JMeter is a test tool from Apache used to analyze and measure the performance of applications, different software services and products.
+Security
+Admin panel security
+Registration as an admin is allowed only for specified people. This is done by inviting him/her by super admin with a time limit. Creating the super admin is done by seeding required credentials to the database when deploying.
+Details about invitations can be seen and it is possible to remove any email address that is already invited if admin wanted to invite him/her again.
+A session will expire after a specific time although an admin did not logged out. When registering and changing the current password, a strong password has to be entered and when changing the current password, admin has to verify his/her identity by giving
+the valid email and current password.
+Mobile Application Security
+JWT is the method of authentication for the users of the mobile application. A JSON web token (JWT) is an open standard (RFC 7519) and it is a compact and self-contained way for securely transmitting information between systems as a JSON object. This
+information can be verified and trusted because, it is digitally signed.
+Once the user is logged in and authenticated by the server, then the JWT token is generated and passed in response, and in each subsequent request, the token is passed to the server. This JWT token contains the information for
+the user's access and permission, which is part of the authorization.
+After registering and after using 'forgot password' option user has to verify himself by entering the OTP he received into his email. This is one security action in our mobile application.
+Timeline
+Project Planning
+Done
+6 weeks
+In first 6 weeks, our team discussed about several project ideas. Among them, we decided to build a milk analysor which can be used by dairy collectors to enhance the deal with dairy farmers. After deciding Hardware components, technologies and timeline,
+project proposal was presented in this phase.
+Backend Design
+4 weeks
+In this phase, basic backend functionalities are implemented in a Laravel project. API designing is the main task in this 4 weeks after creating database models.
+Frontend Design
+4 weeks
+Developing mobile application as a flutter project takes place in this 4 weeks. User interfaces are created in a way that the users of the application can easily manage their activities.
+Hardware Design
+In progress
+4 weeks
+Hardware solution is designed in this phase. All sensors are connected to the main unit and tested by getting measurements.
+Cloud Deployment
+1 week
+This week is for Deployment tasks. Some testing activities also take place on hosting. All issues in previous phases are also resolved.
+Integration
+1 weeks
+This is the last phase of our project where we test all the systems after integrating them together. After this phase, a final model is presented.
+Estimated budget
+#
+item
+quantity
+price(LKR)
+1
+ATmega328p
+1
+750
+2
+Bluetooth module HC-05
+1
+950
+3
+PH sensor
+1
+3800
+4
+HC-SR04 Ultrasonic sensor
+1
+200
+5
+20x4 LCD display
+1
+950
+6
+3.7 V power supply
+2
+900
+7
+Temperature sensor
+1
+250
+8
+Resistors
+10
+100
+9
+Load cell 5 kg
+1
+500
+10
+LDR
+1
+55
+11
+LED
+5
+100
+12
+Piezo Buzzer
+1
+25
+13
+HX711 converter
+1
+200
+14
+Battery charger
+1
+450
+15
+Cost for model
+1
+2000
+16
+Wires and others
+300
+Total
+11530
+Conclusion
+Team
+E/17/012, Aminda Amarasinghe, e17012@eng.pdn.ac.lk
+E/17/038, Anuruddha Chandrasekara, e17038@eng.pdn.ac.lk
+E/17/101, Anjalee Gunathilaka, e17101@eng.pdn.ac.lk
+Project Supervisors
+Dr. Isuru Nawinne
+Dr. Mahanama Wickramasinghe
+Aminda Amarasinghe
+Anuruddha Chandrasekara
+Anjalee Gunathilaka
+Department of Computer Engineering
+University of Peradeniya
+Department Projects
+Copyright © 2021 All rights reserved | MilkTab
