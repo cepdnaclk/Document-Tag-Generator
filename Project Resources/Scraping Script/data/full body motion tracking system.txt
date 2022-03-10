@@ -1,0 +1,24 @@
+Full Body Motion Tracking System
+Home
+Design(current)
+Deployment
+Testing
+Budget
+Team
+Game Console
+The game console is a collection of sensors and wireless modules that can track the motion of arms, legs, and body.
+The collected data use as input for a multiplayer first-person shooter game.
+The smartphone is used to display the graphics and play the sound of the game.
+Motivation
+People spend more time on online gaming and they do not get enough exercises for their body.
+In urban places not enough space for exercising.
+VR gaming devices give solution for both problems.
+The game console market was valued at 34.27 billion USD in 2019**.
+The game consoles are influenced by new technologies like VR, AR, and voice recognition.
+Consumers are increasing continuosly.
+Related Links
+Department of Computer Engineering
+Faculty of Engineering
+Univerity of Peradeniya
+github
+© Copyright 2020 Full Body Motion Tracking System

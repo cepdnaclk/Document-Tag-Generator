@@ -1,0 +1,24 @@
+Home - RV32IM Network on Chip Design and Implementation
+Home | RV32IM Network on Chip Design and Implementation
+Link
+Search
+Menu
+Expand
+Document
+HomeNodesCommunicationRoutersMain Memory and Memory Controller
+This site uses Just the Docs, a documentation theme for Jekyll.
+Project Repository on GitHub
+RV32IM Network on Chip Design and Implementation
+Table of Contents
+Introduction Pipeline Datapath Team Supervisors Links
+Introduction
+Under extended features we designed a Network of Chip to interconnect 16 RV32IM CPU instances using a mesh network. Mesh network is used by the CPU instances to communicate with other CPU instances and to access the main memory through the memory controllers. Figure 1 shows the basic design of the NoC. As shown in Figure 1, the main hardware components of the NoC,
+Nodes Routers Main memory Memory Controller
+GitHub Repository
+Overview of the Network on Chip
+Team
+E/16/069, Damsy De Silve, email E/16/094, Shirly Ekanayake, email E/16/276, Buddhi Perera, email
+Supervisors
+Dr. Isuru Navinna Dr. Mahanama Wickramasinghe
+Links
+Project Repository Project Page Department of Computer Engineering University of Peradeniya

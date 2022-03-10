@@ -1,0 +1,23 @@
+Projects | Department of Computer Engineering
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Greenhouse monitoring and controlling based on IOT/Sensor data
+This is a sample image, to show how to add images to your page. To learn more options, please refer this
+Team
+E/17/065, Kanishka dilhan, email
+E/17/312, Ishini udara, email
+E/17/240, Nadeesha diwakara, email
+Table of Contents
+Introduction
+Other Sub Topics
+Links
+Introduction
+description of the real world problem and solution, impact
+Other Sub Topics
+…..
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

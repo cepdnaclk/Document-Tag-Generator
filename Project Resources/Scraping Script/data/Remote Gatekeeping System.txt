@@ -1,0 +1,386 @@
+Remote Gatekeeping System
+3YP(Group-19)
+Home
+Intro
+Components
+Timeline
+BOM
+Testing
+Scalability
+Security
+Team
+3rd Year ProjectDepartment of CE - UoP
+Remote Gatekeeping System
+Control unit wit|
+Control unit with intercom, Smart Mailbox, Remote gate
+unlocking system, Mobile controlling interface, Administrative
+web services
+Project Repo
+Web Application
+The motivation to our solution
+REAL WORLD PROBLEM
+In the busy and complicated lifestyle today, keeping
+interactions with outsiders is, inefficient, impractical and
+vulnerable. The ongoing pandemic has worsen the situation
+becase people are afraid to having physical intractions with
+outsiders.
+We have understood that people are having troubles with taking
+online deliveries to their door steps securely. Since people
+in Sri Lanka are so busy today, there is a good chance of not
+being in the house when an outsider or delivery person comes
+to the door.If the homeowners are not at home , delivery
+people are adapt to keep the delivery outside the
+house.Therefore delivery package is subjected to get stolen or
+get damaged.
+Otherthan that , when an outsider comes to the door, if the
+parents are not home, it is not a good idea to expose the
+children and elder people to that outsider. It would be better
+if there is a way to communicate with the outsider when she/he
+is at the gate.(before entering to the house premise)
+We thought we can come up with a system of interconnected
+devices (inspired from IoT) to provide an efficient solution
+for those problems.
+Next level delivery receiving and gatekeeping
+Our Solution
+Our solution is to introduce a system, to communicate remotely with
+an outsider who is at our gate or to undertaking deliveries, without
+making physical interactions.
+Watch the video
+How it works
+Components of the Sytem
+Control Unit
+This is the main component of the system and all the
+cotrolling related to the system is done using this
+unit.Outsider interacts with this component.
+Smart Mailbox
+This is used to receive the delivery packages safely and this
+can be remotely controlled by the homeowner from anywhere in
+the world.
+Smart Gate Locking
+Remotely controlled by the homeowner to serve the request of
+the outsider and locking and unlocking of the gate is done
+using this.
+Mobile Application
+Used by the homeowner and various features like capturing the
+photo of the outsider, intercom with the outsider and
+mailbox/gate controlling is handled using this.
+Web Interface
+Used to sign up, establish the connection between the system
+with the user account , download the mobile application and
+various other purposes.
+What happens under the hood
+Solution Architecture
+This is a high level representation of our system and it shows
+how our system works.
+All of the modules of our system is connected to the
+microprocessor Raspberry Pi 3 and it will be connected to the
+internet using built-in wifi module through the home wifi
+access point.
+Then it would be connected to the backend of our system which
+is firebase.Backend transfer data to the mobile application
+and the web interface. Connecting and data sharing between the
+hardware front-end and two software front-end is the main goal
+of the backend.
+Data/Control signal distribution
+Data and Control Flow
+This is a high level representation of our system and it shows
+how our the controlling and data transmission happens in the
+system.
+Purple Lines : Control Signals
+Black Lines :
+Data Transmission
+Control signals are supplied to all the modules that are
+connected to the Raspberry Pi3. Data is input to the Raspberry
+Pi by camera module, push button, usb microphone. The SD card
+is used to load the raspbian OS to the system and if there are
+any data to be stored, they are stored using SD card.
+IoT device is connected to the backend of our system therefore
+obvously data sharing happens there. Using the backend , the
+data transmission between mobile application, web site and the
+IoT device is achieved.
+Blocks and Components
+Block Diagram
+This figure shows how various components of our system
+interconnected.
+All the controling mechanisms are handled by the control unit
+of our system. When the homeowner wants to open up the smart
+mailbox , a control signal will be send to the control unit
+and control unit will send a control signal to the smart
+mailbox and it will be opened. This exact behaviour is applied
+for the smart gatelock as well.
+The control unit is going to connected to the power supply
+adapter and will get power from the wall plug. Then the power
+required for smart mailbox and smart gatelock will be provided
+by the control unit itself.
+Then it would be connected to the backend of our system which
+is firebase.Backend transfer data to the mobile application
+and the web interface. Connecting and data sharing between the
+hardware front-end and two software front-end is the main goal
+of the backend.
+UX-UI Design
+Mobile Application
+Login Screen
+Welcome Screen
+Active Event
+Close Active Event
+Previous Events
+Previous Event Info
+Download Mobile Application
+UX-UI Design
+Web Application
+Home Page
+Login From
+Signup From
+Dashboard
+UX-UI Design
+Hardware Interface
+Initialize system
+Choosing option
+Realtime Updates
+Realtime Updates
+Realtime Updates
+Failure Handling
+Algorithms of the System
+Algorithm runs on the hardware module
+Algorithm runs on the Mobile Application
+how we store the data
+Database Schemata
+We use Firebase Realtime Database as database of our system
+which is a cloud-hosted database. Data is stored as JSON and
+synchronized in realtime to every connected client. That means
+all the clients connected to our system share one Realtime
+Database instance and automatically receive updates with the
+newest data.
+Firebase Realtime Database is a non sql, dynamic and non
+relational database.
+Physical designs of our system
+3D Models
+Control Unit - Front End
+Control Unit - Isometric View
+-->
+How the modules are connected
+Circuit Diagram
+What we have implemented so far...
+Progress
+Initializtion Node
+Failure Handling
+Web App Demostration
+Interaction with the outsider Demostration
+-->
+hardware modules
+Sensors and Actuators
+Raspberry Pi Camera Module v2 (Sony IMX219)
+8 Megapixels
+Several image formats (JPEG, BMP, PNG) - smaller file size for
+faster and effective transmission
+300mA current, 1.2V
+RPi library: PiCamera
+16 x 2 LCD (CM 162-4)
+Affordable
+Suits our requirements
+Consumes less power compared to other options (3.3 ~ 5V)
+RPi library: Adafruit_CharLCD
+Servo Motor (SG90)
+Mechanical locks of the Mailbox and the Front gate
+Has enough torque to do small operations (2.5kgcm)
+Consumes less energy (5V) compared to other motors
+Mini USB Microphone (Adafruit 3367)
+Very reliable for voice recording, which allows optimum
+communication in Intercom
+Works great with a Raspberry Pi computer
+5V of electricity with a maximum current of 0.5A
+Factory Calibrated
+From Week 1 to Week 15
+Project Timeline
+Week 1 - Week 4
+Project Planing
+- Coming up with an idea
+- Getting familier with the tecknologies
+Week 5
+Project Proposal
+- Presentation explaining the Product and the Tecknologies
+Week 6 - Week 8
+Preperation and Learning Phase
+- Getting along with the tecknologies
+- Building the Algorithms
+Week 6 - Week 10
+Web App and Server Backend Dev
+- Development of the User registration system with ReactJS
+- Configuration of Firebase server backend and the database
+Week 7 - Week 12
+Mobile App Dev
+- Design of the application structure and laout
+- Implementation of the application
+Week 9 - Week 13
+Microcontroller Environment Dev
+- Implementation of Intercom capabilites
+- Setting up sensors and actuators
+Week 10 - Week 18
+Error Handling and Final Test
+- Handling the errors arise while combining the technologies
+- Testing of the final product
+- Fine tuning the system
+Proposed on Week 5
+Bill of Material
+Description
+Price - LKR
+Rasberry Pi 3 (Model B)
+8000
+Raspberry Pi Camera Module
+3800
+Raspberry Pi LCD
+2500
+Speaker Module
+2000
+USB Microphone Module
+1000
+Servo Motor × 2
+1000
+Micro SD card
+850
+Power Adapter
+800
+Other Expenses (Push Buttons, Cables, etc.)
+1000
+Total
+20950
+Testing
+Full test results can be found in the
+GitHub Repository
+Functionalaties ofthe Administrative Web Service
+Type : Automated
+Framework : Selenium
+Porgramming Languge : Python
+Test
+Description
+Purpose
+Expected Results
+Result
+User Login (i)
+Use logoing with correct email and password
+Check the user loging with with correct credentials
+Successful login to the system, Initial message of the History
+Table , Correct User name and the email appear on the Dashboard
+Pass
+User Login (ii)
+User loging with wrong email or password
+Try to use loging with wrong credential
+Blocking the invalid users
+Pass
+Device Initializtion (i)
+Device initialize with correct serial number & Valid use
+information
+Check whether the initialzaton work correct or not
+Successful signup to valid-user
+Pass
+Device Initializtion (ii)
+Device initialize with incorrect serial number
+Check whether the initialztion work with incorrect serial or not
+Unable to sign up an invalid user
+Pass
+Secutiry Fetures ofBackend & Frontend
+Type : Manual and
+Automated         Framework,
+Simulators & Libraris : Rules Playground - Firebase
+Test
+Description
+Purpose
+Expected Results
+Result
+Malicious user login
+Brute Forcing passwords
+Checking the security againsts the malicious access
+Security against the malicious access Blocking the selected
+email after a few unsuccessful attempts for a time period
+Pass
+Datebase Access (i)
+CRUD operations on the Users , Messages , InitNodes , Evernts ,
+Nodes collections
+To fine-grain tuning the outside access to the database
+Users - read and write access, authenticated users only for
+their collection.
+Nodes - Read access to any outside users, write access only to
+authenticate users for their collection
+Pass
+bakcend services
+Scalability
+For now, we are using the free tier of the Firestore. Cloud
+Firestore offers free quota that allows you to get started at
+no cost. The free quota amounts are listed here.
+Firebase offers upto 50,000 document writes per day. We have
+observed about 25 database reads will take for a single event.
+If we assume a normal user may encounter 10 events per day, we
+can handle about 200 nodes per day in the free tier.
+Firebase Realtime Database provides 100 simultaneous
+connections for the free tier. Since we are not expecting that
+much of events at the same time, it won't be a bottleneck. If
+it was, we can easily boost it to 200k by upgrading the system
+to paid tier.
+Firebase Realtime Database offers upto 5GB of data storage per
+day for the free tier. We have analysed for several test cases
+and found out average event may contains files upto 3MB. Since
+we are hoping to provide 1 month of backup data, it will be
+enough for 5 nodes. We can reduce the backup size to
+accommodate more users, or we can switch to paid tier.
+Additional 40GBs costs $1 and for that we can provide backup
+for 40 users.
+As a future Implementation, we are going to scale the system
+to have the ability of connecting several users for a single
+hardware node.
+simultaneousconnections
+upto 100
+initializeddevices
+upto 200+
+additionalbackup storage
+$1/ 40 users
+Security Aspects
+authentication
+To authenticate users with their email addresses and passwords, we
+are using Firebase Auth, which provides methods to
+create and manage users.
+At an event of Brute-force Attacks, we are temporarilty disabling
+the account
+which is being compromized to protect the system from the
+attackers. Firebase's
+Managed email-password authentication service
+tightens the default quota of the endpoints to prevent these
+attacks.
+To connect the backend to the hardware node and to communicate with,
+we are using a token-based authentication system, which uses
+JSON Web Tokens - JWT.
+authorization
+Firebase Security Rules secures the database and the storage,
+by fine-graining the user access. We have implemented our own rules
+which restricts the users from accessing unauthorized collections of
+the database.
+hosting
+We have deployed our web application using the Firebase service,
+Firebase Hosting. Since
+Zero-configuration SSL is built into Firebase Hosting, the
+content is always delivered securely, so we don't have to take
+care of it.
+web & mobile app
+We have implemented user input validation for both interfaces, at
+the client-end as well as at the server-end.
+Firebase Security Rules provide the validation at the
+server-end where as at the user interfaces we have implemented
+validation manully.
+Group 19
+Team Members
+Achintha Harshamal
+Computer Engineering UG
+Ishara Nawarathna
+Computer Engineering UG
+Pubudu Bandara
+Computer Engineering UG
+Advisors
+Dr. Isuru Nawinna
+Senior Lecturer
+Department of CE
+Dr. Mahanama Wickramasinge
+Senior Lecturer Department of CE
+Contact Info
+gatekeeper.remote@gmail.com
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya

@@ -1,0 +1,212 @@
+Smart Apartment Security System
+Home
+Introduction
+Architecture
+Design
+Budget
+Team
+SAFENET
+SMART APARTMENT SECURITY SYSTEM
+Introduction
+For years, the need to protect one’s property has become one of people’s
+main concerns. The sense of security and protection is one of those feelings that makes us
+comfortable and complements quality living. Although there are existing solutions for home
+security like video surveillance cameras, alarms etc., they are very expensive, and the
+installation process is also not easy. Most of the existing security system solutions
+address the needs of the people who are living in private houses. But people who live in
+apartments in urban areas have some added needs to be satisfied with a particular security
+system. Therefore, addressing all these issues along with some added unique features we have
+come up with the idea of a Smart Apartment Security System. Smart Apartment security system
+is a system that secure entry points, like doors and windows, as well as interior spaces in
+an apartment from a burglary or a fire by notifying the owners and security officer at the
+apartment gate whenever a threat has been identified through a mobile application.
+Solution Architecture
+Mobile Application
+An Android mobile application is available for
+SafeHome security system to allow users to remotely monitor and control the security system.
+Users are able to arm and disarm the system, get mobile alerts and contact the security
+officer whenever a threat has been identified by the security system. Users can log in to
+the mobile app anytime to view the status of sensors, activity logs for door locks and more
+as well. The app is designed using Flutter.
+Security System
+The security system is used to identify
+threats in the entry points and interior spaces of an apartment through sensors. It will
+consist of wireless sensors(door and window sensors, motion sensors, smoke detector), a
+siren and a smart door lock with fingerprint access for added security. ESP 32 development
+board is used as the microcontroller of the door lock and ESP-01S WiFi modules are used for
+wireless sensors.
+Web Server
+AWS server is used as the web server for the
+SafeHome Security System. Signals from sensors are passed to the mobile application as well
+as control information from mobile applications are passed to the smart door lock and
+response mechanisms through this server. Database which is used to store sensor statuses and
+logs of the system is hosted at the server.
+Highlevel
+Diagram
+Infrastructure
+Technologies
+Frontend Development
+As the front end development we use flutter as our front
+end development software in this development process the
+expectations are to provide user friendly and
+interesting interface with enhanced UI and UX experience
+to the client.Other than that cross platform support is
+required for us to maintain the target clients by giving
+them access to our services independant their mobile os
+type.
+Backend Development
+In the backend server requires to handle a larger amount
+of requests. Therefore the scalability and
+sustainability if uncaught error exceptions happend are
+critical points under choosing a optimum backend server.
+For those requirements, Node js would be the best
+solution for this project. Therefore the backend server
+side requests managements are done by the NodeJs.
+Cloud Deployment
+Due to financial issues met in the process of developing
+the physical server of maintaining cost. The team sole
+decision and the academic guidance as well based on
+cloud services. Therefore the cloud server deployment
+was decieded. In that case the EC2 instance of AWS
+server support is selected.
+Database Development
+For storing data puroposes' requirements were the
+structured schema with the same type of data that have
+the ability to contain all the details of the target
+market when the product able to cover the whole market
+itself. Also the data base should be able to scalable
+from a smaller database. For these requirements are
+fulfil when the chosen selection was Mysql. Because the
+mysql have the ability contain 1000 different tables and
+all our reqiurements are fulfilled under 1000 tables.
+Also a table can record 21 million records with the
+space under 1GB. The maximum row table will be our user
+table but it will not exceed 21 million because the
+targeted ordience is less.
+Circuit Diagrams
+Door Circuit Unit
+Flame and PIR Sensor Unit
+Window Sensor Unit
+Schematic Diagrams
+Hardware Design
+Diagrams
+ER Diagram
+Relational Schema
+Detailed Budget
+Interfaces of Mobile Application
+User Login Interface
+The user can login here. He has to enter his email address
+and password. Two factor authentication is used here.
+Therefore, an OTP is sent to the relevant email address. If
+the user doesn't have an account, he can sign up to the
+system.
+Security Officer Login Interface
+The security officer can login here. He has to enter his
+email address and password. Two factor authentication is
+also used here.
+Therefore, an OTP is sent to the relevant email address. The
+registration of security officer is done by the
+Administrator.
+User Home Interface
+The user can change the mode of house. If the user select
+'Home Mode', the notifications wouldn't get when the motion,
+door and winsow semsors are triggering.
+There are 6 buttons in the home screen and user can go into
+the relevent option.
+User Registration Interface
+The users can register here. The email address is verified
+by sending OTP. Only the owner of the house can register to
+the system.
+Other members of the house can login with his user
+credentials.
+User Details Interface
+The owner details can be seen here. The name and the phone
+number can be changed
+here.
+Sensors' Details Interface
+All the sensor details can be seen here.One button is to
+deactivate the sensors and
+other button is to give access to the
+security officer to enter the house when there is a security
+threat.
+Layout Interface
+The user can find the places of the sensors in the house
+using the unique ID of
+them.
+Notification Interface
+The notifications when the sensors are triggering, can be
+seeen here. The date and
+time are also there.
+Contact Details Interface
+The emergency contacts can be seen here. By pressing the
+button, the user can calling to the
+relevant person.
+Security Officer Home Interface
+There are 4 buttons. Using 'Front Door Sensors', SO can
+find the front door of houses which he can access.
+Sensor Details(SO) Interface
+The status of all the sensors' of the apartment are showing
+here.
+The activate sensors of the apartment can be seen in red
+color.
+User Awaymode Interface
+When the awaymode is activated, background color of the interface is changed blue to green and the sensors are not triggering
+Interfaces of Administrator Web Application
+Previous
+Next
+AWS Deployment
+Previous
+Next
+Security
+Security is the most important thing in the IT world right now.
+In our solution, we have deeply considered the security point of view of our system.
+We have developed our system with the help of the following techniques to enhance the
+application security in our solution.
+JSON Web Tokens (JWT)
+Our application use JSON Web Tokens (JWT) to allow the client to indicate its identity for
+further exchange after authentication. It is a self-contained way for securely transmitting
+information between parties.
+User Input validation
+This prevents improperly formed data from entering an information system. Because it is
+difficult to detect a malicious user who is trying to attack software, applications should
+check and validate all input entered into a system specially in Resgistration and Login.
+Input validation as a mitigation strategy for both SQL injection and XSS.
+Two Factor Authentication
+Used in Authentication is used in the Registration of the Mobile Application. When Email is
+provided, OTP is sent to email address and user has to Enter that OTP for the registration.
+Password Hashing
+Password hashing is used in our application to verify the integrity of passwords, sent
+during login, against the stored hash so that actual passwords never has to be stored. A
+salt is added to the hashing process to force their uniqueness, increase their complexity
+without increasing user requirements, and to mitigate password attacks like hash tables
+AWS EC2 Security Groups
+A custom security group is assigned to the instance where our application is deployed which
+allows only http/tcp connections on port 80. Security groups offer protection at the ports
+and protocol access level.
+Testing Plan
+Project Timeline
+Link to Demonstrations
+Our Team Members
+Dananjaya Morais
+E/17/212
+Ishini Udara
+E/17/312
+Kanishka Dilhan
+E/17/065
+Our Advisors
+Dr.Isuru Nawinne
+Dr.Mahanama Wickramasinghe
+University of Peradeniya.
+Phone: +94 81 239 33 00
+Email: vc@pdn.ac.lk
+Web-site: http://www.pdn.ac.lk/
+Faculty of Engineering.
+Phone: +94 81 239 33 02
+Web-site: http://eng.pdn.ac.lk/
+Computer Engineering Department.
+Phone: +94 81 239 39 14
+Web-site: http://www.ce.pdn.ac.lk/
+Github repo
+Find more informations and
+codes details.
+Copyright 2019 All Right Reserved By Department of Computer Engineering/FOE/UOP

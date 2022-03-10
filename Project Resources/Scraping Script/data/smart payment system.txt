@@ -1,0 +1,46 @@
+Smart-payment-system | e16-3yp-smart-payment-system
+e16-3yp-smart-payment-system
+Smart-payment-system
+This is the 3rd year embedded system project
+Group Members :
+Basnayake S.S. E/16/054
+Madusha shanaka E/16/351
+Nadun welikanda E/16/389
+Table of contents
+Problem
+Our solution
+Solution Architecture
+Hardware & Software Design
+Testing
+Detailed budget
+Links
+OVERVIEW
+As we all know gaming industry is growing day by day. As a result of this growth the concept of gaming centers has been popular lately. In a gaming center they normally use coins to play the games. The procedure is when a customer comes to the gaming center they have to buy coins from the cashier in order to use those as a paying method to the gaming machine. Once they put enough number of coins into the machine they are allowed to play the game.
+Problem
+The problems of this approach are the coins are simply hard to carry around the gaming center when the customer has large number of coins and also they have good chance to loose a coin or two. When we consider the gaming center’s point of view they have to collect coins every day at each machines and count it and keep the record.
+Our Solution
+As a solution for above problems we came up with a solution which completely replace coins system with a RFID and NFC technology. In our solution, when the customer arrives at the cashier and pay money they will be issued a RFID card or if they have NFC supported mobile device they can use our mobile app instead of coins. To play the game what they have to do is simply tap the RFID card or the mobile device into the reading area which is in the gaming machine. After the customer done playing he can go to the cashier and return the card. If there is any balance the cashier will return the balance.
+Solution Architecture
+Detailed Budget
+Hardware and Software designs
+3D model Design
+Cashier Node
+Gaming Node
+Hardware design
+Demonstration
+Cashier Node
+Gaming Node
+Software design
+1. Database
+2. Cashier Application
+3. Web Application
+Testing
+Under testing we checked for unit testing and intergration testing. In unit testing we checked all functions related to adding a card, refunding, return, scanning a card, issue a card, register and login.
+Under intergration testing we tested Basic route to see the server up and ruining and Route which send the 404 message
+Target Audience
+The target audience of this project is Gaming centers which is our primary target. As our next milestone, we are planning to update this system in a way that it can be used in any commercial market place such as casino, leisure world, etc.
+Links
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya
+Project website

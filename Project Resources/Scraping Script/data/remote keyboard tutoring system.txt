@@ -1,0 +1,411 @@
+Remote Keyboard Tutor
+forté
+Menu
+Home
+About
+Architecture
+Design
+Devices
+UI / UX
+Data Flow
+Generation of Data
+Flow of Data
+Software
+Frontend
+Backend
+Other
+Hardware Functionalities
+Security Aspects
+Features
+Research Findings
+Timeline
+Budget
+Contact
+Learn or Teach PianoIn
+The Remote Keyboard Tutoring System is a web
+based system that can be attached to any (electronic) keyboard synthesizer through a MIDI
+connector. Once our system is connected to the keyboard, the user can interactively learn,
+play or teach in combination with the web application that we provide.
+Project Repository
+×
+Key-press Indication
+Remote key-presses as well as local key-presses (when working offline) are displayed in
+real-time with low latency.
+Interactive Exercises
+Upload exercises for the students as sheet music and let the system handle the rest. The
+system keeps records of student's mistake while practicing.
+Schedule Classes Easily
+Teachers can schedule the classes easily with the web application. Students can also
+easily find teachers near by.
+Offline Helper
+Upload the sheet music that you want to practice and the helper will assist you while
+playing.
+Why do you need a keyboard tutoring system?
+The Problem
+Piano is the most
+admired musical instrument so far. Over 25% of the world population fancy playing it. Yet not
+everyone is fortunate to learn from the best. This has fabricated a vast difference in the skill
+level of people who are playing the piano. The reason would be that most of the experts in the field
+lives in either the western hemisphere or east Asia. Even local experts aren't scattered throughout
+the island. So most of them tend to make use of the online procedures to teach piano. The current
+online methods would be using a platform like zoom and an app that simulates what one plays from his
+instrument. This hasn't shown profound results since the teacher or the student has problems when
+showing what he's playing on the piano in real time. The accuracy of the app isn't acceptable and
+the relationship between the student and the teacher isn't sturdy like in a live class room.
+Our Solution
+The solution we present
+is a web based system that can be attached to
+any keyboard synthesizer through a MIDI connector (Legacy or USB). Thus, the only requirement for
+the keyboard is MIDI support. Once our system is connected to the keyboard, the user can
+interactively learn, play or teach in combination with the web application that we provide. The user
+has to be logged in as either a typical user or an expert (a tutor) depending on the user's needs.
+Users can
+get connected to each other in the network and they can share their music with each other. Users can
+play shared music in their own keyboard and join to experts to learn remotely in real-time. The
+tutor can handle multiple students at a time. When the tutor plays on the keyboard, those notes will
+be displayed and played in the students keyboards simultaneously. Tutor can upload exercises and
+when a student plays incorrectly, the wrong key presses will be displayed to both the student and
+the tutor. Their is also an offline helper which will assist the user while practicing when
+connected to the mobile phone via Bluetooth.
+Solution Architecture
+Our system consists of two devices: the Processing Unit and the Visualizer Bar which is a
+composition of visualizer blocks. The processing unit can be connected to our server via a home router and exchange MIDI data with the
+server or with another remote processing unit if they are connected in a session. In order
+to communicate with the server there'll be a mobile application as well as a web platform.
+Through the web platform, students or teachers can login to the system and use the facilities that we provide in our system. When a student is logged in, he/she can easily find teachers near their area or based on the teacher's ratings and reviews. The students can interactively learn what the teacher plays remotely due to the low latency real-time key press indication.
+Using the offline helper we provide in the mobile application (which can be used when the device is connected to the mobile via BT), students can practice music with the assistance of the offline helper. Students can also upload sheet music and play them in their own keyboard synthesizer. When they make a mistake, it'll be displayed in the mobile app by highlighting the particular note in the sheet music
+as well as in the visualizer bar. They can also record and store their playings to the cloud and show them to the tutor at any time.
+When a tutor is logged in to the system, he/she can create their own courses or classes within the system. They can also schedule their existing classes. During a class, tutors can independently monitor his students' playings and give feedback to them. The tutor can upload exercises and when the students practice them, their progress will be recorded until the student marks them as finished. Even if the student practices
+the exercises offline, the progress will be stored temporarily in the mobile phone and will be uploaded to the tutor when the student logs in again.
+Previous
+Processing Unit
+The Processing Unit handles all the data processing and remote communications. It
+has two MIDI interfaces (one for MIDI-in and the other for MIDI-out) as well as
+two USB-C ports. One USB port act as a MIDI redirect interface which also allows
+the processing unit to be recognized as a USB device when connected to a
+computer. The other USB port is to connect the visualizer bar in.
+The processing unit also consists of inbuilt Wi-Fi as well as Bluetooth via an
+ESP 32 Development board. Through this the consumer can directly connect our
+device to the internet through their home router and send MIDI data to our
+server or another processing unit in a remote location.
+Visualizer Bar
+The visualizer bar is where all the key press information will be displayed at.
+The bar has to be placed on the keyboard near
+the end where the key hinges are. We provide the visualizer bar as
+easy-to-connect blocks in order for our product to fit any
+kind of keyboard and to make our product portable. The three common keyboard
+sizes are 61-keys, 76-keys and 88-keys. Therefore,
+the blocks are such that it covers an octave. Since blocks might not cover the
+whole keyboard, we provide the visualizer bar as a
+whole for the most common keyboard sizes as well.
+The visualizer bar has a USB-C port at the right end to connect in to the
+processing unit. The visualizer blocks have magnetic
+ends to stay still when they're connected. Left end of a block has a female
+USB-C port and the right end has a male USB-C connection. The bar has RGB LEDs
+representing each key and they will lit according to the key presses.
+Next
+UI / UX Design
+Previous
+Web UI
+Once the user creates an account on this apllication, the processing unit can be connected to it. Then the user can,
+Select and enroll in courses.
+Upload score sheets to the account and play them on the keyboard.
+Create score sheets using MIDI files.
+Record what he/she plays on the keyboard.
+Convert recordings into score sheets.
+Remotely play the student's/teacher's keyboard synthesizer.
+More features will be included along with the implementation of the product.
+Mobile UI
+Once the user creates an account on this apllication, the processing unit can be connected to it. Then the user can,
+Select and enroll in courses.
+Upload score sheets to the account and play them on the keyboard.
+Create score sheets using MIDI files.
+Record what he/she plays on the keyboard.
+Convert recordings into score sheets.
+Remotely play the student's/teacher's keyboard synthesizer.
+More features will be included along with the implementation of the product.
+Next
+Generation of Data
+MIDI - Musical Instrument Digital Interface
+MIDI is standard protocol for communication between computers and musical instruments.
+Made up of an 8-bit command byte,
+generally followed by 1 or 2 data bytes.
+MIDI Commands
+Note on - This MIDI command will be sent when a note is played.
+Note off - This MIDI command will be sent when a note is released.
+After touch - This defines the preassure applied to the key.
+You can read more details about MIDI from here.
+Flow of Data
+When some key strokes are played in a keyboard, the keyboard itself will convert those notes to MIDI data. Then those MIDI data are send to our processing unit and from there the MIDI data can be send to our remote server in order to store or if that processing unit is in a session with a another processing unit those data can be directly send to that processing unit via the internet. Even though the processing unit is not connected to the internet it will generate necessary control signals in order to visualize those notes in the local visualizer bar.
+So if the processing unit is in a session with a remote processing unit the two processing units can exchange MIDI data via the internet. The processing units can send received MIDI data to the keyboard and the control signals to the visualizer bar. Thus, the recipient can here as well as see what the remote sender is playing.
+Frontend
+Frontend Technologies
+For our frontend web platform would be implemented using React.js. React will assure a fast and easy development of the frontend since React provides lots of readymade components to use and React uses javascript it will be easier to coordinate with the backend as well. Other than that React apps can be made SEO friendly by making them server-side rendered rather than client-side rendered.
+Our frontend mobile platform will be implemented using Flutter since it also provides a lot of components to use and Flutter performs well in a lot of mobile devices. Since Flutter uses Dart as the programming language we can use the same codebase for both ios and android applications.
+What we have done so far?
+Click here to see what we have done upto now in the web frontend and click here to see what we have done so far in the mobile frontend.
+Backend
+Backend Technologies
+Our backend computing platform would be Node.js along with express as the framework. It'll assist us in hadling multiple online requests and the working environment will be more effective and better-coordinated since javascript laguage is used in both frontend and backend development. MongoDB will be used as our database system. As the number of users for our product increase, it is very much practical to use MongoDB since it is very easy to scale up or down. MongoDB works on all types of cloud platforms. Since we'll be using aws to host our services MongoDB will be a great choice. NGINX is used as a reverse proxy so we can get access through http, https and Let's Encrypt is used to get free SSL certificates. All our backend services will be hosted using AWS services. An AWS EC2 instance is used run all the processes and AWS backup will be used to automate and manage backups.
+click here to see what we have done so far.
+Hardware Functionalities
+The brain of our processing unit is the ESP32 Development board. As shown in the high-level diagram, it's needed to have a MIDI interface in between the visualizer bar and the keyboard synthesizer for communicating with MIDI messages. The processing unit will be connected to Wifi as well as to the mobile phone via bluetooth. We use this BT connection for the offline helper as well as to authenticate to a Wifi router.
+When MIDI messages arrive at the processing unit either from the user's keyboard or from remotely through the server, the microcontroller will process them and send control signals to the visualizer bar appropriately. The communication between the visualizer bar and the processing unit will happen via an USB interface through a wired connection. The visualizer bar will also need to send signals to the processing unit because in order to light up the correct key on the keyboard, the processing unit needs to know the positional information of the particular visualizer block. So, before the user starts using the system he needs to do a very simple calibration procedure: play both the first note and the last note one after the other that the visualizer bar covers when the app prompts and thereafter the processing unit will memorize which block is where. In order to achieve this, the visualizer bar will also require a microcontroller. We will be using an arduino pro micro for this purpose.
+Security Aspects
+Security Aspects
+Cybersecurity of connected embedded system devices has always been important. Since our system also involves sharing confidential information through the internet such as passwords and online payments, we have taken extra care to ensure the security of the system. The diagram to the right shows how we have designed our system to ensure the CIA triad.
+To ensure the confidentiality of the system, all the data stored in the server will be encrypted with AES or hashed. When connecting the mobile application to the device for the first time or after a long time of inactivity, the device will ask for a password pin. The pin will be sent to the server and if it is correct the device will be allowed to connect to the mobile phone. The diagram itself explains the countermeasures we have taken to ensure the other two cybersecurity aspects.
+Our Secure Design Process
+The following diagram shows our secure embedded system design process. The gray color path is the ideal embedded system design process that anyone would follow.
+In addition to that, we have added a security approach that'll happen in parallel with the embedded system design process. Starting from our concept of operations, we will do a threat analysis while collecting the functional requirements to analyze the potential attacks that the system may be subjected to when deployed. The next step is to specify how our demand measures the security requirements of the system. Once we have the security requirements, we will start developing the security approach after some rounds of evaluations.
+Features
+Previous
+Real-time Keypress Indication
+The visualizer bar will display the keys pressed at one end, in the other end with minimum latency. The key presses will be indicated using a light beam directed to each key. What's being played is heard through the speakers of the keyboard synthesizer
+Schedule Classes and Assignments
+Tutors can schedule classes easily after setting up tutors’ profiles on our platform. Then after supplying the relevant information about the class such as the difficulty, number of lessons, course fee and etc., tutors can schedule classes.
+Then tutors can set up assignments for those classes, so the students can easily submit their recordings through our platform.
+Offline Helper
+The offline helper will give students the assistance need while doing their assignments and while practicing. First student has to choose a song (MIDI File) that wants to practice, then the visualizer bar will visualize the keystrokes so the student can practice. Prallaly to that the application will show the incorrect notes, as well as out-of-tempo notes that the students have played.
+In order to this offline helper to function the device (laptop or Mobile device) should be connected via Bluetooth or wifi so the devices can communicate with each other.
+Recorder
+Using the recorder students as well as tutors can record their piano pieces without bothering about the mic quality and the background sound since the recording is happening in the MIDI format directly through the MIDI output of the keyboard. Since MIDI data are light weight users don’t need to worry much about managing the cloud storage space.
+So the tutors can easily provide sample pieces to their to the students recorded and the students can easily record the pieces that needs to be submitted and submit them to their tutors.
+Next
+Research Findings
+Previous
+MIDI to Sheet Music
+Our product will often use MIDI messages to transmit data between the keyboard visualizer bar and the processing unit. But MIDI itself isn't interactive with most of the beginners. They'll be needing score sheets or sheet music to recognize what to play or, what is being played in his/her keyboard synthesizer. Therefor we'll be introducing a feature in a our web and mobile apps to convert these midi files to sheet music. We'll be using BYVoid/MidiToSheetMusic
+opensource project to acheive this.
+Usage of this project can be found here.
+Next
+Timeline
+19th July, 2021
+Project Proposal(Milestone 1)
+Presenting our project proposal was the first milestone.
+The first project proposal presentation can be seen from here.
+Finished: 19th July, 2021
+23rd July, 2021
+CAD Models
+Build the CAD models for both the processing unit and the visualizer bar.
+Finished: 01st August, 2021
+24th July, 2021
+Sheet Music Read / Write
+Trying to understand how to integrate music scores and tabs into the web application using the flat.io API.
+Intended features :
+1. Feed real-time MIDI data to the sheet music display.
+2. Output the sheet music as a MIDI data in real-time.
+3. Edit / Create sheet music in the web platform both online and offline.
+4. Upload / Download sheet music.
+This research is being paused for now.
+Finished: n/a
+06th August, 2021
+Mobile platform Front-End
+Design and implement a mobile platform front-end.
+Finished: n/a
+07th August, 2021
+Web platform Front-End
+Design and implement a web platform front-end.
+Finished: n/a
+12th August, 2021
+Testing the ESP32 Board
+Wifi and BLE testing.
+Finished: 28th August, 2021
+25th August, 2021
+Database Schema
+The database schema (ER diagrams) for the system has been designed.
+Finished: 29th August, 2021
+29th August, 2021
+Designing backend APIs
+Implementing backend APIs with authentication and authorization.
+Finished: 02nd September, 2021
+29th August, 2021
+Redesigning the high-level diagrams
+The high-level diagrams for the system are being redesigned with the protocols and technologies being used.
+Finished: 28th August, 2021
+30th August, 2021
+Building Schematics
+Designing schematics for the processing unit and the visualizer blocks.
+Finished: 31st August, 2021
+03rd September, 2021
+Progress Review 1(Milestone 2)
+Criteria to be met before the presentation:
+1. Block diagrams.
+2. Circuit diagrams.
+3. Database schemata.
+4. Algorithms / Flow Charts.
+5. UI Designs.
+6. Performance, Power, Security requirements.
+7. Failiure handling.
+8. Sensors and actuatos.
+9. Controller platforms (programming, memory, available
+interfaces, connectivity, speeds, data-rates, built-in units,
+power, security, cost, etc.).
+10. Network technologies and protocols (interfacing, medium,
+bandwidth, security, availability, reliability).
+11. Back-end technologies (programming, storage, accessing,
+backups, security, cost, 3rd party services)
+12. Front-end technologies (programming, data visualization,
+security).
+The presentation for Progress Review 1 can be seen from here.
+Finished: 03rd September, 2021
+04th September, 2021
+Mobile App / ESP32 BT Test
+Test Bluetooth communication and WiFi SSID, Password extraction inside the mobile application.
+Try to send encrypted WiFi SSID and Password to the ESP32 via Bluetooth.
+Finished:
+17th September, 2021
+15th October, 2021
+Testing
+Testing the API, front-end and security testing.
+Finished: n/a
+25th October, 2021
+Progress Review 2(Milestone 3)
+Criteria to be met before the presentation:
+1. Completete back-end and front-end software.
+2. Cloud deployment.
+3. Ability to provide a clear overview of the system.
+4. Ability to clearly explain features and functionalities (including reliability, scalability and security aspects)
+5. Ability to clearly explain implementation details
+6. Attention paid to enhance the user experience of software/hardware components and of the overall product
+7. Details of three or more tests carried out on the software components (what was tested?, why is it important?, how was the test done?, results and findings)
+8. Designs for embeded node hardware.
+Finished: n/a
+Not started yet.
+MIDI Read / Write Test
+Build and test a circuit to read and write MIDI messages using Arduino. An
+introduction to what MIDI is can be found here.
+Finished: n/a
+Not started yet.
+Implement gRPC services for ESP32
+Implementation of gRPC services in the backend for the embedded hardware.
+Finished: n/a
+Not started yet.
+Implement ESP32 gRPC client
+Implementation a gRPC client in the ESP32 and test with the gRPC supported backend.
+(gRPC direct usage w/HTTP2, and not the gRPC transcoding -> REST API)
+1. Connect ESP32 to HTTP/2 Server.
+1. Efficient IoT with Protobuff
+Finished: n/a
+Not started yet.
+Migrating from JSON to Protobuff
+Change the data serialization format from JSON to Protobuff in the backend.
+Compare the performance difference between the two versions.
+Finished: n/a
+Budget
+Our Budget
+Item Name
+#Units
+Per Unit Price (Rs.)
+Price (Rs.)
+ESP32 Development Board
+2
+1, 550
+3, 100
+Arduino Pro Micro Development Board
+3
+1, 130
+3, 390
+5mm LEDs(12 per block)
+36
+4
+144
+RGB LEDs
+2
+15
+30
+3.7V 4000mAh Li-Po Rechargeable Battery
+2
+800
+1, 600
+DIN 5 pin Connector (Female)
+4
+175
+700
+MIDI-to-MIDI Cable
+2
+400
+800
+TP4056 Charger Module
+2
+65
+130
+LTC3440 IC
+2
+130
+260
+6N139 Optocoupler
+2
+34
+68
+BC212 Transistor
+2
+5
+10
+Resistors (220Ω, 680Ω, 2.7k, 6.8k, 10k, 20k, 1M, 200k)
+8 packs of 40 pcs
+40
+320
+Capacitors (100μF, 470μF, 0.1μF, 22μF, 10μF)
+6
+2
+12
+10μH Inductor
+1
+5
+5
+Latching Push Button Switch
+2
+50
+100
+DPST Switch
+2
+30
+60
+Push Button
+2
+5
+10
+PCB Printing Cost
+_
+_
+2, 000
+3D Printing Cost
+_
+_
+2, 000
+TOTAL
+14, 739
+The above BoM is considering two processing units and three visualizer blocks, one processing unit and one visualizer block for tutor's end demonstration and the rest for the student's end demonstration.
+Our Team
+Dinura Dissanayake
+E/17/072 Developer
+Sathira Silva
+E/17/331 Developer
+Shamal Weerasooriya
+E/17/380 Developer
+Our Advisors
+Dr. Isuru
+Nawinne
+Dr. Mahanama
+Wickramasinghe
+Remote Keyboard Tutor
+The Remote Keyboard Tutoring System is a web based system that can be attached to any
+(electronic) keyboard synthesizer through a MIDI connector. Once our system is connected to
+the keyboard, the user can interactively learn, play or teach in combination with the web
+application that we provide.
+Have a Questions?
++94 77 416 1509
+(Dinura)
++94 77 600 7404
+(Sathira)
++94 76 468 5395
+(Shamal)
+bitlasagna.mail@gmail.com
+Or you can put your general Comments / Questions
+here.
+University of
+Peradeniya
+Faculty of Engineering
+Department of Computer Engineering
+Copyright © Bitlasagna

@@ -1,0 +1,146 @@
+Smart Meeting Automaton
+Unified Project
+Menu
+About
+Overview
+Solution
+Design/Progress
+Budget
+Contacts
+SMART
+MEETING
+AUTOMATON
+Find More
+Solution for a Problem
+We have seen some meeting rooms with working AC machines and projectors unnecessarily without anyone in the room, causing a wastage of current. In some cases, it is quite different that the AC machines are not working even almost all the room is filled.
+Other than that, presence of a worker to the meeting venue at the time of meeting, is essential to control different devices of AC machines and projectors. This control process is sometimes complex as it has to be used various remote controllers to control different devices.
+Our solution "SMART MEETING AUTOMATON" resolves almost all the things addressed here.
+System Overview
+SMART MEETING AUTOMATON consists of two major streams.
+Client Application
+Control Unit
+These two streams are connected via AWS cloud.
+Solution Architecture
+Role of Main Control Unit
+Local server on Raspberry Pi is updated automatically for every 10 minutes according to data on remote AWS server.
+In case of Wi-Fi is disconnected, the Raspberry Pi storage can manage the operations.
+Based on direction data of AC machines, projectors, server motors rotates.
+Role of Extending Unit (Optional)
+Receive signals from Main Control Unit as Wi-Fi signals.
+Give signals to AC machines, projectors as IR signals.
+Entity Relationship Diagram
+System has administrator persons
+Administrators create accounts for users(Lecturers/meeting owners)
+Administrators reserves lecture rooms/meeting rooms
+Admins figure out how to control devices in meeting room/lecture room
+Devices within meeting rooms automatically operates according to schedules
+Users can also control devices within the meeting room.(Via mobile app)
+Front-end Software
+Design Architecture
+React
+Dynamic content
+React Hooks
+AXIOS
+Communication with the backend
+Context API
+State management
+Mobile Application
+Back-end Software
+Node.js Express
+Can build scalable, fast and non-blocking I-O backend server
+MongoDB Atlas
+Automatically scale increase cluster storage with the growth of data
+Storage can be maximized with auto-scaling features
+Security
+Password hashing
+Json Web Tokens(JWT) for user authorization
+Authenticated local strategy using email and password
+Authorization using JWT strategy to protect end points
+Access tokens and refresh tokens for user identification
+Data validation before sending them to database
+Software Testing
+Summary Report
+Area of testing
+What was tested
+How was the test done ?
+Purpose
+Expected Results
+Findings
+Server
+Login to the system
+User needs to give correct username and password
+Admin and user have separate authorization methods. So some route need to admin login it will check by The API (User or Admin that are logged in)
+Token is given, if user logged successfully
+Otherwise, anyone can not access the services of the system
+Token is valid for 30 minutes. If a person knows this token within that time, he can access the system. (except for critical operations)
+Server
+Adding user to system and verify
+User need to register for the system
+Need freshly logging of admin
+User needs the verification link that comes to email
+After successfully adding, user needs to login again
+User can be added to the system with an email verifification and only admin can add user
+On success : When admin adds a user to the system, verification email is sent
+New user can only login the system via that verification link
+User is uniquely identified by the email
+User is validated whether he has provided an correct email
+Server
+Adding room
+Delete room
+Delete user
+Need admin fresh login (It expires within 5 mins)
+These operations are allowed only for admin to avoid misbehaviours of the system
+On success : Status code - 200
+Failed operations : Status code - 401
+Admin should verify his login with his password each time when he does these operations
+Unit tests to verify outputs over inputs
+Embedded Systems Testing
+What to test ?
+Why is it important ?
+How will it be tested?
+Admin can add a meeting rooms to the system.
+When a control unit is established, he can add that meeting room to the system with devices giving all configuration data.
+Checking whether configuration data is properly reached to the database and relevant hardware nodes.
+Admin and users can add meeting schedules to the system
+The devices within a meeting room work according to the given schedules.
+Checking whether the projectors or ACs working properly according to schedules.
+Devices work properly with the configured data given by system admins
+The devices within a meeting room work according to the given config data.
+Checking whether the projectors or ACs can work properly.
+Hardware Designs
+Main control unit consists of two major parts.
+Base Part
+It mainly consists of Raspberry Pi
+Other components are LCD display, relay module, sockets to connect bulbs
+Upper Cover Part
+It has few sockets to connect IR transmittors
+So that IR transmittors can be directed exactly towards the projector or AC
+Extending Unit (Optional)
+Base Part
+It mainly consists of NodeMCU unit
+It forwards the signals comming from main control unit to projectors or ACs
+So that, we can give control signals for the devices, that can not be reached be main control unit
+Circuit Designs
+Schematic Designs
+PCB Designs
+Cloud Deployment
+Budget Report
+Find more details from our github project repository
+Visit Now
+Team Members
+Visit Our github Accounts
+Chamath Amarasinghe
+Diwanga Amasith
+Wishwa Madusanka
+Email
+e16022@eng.pdn.ac.lk
+e16025@eng.pdn.ac.lk
+e16222@eng.pdn.ac.lk
+Advisors
+Dr. Isuru Nawinne
+Mr. Ziyan Marikkar
+Essential Links
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya
+Copyright © Smart Meeting Automaton 2020

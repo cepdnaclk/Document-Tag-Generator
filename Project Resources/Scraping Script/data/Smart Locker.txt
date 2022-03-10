@@ -1,0 +1,92 @@
+Smart Locker
+Overview
+Solution
+Mobile App
+Architecture
+Technologies
+Security & Failure Handling
+Testing
+Budget
+Demonstration plan
+Timeline
+Supervisers & Mentors
+Overview
+The Smart Locker is a improvement for the traditional locker where we are trying to provide the lockers for public usage.
+Normal traditional lockers were used privately but as a team we think if lockers can be provided in a public way where citizens will
+book lockers for their access in public places it would be a market opportunity.
+We are as a team will develop a locker with digital improvements where users can unlock the locker by purchasing it online for a certain time period.
+The Lock itself will be developed by a arduino based electronic system where set of lockers will be monitered by a centeralized system.
+Motivation
+People from remote areas travel a long distance to the town in their day-to-day life. Employees come for their jobs.
+Students come for educational purposes such as schools and tuition classes. All these times they carry a lot of things here and there
+because they have to carry everything that they need in one go. So as a team we understand it is very difficult for those people.
+Then we came up with the idea of public lockers for making their day-to-day life easy.
+As a result we also understand that there are many people who can benefit from our solution rather than people who live in remote areas. This led to finalizing our idea as well.
+Our Solution
+⚫ Operable by a phone’s mobile application
+⚫ With map assistant to find where the lockers are
+⚫ Users can book lockers using application for certain duration of time.
+⚫ When booking users will receive a token.
+⚫ User can either use their phone or enter the token number to unlock the locker
+⚫ Token can share with another trusted person for accessing the locker by himself.
+Mobile Application
+Infrastructure and Architecture
+Components Used Inside the Locker
+This system consists of three main segments. The first one is the Locker. Others are
+backend and frontend which is also known as the mobile application. Smart locker includes four main parts.
+There are two input devices and they are Keypad and Ultrasonic sensor. There are two output devices and
+they are LCD display and solenoid lock. The keypad is used to enter tokens and other data. The
+Ultrasonic Sensor, helps the user to detect locker is empty or not. Through LCD display user can observe
+messages from the locker and the token which is entred.
+Initially, general information of lockers is stored in the cloud server database and it provides data to
+the mobile application and lockers. Also, it collects user data through the mobile application and the Locker. Users
+can ask about lockers and it gives details such as availability etc. If the user books a locker, then the
+backend generates a new token and sends it to the locker and user. The main functionalities of the locker
+are handled by the microcontroller and it makes a connection to the server through a Wi-Fi network. In
+advance, as a security feature buzzer is used. Finally, to enhance user experiance two LEDs are used for
+correctly identify whether the lock is in locked mode or not.
+Circuit Diagram
+Database Schema
+Technologies Used
+Security and Privacy
+In Software
+⚫ Prevent unauthorized access from the mobile application
+⚫ Block user IPs using a rate limiter
+⚫ Validate user inputs
+⚫ JSON Web Tokens for authorization
+⚫ JWT signature validation
+⚫ Encrypt the user password in the database
+⚫ Update locker password after every single usage
+⚫ Record login details
+⚫ Block unwanted traffic using built-in AWS firewalls
+In Hardware
+⚫ Durable Solenoid locks and lockers
+⚫ Sound buzzer if something wrong went wrong or malicious thing happen
+⚫ Private wi-fi connection for each cluster of lockers
+Failure Handling
+⚫ Solenoid lock is in Locked state at a power failure
+⚫ Solenoid lock is in Locked state at a server failure
+⚫ Show warnings to users
+⚫ Data fetched from sensors are stored within the device for a certaion period
+⚫ Send that data again to the server to mitigate if lost updates happen
+Testing Plan
+Budget
+Demonstration plan
+We are implementing two lockers as a bunch with the functionalities described above.
+Then an item is put in one locker. So it is unavailable. One of our team members books the
+available locker using the mobile application with map assistance. Then he opens it through the mobile
+app and puts something in it. Afterwards, he shares the token that he received with another team member. This other
+guy opens the same locker using the mobile application as well as the keypad by entering the token. Moreover, after
+expiring the time duration, the owner cannot open the locker furthermore.
+TimeLine
+Supervisers
+Dr. Isuru Nawinne
+Dr. Mahanama Wickramasinghe
+Mentors
+Mr. Dinidu Thilakarathna
+Group Members
+PGAP Gallage - E/17/091
+KPCDB Jayaweera - E/17/144
+KHSP Kodagoda - E/17/168
+Project Page
+Github Project Repo

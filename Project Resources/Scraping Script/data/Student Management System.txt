@@ -1,0 +1,14 @@
+Student Management System | e16-co328-Student-Management-System
+e16-co328-Student-Management-System
+Student Management System
+Student App
+Desging diagrams
+Interaction perspective - use case diagram
+left - teachers app
+right - students app
+Structural perspective - class diagram
+left - teachers app
+right - students app
+Behavioral
+perspective - Activity diagram
+Databse design - ER diagram

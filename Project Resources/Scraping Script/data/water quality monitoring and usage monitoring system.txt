@@ -1,0 +1,347 @@
+Project site
+Toggle navigation
+×
+Github Repo
+Water Quality and Usage Monitoring Device
+Check your tank with care
+Intro
+How It Works
+Team Members
+Components and Technology
+Advisors and Mentors
+Work Done So Far
+Intro
+Problem
+Water mismanagement and consumption of poluted water is a major challenge, the world is facing currently.
+Current market is yet to address this issue with an effective solution. The solutions that are currently
+present on the market are either too expensive for domestic usage or does not meet the user expectations.
+Solution
+To overcome these issues, we are propossing a device which can be used to measure the water quality of the
+inlet of a water tank and the water level inside the tank. We expect to target both domestic user requirments
+and industrial user requirements by a reasonable price (click here for budget) User can access to the data using a mobile application.
+Water level Monitoring
+By using an ultrasonic sensor, water level will be monitored and when the tank is nearing to finish filling, user
+will be notified. We use ultrasonic sensor because of it's high accuaracy and sensor is not easily effected by
+water. Also this will generate the usage reports of the water and allow user to observe the current water level
+in the tank if needed. This measurement also allows to rationing of water and user will be warned in case of overusage.
+Water Quality Monitoring
+TDS count – by electric conductivity of water
+The presence of dissolved solids in water may affect its taste.The palatability of drinking-
+water has been rated by panels of tasters in relation to its TDS level as follows:
+excellent, less than 300 mg/litre;
+good, between 300 and 600 mg/litre;
+fair, between 600 and 900 mg/litre;
+poor, between 900 and 1200 mg/litre;
+unacceptable, greater than 1200 mg/litre
+Water with extremely low concentrations of TDS may also be unacceptable because of its flat,
+insipid taste. Click here for see WHO guidelines for drinking water quality
+Turbidity – by measuring scattering of light in water
+Turbidity, which is caused by suspended chemical and biological particles, can have both water safety and aesthetic implications
+for drinking-water supplies. Turbidity itself does not always represent a direct risk to public health; however, it can indicate the
+presence of pathogenic microorganisms and be an effective indicator of hazardous events throughout the water supply system,
+from catchment to point of use. For example, high turbidity in source waters can harbour microbial pathogens, which can be
+attached to particles and impair disinfection; high turbidity in filtered water can indicate poor removal of pathogens; and an
+increase in turbidity in distribution systems can indicate sloughing of biofilms and oxide scales or ingress of contaminants through
+faults such as mains breaks.WHO says that for dinkable water turbidity must be below 5NTU and should be low as possible like 0.1NTU
+Click here to download the review done on the turbidity by WHO.
+For these 2 measurments, TDS sensors and Turbidity sensors will be used and their readings will be analyzed with ideal water
+quality levels and determine the water quality of the incoming water to the tank during a filling and notify the user if there
+is any contamination in the water. We use these 2 sensors because by using these 2 readings we can determine most of the
+characteristics of water.
+How It Works
+This diagram shows the overall implementation of the system.There are sensors to get the data, server to handle the clients.The system works as below steps.
+Sensors reads the data
+Sends the data to the server
+Server sends the data to the clients
+According to above steps, firstly sensors read the data. The ultra sonic sensor is situated inside the tank and the turbidity sensor is situated inside the water pipe which uses to fill
+the tank. The readings from these sensor are sent to the atmega chip and by using a wifi module those readings are sent to the server. From server, relavant data sends to clients accordingly.
+Client may be a mobile user or pc user. When consider the mobile users, by using the mobile app, clients can check the level of water filled to the tank and also can see the water purity percentage.
+When consider the pc users, they can log into the website and get the above details. There is an alarm module to function without any internet connection which is helpful when the client has no internet access.
+And it can be implemented according to the clients' desire. Clients can also get daily usage details via the website.
+Team Members
+Harshana Bandara
+E/16/049
+S.D.M.V.G.H.N.Bandara
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya
+Yasitha Herath
+E/16/134
+H.M.Y.B.Herath
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya
+Thushara Weerasundara
+E/16/388
+W.M.T.M.P.B.Weerasundara
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya
+click on images to visit github pages of the members
+See more..
+Components and Technology
+HTML , CSS and JS
+HTML is a simple and dominant language to formatting web pages.It supports every browser .HTML Combined with CSS and JS can be used to give client an elegant and yet fast experience
+Flutter
+Flutter is free and open source UI framefork which is able to cross platform developments.The language used in
+flutter is DART which is optimized for UI development.
+MQTT
+Protocol which allows efficient data distribution with lightweight overhead and with high sclabability
+Reduce bandwidth consumption so the client can have maximized available bandwidth.
+MongoDB
+High scalability and better for cloud services
+NodeMCU
+Provides the connectivity between the device and server.low cost which reduce the prie of the product and low energy consumption
+which is essential to a long battery life of the devise.
+Ultasonic Sensor
+Reliable hardware for measuring short distances with a sufficient accuracy
+Mentors
+Dr.Isuru Navinna
+Senior Lecturer
+Dr.Zian Marikkar
+Senior Lecturer
+Work Done So Far
+GUI prototype
+GUI was designed with the aid of figma.Click herefor experience the GUI
+Circuit Designs
+Click this link to see more about our Circuit Design
+Hardware Testing and Simulation
+Hardware Components are simulated in Tinkercad. click here to see more
+Our Front End Implementation
+Web Site
+Our web site UI is designed to give a user friendly experience to the customer in a very simple manner.
+It uses dynamic web pages to interact with users therefore fast responses can be obtained with less data
+usage.
+Role Based Access
+This offers different user expirience to the user depending on the role of a user.
+3 roles in our system are,
+Super Admin - Give access to Admin Users
+Admin - Supervise Users (Customers)
+User - Customers
+Implementation
+Uppon registration to the service, each user should confirm their account using their email account by clicking on a generated url
+User actions are based on their roles and authorization middleware monitor and control those ations accordingly.
+authorization middleware make sure,
+Verify / Idenify users and roles
+Users don't access unauthorized locations and perform unauthorized actions
+Redirect users on unauthorized locations and unauthorized actions
+Customers can login and monitor their devices. They can monitor,
+Daily Usage of water
+Monthly Water Usage reports
+Water Quality of their tanks
+Admins can monitor the system and manage customers, also they can provide customer support.
+Their tasks include,
+Send notices to users
+Edit and remove customers
+Monitor devices with issues
+Super Admins can allow access to the admin users to the system and remove admins.
+Web Site Views
+1. Customer UI
+Log In
+Daily Usage
+Monthly Usage
+Sign Up
+Getting User Details
+Demonstration
+2. Admin UI
+Admin View
+Delete a User
+Update a User
+Demonstration
+3. Super Admin UI
+Admin View
+Create Administrative User
+Delete an Admin
+Demonstration
+Mobile App
+App with limited access for customers
+App uses validate methods when a user does a login attempt to avoid un-necassary requests to the server
+Login Screen
+Home Screen
+Tank Details
+Invalid email
+Invalid Password
+Tank info
+Tests Conducted
+1. Penetration Testing
+Several Penetration Tests were carried out in order to check vulnerabilities in our backend
+system. Tools used on those tests are
+Wire Shark
+BURP Suite
+Dirb
+Nmap
+Sqlmap
+Nilto
+Results
+Using wire shark we conducted packet sniffing tests. As a result of that we observed information exposed in requests.
+Using Dirb we tested using a brute force attack to check vulnerabilities in every directory/object of our website and server.
+We managed to identify exposed endpoints by the test.
+Using BURP Suite and Sql map we tried to conduct a sql injection attack but attack was failed due to security measures in our
+server.
+Using nmap and nikto we tried to obtain information about the web server and it's components. We managed to get server type, OS,
+open ports, vulnerabilities in our content policies, server capabilities. These information could be used for DOS, DDOS, sql injections
+Packet Sniffing
+End Point Responses
+Security Headers
+OS information
+Security Headers
+2.Unit and integration Testing
+Unit test are carried out to check the functionality of the seperated functions and integration tests are used to test user creation and roles, to test sensor
+readings storing and validity.Below tools are used to test these.
+Mocha
+Chai
+Tests
+Results
+Conclusions
+Only the users with unique and valid credentials can sign up
+Only the admin can get the signup data, redirection to the adminSignup view
+Only the valid sensor data is stored , guarantee the quality of the sensors
+Any user with different roles can log by giving correct credentials
+We implemented our security measures using these results.
+Security Aspects
+https server
+Using self signed certificates using open ssl for devolepment purposes. This protects sensitive
+information by encrypting, thus protects from outsiders.
+Using Credentials to Authenticate Users
+Users are authenticated by using passwords. These passwords are hashed therefore even the database is
+compromised, passwords are safe therefore attacker cant use it.
+Using cookies for Track Sessions
+For successfull authentication of a user, user will be issued a jwt tocken. Using that token user will be
+authenticated. Since tocken is sent via https it is secured. Also secure tag and httponly tags are set therefore
+no one can manipulate the tockens from browsers and use undetected.
+Role Based Authorization
+Server uses middleware to authorise users in server. Therefore each user will be limited to actions pre defined
+for his corresponding role.
+Setting Rate Limits Per User
+By setting x rate headers, number of requests from a user are monitored and limited. If rate is overflowed 429 status
+is returned. Thus protecting from dos attacks.
+Request burst tracking
+Server tracks number of requests received in a given time. If the number of requests go pass that number, server will
+take predefined necessary actions. This gives protection from ddos attacks.
+Hiding Server Information
+By hiding server type, OS, database information and capabilities server has protection from attacks sepecially designed
+for our server. Also using content policies we can have protection from sql injection attacks.
+Embeded Hardware Designs
+Components List
+Ultra Sonic Sensor - U1
+Water Level Monitoring.
+ATMEGA328P chip - U2
+Microcontroller chip.
+DC-DC step down Buck converter - U3
+Voltage Controller.
+Li Battery Charger - U4
+Battery Charging module.
+Turbidity Sensor - U5
+Turbidity Measurement of Water.
+TDS Sensor - U6
+TDS Measurement of Water.
+Flow Meter - P1
+Water Usage Monitor.
+NODEMCU - MK1
+Internet Connection Module.
+Speaker - SP1
+Warning System.
+Reset Button - SW1
+Power Button - SW2
+Designs made for fabrication
+Embeded System
+Water Quality Monitoring Module
+Water will enter this module and Quality Measurements will be recorded. Readings will be taken as analog inputs.
+Water Usage Monitoring Module
+Water Usage will be recorded using this module. Readings will be taken by external inturrupts in microcontroller chip.
+User Expirience Optimization
+Using Solar Power
+Ability to Perfrom during Blackouts
+Protection from Environmental Conditions
+User Freindly UIs
+Faster Response time due to dynamic web pages
+Scalability
+Using Nginx to run multiple servers to load balancing.
+Using Proactive scalling features in MongoDB to scale database to support high traffic events.
+Each user can monitor multiple devices using a single app.
+Reliability
+In case of a server failure, another server will responds to requests.
+Thoroughly calibrated and tested sensors.
+Cross platform application.
+Plan For The Embeded Systems Testing
+There are two parts of our embedded system testing plan.Those parts are showed below.
+Hardware Testing
+Node Software Testing
+Aim is to ensure the reliability of our product by doing these tests.
+Hardware Testing
+In this we do tests when soldering and to test the functionality of the sensor devices.
+When soldering we do below steps,
+Soldering and testing the power sections one by one
+Solder the relavant wires from the sensors with microcontroller and test the basic functionality
+check the connectivity
+To check the connectivity we use oscilloscope or logic analyzers.
+To do the sensor testings for turbidity sensor and TDS count sensor we use glasses with water which desolved with different kind of substances as below.
+By dipping the sensors inside the water glasses we test the functionality of the sensors and how the readings change according to the difference of water. By those readings we can calibrate the sensor readings accordingly. And also we can detect if the sensors are deffected by checking the sensor readings.
+To test Ultrasonic sensor we can use above glasses with different water levels and do the same tests.
+Node Software Testing
+In this testing we do test to check variable overflows, compiler optimizations and typing mistakes.
+We use below techniques to do the debugging.
+Debug breakpoints
+Disassembly window
+Call stack window
+And also we are planning to check the real time sensor readings are showing on our web site and the app. By this we can make sure that the interaction between node software and backend works correctly.
+Embeded Software Explanation
+This device utilizes the services of Arduino UNO R3 board which has ATMEGA328P U chip and NodeMcu ESP-12E board for WiFi connection.
+Let's consider the working procedure of the device step by step.
+Device Initialization
+When the device is powered up, NodeMCU will creates a WiFi server on port 80 under the url of www.aquawatcher.com using "DNS" and "WebServer" modules. We can connect to that network and set up user details and tank details. Then we can enter our WiFi network details as well. Those details will be stored in EEPROM memory of the device until they are updated. Therefore user won't have to set those values again on reboot.
+We can reset the above details by pressing reset button and going through the same procedure as before.
+Thereafter, server will be closed down and normal procedure of the device will occur.
+Working Procedure
+Water Level will be measured using Ultra Sonic sensor using an analog input pin. This will be used to get tank size as well.
+Water Usage will be measured using a Flow Meter using external inturrupts.
+Water Quality will be measured using TDS and Turbidity Sensors using an analog input pins.
+All the above modules will use their own custom libraries.
+Readings will be taken periodically.
+When the water is contacted with the sensors, device will identify water is filling.
+Then the device will start sending new data to the server.
+When an issue occurs regarding water level or quality, an alarm will be set off using Tone function.
+Water quality standards are preseted values.
+Communication between 2 boards will be done using serial communication. Extra pins in NodeMCU board was set as serial pins using Softwareserial library.
+Solar panels are intergrated as power source.
+Device Installation
+Water Level Monitor
+Water Quality Monitor
+Water Level Monitor
+1st empty the tank
+Then Install the "Water Level Monitor" inside of the closing lid of the tank. Make sure it is levelled
+Water Quality Monitor
+1st remove the inlet of the tank.
+Then Install the "Water Quality Monitor" to the inlet and then insert inlet pipe to the back of the device.
+Make sure to expose the device to direct sun light if you choose to use our solar panel intergrated version..
+Getting Started
+There are two parts of setting up the device.
+Device Initialization
+Connect to WiFi network
+Device Initialization
+1st we need to store user email and tank number in the device. 1st connect the device to the power, then connect with "AquaWatcher device Setup!" wifi network. Then go to the address www.aquawatcher.com and provide information.
+It will be convinient to you if you installed our "AquaWatcher" app on your android/iOS device as well.
+Connecting to WiFi
+Then wifi network "Aqua Watcher" will be available and connect to it. Then go to manage wifi network and enter your wifi network information.
+Start Operation
+You can now start to fill the tank.
+You don't have to keep monitor the device. It will send notifications when,
+Tank is almost full
+Water pollution is detected
+Tank is nearly empty.
+Water cuts and relevant details regarding to water suplyer.
+You can monitor your devices via our website www.aquawatcher.ml as well.
+Our services will include direct interactions with National Water Supply and Drainage Board for your convinience as well.
+Cloud Deployment
+A Node.js based server is deployed in an aws ec2 instance.
+URL of the website is www.aquawatcher.ml .
+2 webservers are handling requests and they are configured using nginx. Round robin method is utilized.
+Admin access is restricted to certain ip addresses and ports to prevent unauthorized requests to admin endpoints.
+Database is a MongoDB implementation.
+Database access is restricted to unknown ip addresses.
+Database takes snapshots of it self to keep backups.
+Future Plans
+Water leakage detection functionalities.
+Extend the compatibility to other chemical types to install with chemical tanks.
+Set automatic valves.
+Improve app and server architecture.

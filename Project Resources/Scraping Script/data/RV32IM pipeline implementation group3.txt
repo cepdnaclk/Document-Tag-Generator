@@ -1,0 +1,35 @@
+RISC-V 32 bit CPU
+RISC-V 32 bit CPU
+Home
+Blog
+planning
+Posted On July 2nd, 2021 .
+Instructions and encoding.
+Datapath and control, hardware units and signals.
+Continue Reading →
+ALU and Register file
+Posted On July 3rd, 2021 .
+ALU
+Register file.
+Other hardware units.
+Continue Reading →
+control unit
+Posted On July 7th, 2021 .
+Analysis of the controll unit behaviour to different instructions
+Finalizing the convention of the multi-bit control signals outputs.
+Continue Reading →
+Intergration & Testing
+Posted On July 24th, 2021 .
+Intergrating all the units together.
+Hazzard handling is done with assembler for now.
+Continue Reading →
+Hazard Hanndling
+Posted On August 24th, 2021 .
+Implemented two fowarding units in stage3 and stage4.
+Implemented a flushing unit to flush the data in pipeline registers in stage1 and stage2
+Continue Reading →
+Phase2: Shared Memory MPSoC
+Posted On October 22th, 2021 .
+Implemented a Shared MPSoC system that uses a snoop bus and snoop controller to handle data sharing
+Implemented a chache with a state machine based on the MESI protocol
+Continue Reading →

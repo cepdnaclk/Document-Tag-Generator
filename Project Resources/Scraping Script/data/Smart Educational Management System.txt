@@ -1,0 +1,41 @@
+Smart Educational Management System
+Projects - Department of Computer Engineering
+University of Peradeniya, Sri Lanka
+Smart Educational Management System
+Team
+E/15/246, R.L. Opanayaka, rajithaopanayaka.ro@gmail.com
+E/15/385, S.P.A.P.E. Weerasinghe, amilaweerasinghe677@gmail.com
+E/15/233, P.N.N. Muthucumarana, nipunimuthucumarana@gmail
+Table of Contents
+Introduction
+Solution Architecture
+Hardware & Software Designs
+Testing
+Links
+Introduction
+Smart Educational Management System (SEMS) is specially designed for schools, colleges and institutes to automate the institutional processes. Use of SEMS makes your institution eco-friendly as all data and your reports are stored on the server, the use of paper and files are necessary only when needed. Attendance of students can be marked by taking the fingerprint using a device with an embedded system. SEMS is very affordable and comes with no limits on the number of students, teachers and parent logins. This system is highly secured and the automation helps in reducing costs and brings a lot of savings for you.
+Solution Architecture
+Smart Attendance Marking System (SAMS)
+Hardware and Software Designs
+Milestone 1-Project Evaluation one
+What we have completed up to now
+Finger print end node
+-Taking inputs from finger print sensor
+-Enter ID from each user
+-Enroll, Search, back function implementation
+We are capable of
+Enroll a new user
+Search for a enrolled user
+Web app
+-Implemented user login registration
+-Implemented retrieving and storing from Mysql DB using php backend
+Changes made
+-As with more relational connections occured in EER diagram we tend to use MySQL(realtional) instead of firebase(non-realtional)
+Testing
+Test plan PDF
+Links
+Project Repository
+Project Page
+Department of Computer Engineering
+University of Peradeniya
+Back to top

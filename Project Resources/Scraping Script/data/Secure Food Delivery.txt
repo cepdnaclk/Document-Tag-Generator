@@ -1,0 +1,175 @@
+Secure Food Delivery
+Home
+About
+Architecture
+Design
+Security
+More
+Testing
+Budget
+Timeline
+Conclusion
+Team
+Want to deliver your order to the doorstepmore secure manner?
+Secure Food Delivery
+Let's explore the new way to get your order !
+Project Repository
+Current Scenario
+As we are really busy with our day-to-day life, almost everyone is like to have their meal wherever and whenever they want.
+So, online food delivery services are really famous and very popular among people. There are so many food delivery services in Sri Lanka and there are huge beneficiaries also.
+Motivation
+There are some services, that are providing online food delivery services already. But, there are some serious issues regarding those services. The main thing is about security (Reliability/Trust).
+In this particular area, those questions 'How far do we can trust those services? as a customer and 'How far do we can trust those services? as a restaurant owner can occur.
+There are two major roles here. The first one is the restaurant owners who provide food through delivery services and the second one is the customer who orders food through delivery service (Website or Mobile App).
+We saw some complaints and some news about stating 'not delivering the ordered food accordingly' from the customers. Also, we could see those restaurant owners could not do anything about it since the delivery service provides the service of delivery. But they have an issue with their customer's trust. This becomes a problem in good service and we want to give a solution that would help to develop the online food delivery services more reliable.
+Our Solution
+As it becomes a real-world problem, we thought about having a solution for that.
+We provide a smart locking system for the food delivery carrier, which can only be accessible from two ends. The person from the restaurant side providing food can unlock the container using an RFID card and put the order into it. After locking the container, it can only be unlocked by the customer using an OTP or an RFID card, or both.
+That must satisfy customers as it can't be opened within the delivery. So, they can trust whatever they buy. And also both client and customer have proof about the delivery.
+Design Architecture
+Solution Architecture
+The solution architecture consists of both software and hardware node. In the software node, there is an API that is responsible for handle data. Also, there is a mobile APP that will use to access the lock, and the client system is the one that assigns a particular order to the related delivery carrier.
+In the hardware node, using a microcontroller, the carrier will be locked with a digital lock. To unlock the delivery carrier, an RFID tag or OTP will use through the mobile app. If there is an unauthorized opening then it will be detected. By using an LCD display, the necessary information such as OrderID that is in the carrier at that moment; will be displayed.
+Control and Data flow
+In the control and data flow, there are three significant roles in the system. They are restaurant admin, regular customers, and delivery riders.
+Once a regular customer ordered foods through the existing online food delivery service system, he will get an Order-ID. Then on the restaurant side, the restaurant admin will confirm the order and put the order in one of the available motorbike carriers by using provided RFID tag for that restaurant. In this process, the restaurant admin will confirm the order with that particular Carrier-ID. Then, the mobile number of that regular customer who ordered the food; will be sent to the SFD API with the Order-ID and Carrier-ID.
+In the SFD API, the OTP (One-Time-Password) will send to the customer. Also, API will search for the mobile number in the database to check whether that customer has registered for the RFID tag, then if yes, the relevant RFID code will send to the microcontroller.
+Once the regular customer logs into SFD's app, and if he entered the correct OTP then an unlocking signal will be sent to the microcontroller through the API. Here is the delivery rider's job once he confirms that particular order has arrived at the customer's place, then only the locker is available for the customer to unlock. Until then, the customer is not allowed to open the delivery carrier and that will display to the customer through the mobile app.
+Here is the delivery rider's job once he confirms that particular order has arrived at the customer's place, then only the locker is available for the customer to unlock. Until then, the customer is not allowed to open the delivery carrier and that will display to the customer through the mobile app.
+In the locking system, there is an unauthorized opening detection unit for the delivery carrier. Whenever the delivery carrier opened, it will generate an interrupt signal, if the unlocking signal from the API is not present at the microcontroller, it will alert the API as an unauthorized opening. Otherwise, the interrupt will ignore.
+The current status of the delivery carrier will display through the LED indicators, and the current order's Order-ID will display on the LCD screen.
+Design of the System
+Database ER Diagram
+Hardware - Power, Data, and Control Flow
+Circuit Design
+Delivery Box 3D Model Design
+UI Design
+Welcome Page
+This is the landing page of both customer and rider
+.
+Register Page for Customer
+If any customer wants to register in SFD service
+they can register by providing above details
+.
+Login Page For Customer
+To unlock the device, customer has to login in to the SFD app
+by providing contact details and the order id
+.
+Unlock Page using OTP
+After successfully logged in
+customers can unlock the device using OTP
+.
+Register Page for Rider
+If a rider wants to register in SFD service
+they have to provide above details with pre registered Device ID
+.
+Login Page for Rider
+Riders can log in to the app using contact details and the password
+.
+Order List Page for Rider
+After rider login, they can see their assigned orders
+also they can confirm orders by clicking the arrow button
+.
+Previous
+Next
+Hardware Components
+Microcontroller
+Communication Device
+Locking Device
+LCD Display
+RFID Sensor
+Unauthorized Access Detector
+BMS
+ESP32 Devkit V1
+Microcontroller unit of the system
+240 GHz Dual Core Processor
+4MB flash memory
+32-bit architecture
+512 KB RAM
+GPIO pins
+Peripherals (ADC/DAC/SPI/UART/I2C/PWM)
+Total of 30 Pins
+SIM800L GSM-GPRS EVB V2
+Communicational device of the system
+Communicate via GPRS
+Quad-band 850/900/1800/1900MHz
+AT Commands interface with “Auto Baud” detection
+Connect via UART protocol
+Clock Rate : 256kHz
+Data rate : 1.2 kbps - 115 kbps
+Consumes 2A in active mode, 0.7A in sleep mode
+12V Solenoid Lock
+Draws 650mA at 12V
+1-10 seconds long activation
+20x4 LCD Display
+20 Characters x 4 lines
+Connect via I2C interface
+LCD consumes 2mA
+Backlight consumes 40mA
+MFRC522 RFID Module
+Data Rate : 420 kbps
+Clock speed : 13.56 MHz
+Communication with Microcontroller over 4 pin SPI
+13 - 26 mA current consumption
+A3144E Hall Effect Sensor
+Operating Voltages : 4.5-24 V
+Maximum current : 25mA
+4S Battery Management System
+4 cells in series
+Maximum rated charge/discharge current : 30A
+Charging voltage : 16.8 V
+Balance current : 60mA
+Software Technologies
+Flutter
+For the implementation of the mobile aplication, Flutter has chosen as it supports both android and IOS applications with single code base.
+NodeJs
+To built the API, Node.js javascript runtime enviroment is used.Single treaded non-blocking operations, make the speed of the application much higher.
+MySQL
+As the database, the API uses a relational database.MySQL is used to build the relational database for the API.
+AWS Services
+AWS EC2 Service is used to host the API.For the MQTT connections, the AWS IoT Core is being plan to use.
+Security
+Security is the most important thing in the IT world right now.
+In our solution, we have deeply considered the security point of view of our system.
+We have developed our system with the help of the following techniques to enhance the application security in our solution.
+JSON Web Tokens (JWT)
+For authentication purposes, our API uses the JSON Web Token to ensure integrity.
+In the successful event of login, the user must receive a JWT, which is signed by the server.
+Whenever the client wants to communicate with API (after the login stage), it has to pass that returned token with the
+request.
+If somehow the token is modified, API would deny access to the data.
+Input Validations
+User Inputs are the most common way to commit a malicious attack.
+To prevent such scenarios, we validate the user input from both the front-end application and the back-end API.
+If inputs are not in the correct order, in the front-end, it denies the inputs. And from the back-end, it denies the request.
+Encrypt Sensitive Data
+Although we are using a relational database to work with data, we do not directly store sensitive data on the database.
+For that, we encrypt the sensitive data on the API with the help of well-known powerful libraries and then store those in the database.
+SSL/TLS Communication
+To ensure secure communication between the mobile application, and the API, we used the HTTPS protocol to securely transmit the data.
+With that, we can guarantee the message's integrity as well as the confidentiality of the data.
+In our API itself is secured with AWS EC2 security features. Hence the security of the system is more in an advanced manner.
+MQTT Broker Authentication
+Hardware to hardware communication (API and the Microcontroller), we have used the MQTT as the messaging protocol.
+For that, we have currently used AWS IoT Core as an MQTT message broker, which is a secured private message broker that requires certificate-based authentication for the MQTT clients.
+Testing Plan
+Budget
+Project Timeline
+Our Team Members
+Mahela Ekanayake
+E/17/083
+Lahiru Pathum
+E/17/405
+Nadeesha Diwakara
+E/17/240
+Our Advisors
+Dr. Isuru Nawinne
+Dr. Mahanama Wickramasinghe
+About Us
+We are a group of undergraduates from Department of Computer Engineering, University of Peradeniya. This system was implemented as our third year project.
+Mail to us
+Quick Links
+Project Repository
+Department of Computer Engineering
+Faculty of Engineering
+University of Peradeniya
