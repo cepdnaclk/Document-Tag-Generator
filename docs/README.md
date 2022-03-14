@@ -3,13 +3,13 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
+repository-name: e17-co328-Document-Tag-Generator
 title:
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# Document Tag Generator
 
 ---
 
@@ -19,9 +19,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  e17100, Gunathilaka R.M.S.M, [email](mailto:e17100@email.com)
+-  e17246, Perera K.S.D, [email](mailto:e17246@email.com)
+-  e17284, Rathnayake R.L.D.A.S, [email](mailto:e17284@email.com)
 
 ## Table of Contents
 1. [Introduction](#introduction)
