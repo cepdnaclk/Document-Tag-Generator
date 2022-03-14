@@ -19,9 +19,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 
 ## Team
--  e17100, Gunathilaka R.M.S.M, [email](mailto:e17100@email.com)
--  e17246, Perera K.S.D, [email](mailto:e17246@email.com)
--  e17284, Rathnayake R.L.D.A.S, [email](mailto:e17284@email.com)
+-  e17100, Gunathilaka R.M.S.M, [email](mailto:e17100@eng.pdn.ac.lk)
+-  e17246, Perera K.S.D, [email](mailto:e17246@eng.pdn.ac.lk)
+-  e17284, Rathnayake R.L.D.A.S, [email](mailto:e17284@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
