@@ -3,16 +3,11 @@
 ---
 
 
-## Team
--  e17100, Gunathilaka R.M.S.M, [e17100@eng.pdn.ac.lk](mailto:e17100@eng.pdn.ac.lk)
--  e17246, Perera K.S.D, [e171246@eng.pdn.ac.lk](mailto:e17246@eng.pdn.ac.lk)
--  e17284, Rathnayake R.L.D.A.S, [e17284@eng.pdn.ac.lk](mailto:e17284@eng.pdn.ac.lk)
-
 # Table of Contents
 1. [Introduction](#introduction)
-2. [Local Installation](#other-sub-topics)
+2. [Local Installation](#local-installation )
 3. [Links](#links)
-
+4. [System Organization](#architecture)
 ---
 
 # Introduction
@@ -34,17 +29,6 @@ Our plan is to build an ML model to generate relevant tags. The data needed to i
 * [API repository](https://github.com/cepdnaclk/projects.ce.pdn.ac.lk)
 * [API site](https://api.ce.pdn.ac.lk/)
 
-<br></br>
-___
-***Project Owner : Mr. Nuwan Jaliyagoda*<br>
-*Scrum Master: Mr. Thushara Bandara***
-___
-<br/>
-
-## ✨Our Team
-#### E/17/100 - Gunathilaka R.M.S.M
-#### E/17/246 - Perera K.S.D
-#### E/17/284 - Rathnayaka R.L.D.A.S
 ---
 
 <br/>
@@ -83,7 +67,9 @@ python3 stat_script.py
 # Architecture
 ___
 
-___![architecture](https://user-images.githubusercontent.com/73388013/158224802-7eb90279-1bba-4147-9723-217a4cb89885.png)
+___![image](https://user-images.githubusercontent.com/73387610/158681110-130895f6-e7b0-41f9-a79c-a430109eeb8e.png)
+
+___![architecture](https://user-images.githubusercontent.com/73387610/158680952-006d1fe0-232e-4c90-b506-8bebe55ea301.jpeg)
 
 
 In department projects website, frontend, and backend are already implemented. According to the current implementation, users can search projects using tags. But the tagging was done using a simple algorithm such that it checks whether the project description contains the searching tag. Our goal is to implement a machine learning model, which can do tagging in a much better way.
@@ -99,7 +85,17 @@ When new project is added to the department project website, we need to run the 
 
 Since project pages and project repositories are update regularly, we hope to run the ML model weekly. 
 
+<br></br>
+___
+***Project Owner : Mr. Nuwan Jaliyagoda*<br>
+*Scrum Master: Mr. Thushara Bandara***
+___
+<br/>
 
+## ✨Our Team
+#### E/17/100 - Gunathilaka R.M.S.M
+#### E/17/246 - Perera K.S.D
+#### E/17/284 - Rathnayaka R.L.D.A.S
 
 
 
