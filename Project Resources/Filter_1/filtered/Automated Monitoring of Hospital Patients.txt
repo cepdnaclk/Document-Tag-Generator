@@ -1,0 +1,20 @@
+Automated Monitoring of Hospital Patients
+Automated Monitoring of Hospital Patients
+CHATHURANGI E.	E/14/054
+WITHANAGE K.	E/14/413
+DISSANAYAKE D.M.S.N.B	E/14/084
+Table of Contents
+Solution Architecture
+Hardware & Software Designs
+This study develops a remote monitoring diagnostic framework to detect condition of patients in real-time which helps avoiding potential diseases.This system will be basically used in hospitals and medical centers. The proposed system has an embedded micro controller connected to a set of medical sensors (the sensors would differ according to the condition of the patient) and a wireless communication module (Bluetooth) . Each bed in the ward
+is considered as a node in a wireless sensor network and connected to a central node installed at the main monitoring location in the ward through an internet connection. The embedded micro controller checks if the patient health status is going well or not by analyzing the scanned medical signals. If even one of the sensing values goes out of the range, the monitoring system will indicate with an alarm that the particular patient is under a serious condition. If the condition is critical, then the system will automatically alarm the on-call doctor through a message. The medical report of each patient will be recorded separately and the overall details of each ward will be monitored by the hospital board. This system will be also helpful in reducing all the paper work done at hospitals as the records of each patient by the time he gets checked in till time he gets discharged will be recorded. The following aspects will be addressed by the system mainly.
+*Remote monitoring
+*Identifying emergency situations
+*Low cost
+*Data acquisition efficiency
+*Emergency data report
+*Scalability
+Solution Architecture
+Hardware and Software Designs
+Watch
+Back to top

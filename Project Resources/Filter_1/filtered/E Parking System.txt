@@ -1,0 +1,50 @@
+E-parking system
+QuickPark
+Menu
+Home
+About
+Design
+Progress
+Development
+3D Models
+The Fastest & Easiest Way To Manage Your Parking Lot
+Assign parking spots and manage payments with ease
+About us
+The motivation behind our product
+Urbanization has led to quick and efficient parking being vital.
+Human-operated parking lots have a lot of inherent flaws.
+An autonomous parking system could address these issues effectively.
+Why choose our product
+Manual systems are highly inefficient and leads to long queues and waiting times.
+It is difficult to manage the allocation of parking spaces.
+Owners cannot easily get an idea of the overall status.
+Our objective
+We aim at eliminating the overheads and inefficiencies associated with manual parking systems to provide a comprehensive solution that addresses the concerns of both the consumers as well as the owners of the parking lot.
+Features
+Key Features Of Our Product
+Reservation of parking spots
+Make reservations in advance and save time
+Providing directions to assigned spots
+Get directions with our mobile app
+Payments made easy
+Register through our mobile app for payments
+Bird’s-eye view of parking lot
+Parking lot owners can manage with ease and collect usage statistics
+Progress
+Product Timeline
+Week 7-8:Backend Design
+Week 9-10:Hardware design
+Week 11:UI and algorithm designs
+Week 12-14:App development
+Week 15:Cloud deployment
+Week 16:Integration
+Week 17-18:Testing
+Product Demo
+QuickPark
+An autonomous system for assigning and managing parking spots and processing payments in a car park.
+Supervisors
+Dr. Isuru Nawinne
+Dr. Mahanama Wickramasinghe
+Related Links
+Faculty Website
+Copyright ©2022 All rights reserved.

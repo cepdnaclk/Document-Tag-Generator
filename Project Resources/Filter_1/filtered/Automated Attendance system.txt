@@ -1,0 +1,13 @@
+Automated Attendance system
+Automated Attendance system
+Table of Contents
+Solution Architecture
+This project aims to automate the attendance procedure of an educational System using biometric technology. This replaces the traditional attendance marking methods to a fool Proof method.This will reduce the time spent in a lecture for attendance marking and increases the accuracy of the process.This will be a hand held device which is passed in the class while the lecture is going on. The students can simply place the finger over the sensor to mark the presence in their class.
+Solution Architecture
+CO321- Embedded Systems
+The fingerprint is recognized using a sensor. A LED display will be used to present the information about the student.
+CO324- Network and Web Applications
+Data (finger print) is transmitted to a centralized server and confirmation of the finger print with the relevant details will be transmitted back in real time. Controlling of the network traffic occurs when there is large number of classes and large number of students will be considered as a design task and it will be designed to reduce the drawbacks.
+CO325- Security
+The data that is transmitted should be encrypted so that no other party can access or modify the data.
+Back to top

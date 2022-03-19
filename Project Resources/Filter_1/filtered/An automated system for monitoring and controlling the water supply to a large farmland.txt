@@ -1,0 +1,20 @@
+An automated system for monitoring and controlling the water supply to a large farmland
+An automated system for monitoring and controlling the water supply to a large farmland
+Table of Contents
+Solution Architecture
+Hardware & Software Designs
+Testing
+Conclusion
+This is a system for automatically controlling the amount of water flow in a soil field for maintaining the correct amount of water over it. The idea is to sense the amount of water using a device with an embedded system. The device has sensing elements where it measures the electrical conductivity and those results are used to estimate the amount of water the soil has. The system could be controlled by a controller/supervisor or it can be done in an automated way. The device will automatically switch off the water supplier when the highest level is reached and switch on the motor when the lowest level is reached.
+Solution Architecture
+Our solution for the above mentioned problem is to develop a system for automatically controlling the amount of water flow in a soil field for maintaining the correct amount of water over it. The idea is to sense the amount of water using a device with an embedded system. The device has sensing elements where it measures the electrical conductivity and those results are used to estimate the amount of water the soil has. The system could be controlled by a controller/supervisor or it can be done in an automated way. The device will automatically switch off the water supplier when the highest level is reached and switch on the motor when the lowest level is reached.
+Hardware and Software Designs
+WiFi coverage area of a device
+Sprinkler
+The whole idea
+Testing
+Results for hardware load testing
+Conclusion
+You can see our final product and how the water supplying process works by this link.
+CLICK TO WATCH
+Back to top
