@@ -1,0 +1,15 @@
+Automated Greenhouse Fertilizing System
+Automated Greenhouse Fertilizing System
+Table of Contents
+Solution Architecture
+This project aims to calculate the component(N , K , P) levels which are responsible for the growth of the plant in a real time basis and maintain the component level which is required for the relevant plant. Using this system we can increase the lifetime of a plant and can get the maximum harvest out of the plant.
+In the traditional system we won’t get the perfect component levels as we are not checking the current component level. (We are adding the same amount of water or fertilizers to the every plant irrespective of the component level in that plant).
+First using sensors we will get the current component level of each and every plant. Then the data will be transmitted to a centralized server. Then the server will check whether the component level of each plant are up to the required level. For different varities of plants the component levels are also differ. If a component level of a certain plant is not up to the required level the server will send a command
+to the automated pipeline system asking it to send the relevant amount of required components through the pipeline to the relevant plant.
+Solution Architecture
+Embedded Systems Design
+PH sensors and Humidity sensors are used to measure the PH level and the humidity level of the soil in a particular plant.
+Temperature sensors are used to measure the temperature within the greenhouse.
+Node mcu is used to transfer data from the sensors to the server.
+Arduino uno will be used to control the fertilizer dispersion system.
+Back to top

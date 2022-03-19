@@ -1,0 +1,306 @@
+Attendance Marking System
+Home
+Solution
+Services
+Design
+website
+app
+hardware device
+Cloud Deployment
+Testing
+Software Testing
+Hardware Testing
+Demonstration
+Budget
+Future Developments
+Contact
+Computerized Timetabling And Attendance
+Marking System
+In this project,our goal is to develop a
+modern attendance marking system that is suitable for
+today's world.In parallel with the attendance marking system,a fully-fledged time table
+managing
+and lecture reminding system is developed.
+Read
+More
+How things work?
+On the registration day of the students,fingerprints and student details are taken and added to the
+database using the website.A RFID token is registered for a student and given to them.Student can do
+the registration via the website or mobile app.Before a particular class starts,corresponding
+student details and fingerprint details are loaded into the sd card and fingerprint device with the
+help of nodemcu & backend server for student identification purposes.when a particular student put
+their attendance using fingerprint device and RFID sensor student details are displayed in the LCD
+display.At the same time,new attendance data is sent to the backend.All timetable data is added to
+the database and lecture reminding is automatically done by the server.Student and teachers are able
+to analyze and visualize attendance data via the website or mobile app.
+Services
+Attendance marking System
+Identifying the students in a lecture will be done by a hardware device which is in the
+lecture rooms by fingerprints and rfid cards.Students can see they were identified correctly
+in hardware device itself by seeing his information in the lcd screen.During the lecture
+time attendance details will be sent to the server and attendance will be updated.
+Lecture Notifications
+Before a lecture of a particular course students who had registered to that course will get
+notifications regarding lecture,lecture time,lecture duration and lecture room
+Student Registration
+Student will registered to the system via the website.This process will done by an
+admin.Student details including fingerprint will be taken into the system.
+Course Registration
+Beginning of the each semester registered students can do the course registration via the
+website or the app
+Automated Timetable
+Admin will initially enter the time table details (date,time,course,lecture room,lecturer) to
+the system via website.After that before each lecture students will get notifications via
+the mobile app
+Attendance Review
+Students can see their attendance percentage,daily attendance details via the mobile
+app.Lecturers can see their students' attendance for lab sessions and lecture sessions via
+the website.
+UI Design - Website
+UI Design - App
+Final Hardware Device
+Power On
+Power Off
+Keypad
+Setting the course code
+Selection Menu
+Selecting modes such as course registration,attendance marking for the
+device
+RFID sensing area
+Fingerprint Scanner
+LCD display
+Displaying student details after making the attendance
+Hardware Components Used
+1. ATmega328P microcontroller
+Operating Voltage: 1.8V-5.5V
+Flash Program Memory: 32 kbytes
+EEPROM Data Memory: 1 kbytes
+I/O Pins: 23
+SPI and I²C Master and Slave Support
+USART Support
+External Oscillator: up to 20MHz
+2. ESP8266 microcontroller
+Operating Voltage: 3.3V
+Flash Memory: 4 MB
+EEPROM Data Memory: 1 kbytes
+Digital I/O Pins : 16
+SPI and I²C Support
+USART Support
+PCB Antenna
+Integrated TCP/IP Protocol Stack
+External Oscillator: up to 80 MHz
+3. R307 Fingerprint Module
+Interfacing
+UART -> for microcontrollers/ARM processors
+USB 2.0 ->for computers
+Software serial -> to use other digital pins
+Reliability
+Flash memory for saving fingerprint templates -> Avoids data loss in
+power failures
+Power Usage
+Operating on 3.3v or 5v
+Sensing circuitry consumes 5µA(very low)
+4. RC522 RFID Module
+Operating voltage: 2.5V to 3.3V
+Communication : SPI, I2C protocol, UART
+Maximum Data Rate: 10Mbps
+Maximum Read Range: 5cm
+Current Consumption: 13-26mA
+5. Keypad & Port Expander(PCF8574P)
+4x4 keypad -> 8 pins(wastage of pins)
+Port expander
+Pin usage reduces to 2 pins
+Uses I2C protocol
+6. 16x2 LCD Dispaly & Port Expander(PCF8574P)
+LCD module - > 11 pins(wastage of pins)
+Port expander
+Spi -> i2c Conversion
+Pin usage reduces to 2 pins/li>
+7. Rechargeable battery(Li-Po)
+Output voltage - > 12v
+Capacity - > 2500mAh
+Circuit Diagrams
+PCB design
+Protocols
+Software Testing
+Integration Testing
+Integration testing is a level of software testing
+where individual units / components are combined and
+tested as a group. The purpose of this level of testing is to expose faults in the interaction
+between
+integrated units. Test drivers and test stubs are used to assist in Integration Testing.
+Spring Boot Application Architecture
+Spring Boot Application has a 3 Tier Architecture with
+Controller, Service and Persistence Layer.
+When we talk about integration testing for a spring boot application, it is all about running an
+application in ApplicationContext and run tests. Spring Framework does have a dedicated test module
+for integration testing. It is known as spring-test. If we are using spring-boot, then we need to
+use spring-boot-starter-test which will internally use spring-test and other dependent libraries.
+Example :- Adding a Lecture room
+Results
+Unit Testing - API
+UNIT TESTING, also known as COMPONENT TESTING, is
+a level of
+software testing where individual units / components of a software are tested. The purpose is to
+validate that
+each unit of the software performs as designed.
+Example :- Lecture Attendance Percentage Update
+Results
+UI Testing - Mobile App
+In     UI TESTING, test runs on a device or an emulator.
+In the background, your app will be installed and then a testing app will
+also be installed which will control your app, lunching it and running UI
+tests as needed
+Example :- User Login
+First Student will enter the username .
+Then he/she will close the keyboard.Next, student will enter the password.
+After that, he/she will close the keyboard again.
+Finally, student will preform click button.
+Programme
+Result
+After Running the Test, Mobile app's Login UI will redirect to corresponding user's home page.
+Performance Testing - Website
+website performance, was measured using
+Web.dev
+site.Performance details are as follows.
+Results
+Summary Report-Software Testing
+Feature / Unit
+Functionality
+Tools
+Results
+1
+Backend Validations
+Registration number and Email were tested for proper pattern with different inputs
+JUnit
+Given Registration number and Email should have proper pattern for user registration
+2
+Frontend Validations
+Frontend forms were tested with different set of inputs.
+Jest and Enzyme
+Forms can not submit without proper inputs
+3
+Joins in the database
+After Course registration of a student, Course and Student and Attendance Collection
+details were tested.
+Course and Lecturer collections was tested
+Course and TimeTable collections were tested
+JUnit
+Attendance details were join correctly with Course and the Student
+Lecturer collection joins correctly with course collection.
+Course collection joins correctly with Timetable collection
+4
+Lecture Attendance
+Tested whether correct present days,absent days and attendance percentages of student is
+calculated after adding attendance of a lecture by hardware device
+JUnit
+Attendance details are correctly calculated and stored in the database.
+5
+UI Testing in Mobile App
+Mobile App UI s were tested with different user inputs.
+Button clicks were checked with different pressed times to see output
+Expresso
+Forms can not submit without proper inputs
+Only registered students can log in
+No matter which time duration button was pressed.It gives the correct function after button was released.
+6
+Performance Testing in website
+Test the performance of the website by metrics such as
+first paint and time to interactive to determine lag.
+Test the HTTPS usage to correct image aspect ratios.
+Check for best practices to ensure site is discoverable.
+Check for common issues that may prevent users from accessing website content.
+Web.dev
+performance is quite low the following reasons may be possible
+Usage of unencoded images
+Bad aspect ratios of images
+Bad API response time
+Accessibility and Best practices are at a good level
+SEO is very high because website is hosted in AWS and AWS is take care of SEO
+Hardware Testing
+Unit Testing
+Every Component (Fingerprint,RFID module,SD card module,
+...) should be tested for proper functionality.
+Sensor
+What will be Tested
+Importance
+1
+RFID sensor
+Test the results according to the environment in which the tag is being read.
+Test the distance range and the orientation of the tag.
+Accuracy of identifying the tags should be high
+2
+Fingerprint sensor
+Ability to scan a fingerprint.
+Test the tolerance level of the sensor.
+Accuracy of identifying the fingerprints should be high
+3
+Push Buttons
+Debouncing of push buttons.
+To improve UX with debouncing of push buttons
+4
+LCD Display
+Test the screen clearness of the LCD display under different light conditions
+LCD display screen must be clear to use the hardware device.
+Letters and numbers must be clearly visible
+5
+SD Card module
+Test the ability to create files in unique names
+Test the ability to write and delete files
+Test the ability to delete files
+To properly handle the connection failure or power failure conditions
+Testing Power Supplies
+After soldering testing power supplies one by one
+Main power input(Battery)
+check ripple voltages (using oscillator)
+Is noise acceptable
+Micro Controller circuit
+checking connectivity (using Oscilloscope or Logic probe)
+check the basic functioning
+Sensors
+checking connectivity
+check the basic functioning
+Cloud Deployment
+Demonstration
+Website
+Mobile App
+Hardware Device - Part 01
+Hardware Device - Part 02
+Budget
+Future Developments & Plans
+develop mobile app for ios platform
+Introduce the product into ,
+Universities
+Post graduate institutes
+Technical schools
+We are 3rd year Computer Engineering Students of University of Peradeniya
+Eranadana Wijerathna
+Computer Engineering Undergraduate
+Saubhagya Munasinghe
+Computer Engineering Undergraduate
+Nuwan Piyarathna
+Computer Engineering Undergraduate
+Visit Our Github Repository
+Visit Now
+Contacts
+Nuwan Harsha
+nuwan.harshamatrix@gmail.com
+Saubhagya Munasinghe
+sm201211d@gmail.com
+Erandana Wijerathna
+erandanawijerathna@gmail.com
+Home
+Solution
+Services
+Design
+website
+app
+hardware device
+Cloud Deployment
+Testing
+Software Testing
+Hardware Testing
+Demonstration
+Budget
+Future Developments
+Contact
