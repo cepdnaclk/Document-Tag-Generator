@@ -1,0 +1,27 @@
+Monitoring and Tracking System for Transportation of Pharmaceuticals
+Monitoring and Tracking System for Transportation of Pharmaceuticals
+Table of Contents
+Solution Architecture
+Hardware & Software Designs
+Testing
+5 Links
+When Medicines or Drugs are transported or stored there are conditions that have to be satisfied, such as Temperature, Pressure, Moisture inside the box. It’s important for Medicine Distributors or Hospital management to ensure that medicines or medical samples are kept in a certain controlled environment. And also important to track these items when transported.
+This Project is a system that could monitor the variations in these parameters and track the locations of items being transported and let the relevant person know through a mobile app. This project will be helpful to Medicine Distributors and Hospital Management to transport Medicine, Medical Samples or Organs Safely.
+Solution Architecture
+An Embedded System which helps to:
+Measure Temperature, Pressure, Humidity, 3D Orientation of the product being transported and observe the variations through a mobile app and web interface.
+Get a warning alert when a parameter changes drastically or a condition is broken.
+Track the location of the product being transported.
+Maintain a database and analyze the variations in parameters being monitored
+Owner of the product, the person in charge of the distribution, the wholesale buyer can monitor the database.
+It can be used for all the products which are needed to be transported in controlled conditions.
+Hardware and Software Designs
+Overall Design
+Testing
+Test Plan for the Project
+We planed to do 4 tests for our project.
+1.Test for Backend Server
+2.Load Test for Relay Node (NodeMCU ESP8266 Access Point)
+3.Unit Test for Sensors (DHT22, BMP280)
+4.Unit Test for GPS module (uBlox Neo-6)
+Back to top

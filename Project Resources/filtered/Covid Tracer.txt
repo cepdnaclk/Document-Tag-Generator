@@ -1,0 +1,215 @@
+Covid Tracer
+Covid Tracer
+Home
+About
+Features
+Solution Architecture
+High Level
+Hardware
+Security
+Budget
+Timeline
+Development
+Software
+Hardware
+Testing
+Autonomous Covid-19 Tracking System
+For a Well Aware and Safe Sri Lanka
+Covid-19
+New Normal Situation due to the Pandemic
+Get Started
+Overview
+The Covid-19 Pandemic is the defining Global Health Crisis of the contemporary society. Since its emergence in late
+2019, the virus has spread across the entire world and led to a dramatic loss of human life. The economic and social
+disruption caused by the pandemic is devastating. Almost every sector is affected by this pandemic. In addition,
+this prevailing situation has raised unprecedented challenges to the daily routines of the people. While taking
+immense measures on infect diagnosis, Corona Virus treatments and controlling the spread of the disease a reasonable
+focus should be given to how we adjust to this new normal situation.
+When will the world be free of Covid? is an unanswered question. Our focus is to make the new normal situation due
+to Covid easily adjustable for the people while making their lives safe.
+Real World Problem
+Due to the prevailing pandemic situation people have a responsibility of providing accurate details of themselves at
+entrances of various commercial places like shopping malls, banks etc. and get their temperatures checked and accepted
+before entering. This situation is currently handled manually by people writing details on a book at entrances of various places.
+Some major issues with this system includes:
+Inefficient thus time consuming
+Risk of getting infected by everyone touching same stationary is high
+Details get blot by touching with wet hands after washing or sanitizing
+Personal details of people are publicly made available
+High probability for the guard at the entrance checking temperatures to get in contact with infects
+People providing inaccurate data, neglecting providing details and getting the temperature checked
+Inability to detect people under quarantine
+Inability to keep track of infected percentages of the locations visited
+Adhering to workplace safety and health practices and ensuring access to decent work and the protection of labour rights
+in all industries will be crucial in addressing the human dimension of the crisis.
+Features of our system
+Computerized system
+Covid-19 management software with computerized database system for the Government. This is also mainly used for demonstrating how over system gets latest
+covid information from the Government Authorities through a REST API
+Autonomous detail entering and temperature checking
+Details about the person will be entered to the system by scanning the barcode of NIC/ QR scanning, system will detect if the
+person is under quarantine. The temperature will be measured using sensors. These temperature measurements along
+with the visited location will be sent to the server and stored for a 2 weeks period. Your privacy will be highly protected
+Automated door opening
+This comes as an optional feature of our system. If certain satisfactory conditions are met like quarantine status, max
+temperature level then the doors will be opened automatically
+Covid tracking
+Check about reported infects of a particular location as a percentage before visiting.
+Our system will also keep records about the visited locations of a person for a period of 2 weeks. Infect percentages
+of these locations reported later will be tracked
+Website
+Local community can visit our website to view covid related information like daily/cumulative cases and deaths, infect percentages
+of areas. A seperate user login will be provided to view personal details like temperate fluctuations using data obtained
+at entrances, infect percentages of the locations visited for a period of 2 weeks
+Mobile app
+Similar interface as the website. This is designed for the easy use at the comfort of a mobile phone.
+High Level System
+Description
+Our system can be described in four segments.
+A software for data entering, data representing along with a computerized database system will be provided to the
+Government Authorities. They maintain detailed Covid related information like infects, pcr test reports,people under quarantine etc. in their
+server system. Our database system will be updated on certain intervals with the Government Server through a REST API.
+Our server system will be deployed in the cloud. We will keep information about people's NIC numbers,
+addresses, contact numbers, visited locations, temperature readings obtained at various entrances etc. Various calculations on data
+for example infect percentages will be done on a cloud virtual environment
+Commercial Merchants including shopping malls, banks etc. will be provided with an embedded system
+device based on a micro-controller. People can scan their IDs before entering and the system will check with the servers if the
+person's under quarantine. The temperature will be measured by contact-less sensors and checked if satisfactory. Whether the person
+is allowed to enter or not will be notified using LED displays and buzzers. ID number along with the temperature and location will be stored
+in our servers for a 2 week period. Therefore merchants don't have the burden of handling customer details. At the same time
+people don't have to provide their details publicly. Commercial merchants have the choice of implementing our door system which will
+be opened automatically based on the customer's conditions
+The local community will be provided with a website as well as a mobile app. They can visit our website/app to
+view general Covid related information in the country eg: daily/cumulative cases and deaths, infect persentages of different areas. A seperate
+user login is provided to view personal data eg: infect percentage reported later of visited locations, temperature fluctuations,
+general health alerts released by Government eg: vaccinating dates in different areas as well as user specific health alerts
+Embedded Hardware Device
+Microcontroller
+Microcontroller is the base of our device and it should accomplish several task at the same time.
+Hence, having a dual core processor in the microcontroller will be efficient to handle those tasks
+seperately. Low power consuption is a major concern as it is active 24x7 mostly.
+Modules
+GSM module
+GSM module(SIM 800L) supports a sim card to connect with server using 2G mobile data as a backup option when
+wifi is not available.
+External Flash Memory
+W25Q32(4MB) model is used as the external flash memory to increase the scalability of the device. As the system has to check with
+the cloud server whether the person is quarantined or not for each person, and since the server gets such requests from
+all over the country, the efficiency and scalability will be less. Therefore a local caching system will keep a list of quarantined people in there are,
+Thus only the information that is not available to the device can be requested from the server.
+Battery
+The device contains an internal rechargeable battery to keep the device active in case of
+power failures.
+Sensors
+IR Sensor
+Contactless IR sensor is used to detect the body temperature.
+Ultrasonic Sensor
+This sensor is used to detect the distance from IR sensor to hand and to the execution of sanitizing unit.
+Barcode Scanner
+Gm66 model 2D barcode reader is used to read the barcode in the ID card.
+Actuators
+Piezo Buzzer
+A piezo buzzer is used to indicate that certain process is successfully done or not.
+LCD Display
+The result of each process is dispalyed on the LCD.
+Security Aspects
+Why is it important?
+For any system it's crucial to pay attention to the security aspects. No system can be automatically immune.
+If we don’t consider this seriously, the impact and recoveries can be very expensive. Looking from the perspective of the CIA triad,
+Availability is necessary because the system mostly works 24/7 and the whole entrace system of the country depends on it.
+If the system is not available the effects can be very significant.
+Confidentiality also plays a major role as we handle sensitive data. Only the authorized people should be able to see the data.
+Integrity is necessary because if the data is modified without the knowledge of authorized people, it can break trust of people
+towards the system. Imagine providing inaccurate health details to people!
+what are the sensitive data that needs to be secured?
+Any system that handles PII(Personally Identifiable Information) or SPII(Sensitive Personally Identifiable Information) or any Health Care data, are legally obligated to protect these data.
+If these information are compromised it can lead to devastating consequences like identity theft incidents, high risk of damage to a individual, loss of
+trust on the system and many more.
+There are many international guidlines such a system needs to adhere to. For example GDPR(General Data Protection Regulation), HIPAA(Health Insurance Portability and Accountability Act)
+Our system keeps personal details about people like full name, NIC, address, contact details, locations they have visited, health details like temperatures and oxygen levels. These data have high criticality. When such system is deployed,
+many attackers try to play with the data since the data can be of interest to many. For example if a person can access to someone else's mobile app, he can checkin to places pretending to be someone else.
+If our database is compromised it can lead to a data breach which will expose all the PII details of the community.
+This can even result in Ransomware attacks.
+Budget
+Item
+ESP32 30-pin DOIT Board
+External Flash(W25Q32)
+Ultrasonic sensor(HC-SR04)
+Barcode reader(GM66)
+IR temperature sensor(MLX90614)
+Piezo buzzer
+16x2 LCD
+Power Supply Module
+9V AC/DC Adapter
+Transistor
+Water Pump
+Nozzle
+ESP32 Antena
+Rechargable battery
+***
+Quantity
+1
+1
+2
+1
+1
+1
+1
+1
+1
+1
+1
+2
+1
+1
+***
+Unit Cost
+2400.00
+300.00
+200.00
+5000.00
+3000.00
+30.00
+320.00
+1100.00
+750.00
+130.00
+300.00
+180.00
+220.00
+1200.00
+Total
+Total
+2400.00
+300.00
+400.00
+5000.00
+3000.00
+30.00
+320.00
+1100.00
+750.00
+130.00
+300.00
+360.00
+220.00
+1200.00
+15510
+Timeline
+Our Team
+Kenath Perera
+Deanna Coralage
+Ruchika Perera
+Our Supervisors
+Dr. Isuru Nawinne
+Senior Lecturer
+Dr. Mahanama Wickramasinghe
+Senior Lecturer
+Covid Tracer
+We are a group of undergraduates from Department of Computer Engineering, University of Peradeniya.
+This system was implemented as our third year project
+----------------------------------- Links
+-----------------------------------
+Faculty of Engineering
+© Copyright eBusiness. All Rights Reserved
+Designed by BootstrapMade

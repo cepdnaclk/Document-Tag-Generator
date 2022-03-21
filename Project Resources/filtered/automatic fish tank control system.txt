@@ -1,0 +1,435 @@
+Fish Tank Control System
+e16377@eng.pdn.ac.lk
++94 77 88 75 74 7
+Fish Tank Controller System.
+Home
+Hardware
+Mobile App
+Software Testing
+Design
+Budget
+Contact
+Welcome to Fish Tank Controller System
+We are team of talanted Engineering Undergraduates making the world a better place
+Get Started
+Check our Mobile App
+Demonstration
+Connect
+Connect to your fish tanks remotely and control it
+Keep Track
+Keep a log about the fish varieties in the fish tanks
+Feed on time
+Feed them as you need.
+Clean It
+Renew the water when the tank get polluted
+What Are We Going To Do
+Many fish are dying in aquariums due to lack of food or polluted water. We found a solution for that.
+We have invented a Fish Tank Control System
+So you can control multiple fish tanks from anywhere in the world.
+Read the pH value and Temparature inside the fish tank.
+Through the sensors you can check the pH value and temparature inside the fish tank.
+Control your fish tanks from anywhere
+You can set the feeding times and how much mass you are gonna feed to the fish. And also you can
+log the fish types and count of each fish type using the mobile app.
+Depend on the water quality, the water renew system will work automatically.
+Planing 100%
+User Interface Designing95%
+Back End Developing 75%
+Hardware Implementation 20%
+Mobile App 30%
+Total Progress 55%
+5
+Milestones
+1
+2
+Semesters
+3
+Hard Workers
+Hardware
+Check our Hardware Technologies
+We are using several Hardware Technologies
+ESP32-WROOM
+GPIO pins + WIFI module inbuilt
+18 Analog-to-Digital Converter (ADC) channels
+16 PWM output channels
+Dual-core 32-bit LX6 microprocessor, up to 240 MHz
+448 KB ROM for booting and core functions
+520 KB SRAM for data and instructions
+4MB Flash
+Supply Voltage : 3.3V
+XH-M603 Charger module
+Input Voltage : DC 10-30V
+Can Control Input Voltage
+Inbuilt Display
+12V lead acid battery
+Very Durable
+Rugged Construction
+7.2AH Capacity
+Ph meter sen-0161
+pH signal conversion board + pH probe
+Supply Voltage : 3.3V~5.5V
+Accuracy : ±0.1 at 25℃
+Temperature Range : 5~60 ℃
+Response Time: < 1min
+Probe Life : 1 year
+DS18B20 Waterproof Sensor
+Communicate using 1 wire method
+Operating Voltage: 3V to 5V
+Temperature range : -55~125 ℃
+Programmable
+0.5 ℃ accuracy
+G1/2 plastic Solenoid valve
+Normally Closed
+Thread : G1/2”
+Rated Voltage : 12V
+Current 300mA
+Applicable fluid Temperature : 0~55 ℃
+Applicable Water pressure : 0.02-0.8MPa
+Assembly Design of Final Overview
+Front View
+This is the front view of our tank that we willing to gain at as final overview.
+Final Overview 1
+Feeding Controller
+This is the feeding controller design which will attach to the tank of user.
+Final Overview 2
+Sensor Panel
+This is the sensor panel that can easily paste to user tanks.
+Final Overview 3
+Controller PCB Designs
+Controller Circuit
+Controller circuit consists of four regelators that helps to manage the voltage levels required for the components .
+Controller Circuit layer 1
+Controller Circuit
+This contains the bottom layer of our controller circuit .
+Controller Circuit layer 2
+Power Circuit
+This power circuit contains a transformer and a rectifier,which helps to connect with our charger module and LED ACID battry
+Power
+Circuit layer 1
+Power Circuit
+This contains the bottom layer of our power circuit .
+Power
+Circuit layer 2
+Final Overview of
+Component Placement
+Overview of Component Placement
+This view shows the final hardware component placement in our device.The device consists of a plastic cover .
+Battry Display
+The Display indicates the volatge level of our led battry.
+Side overview of Device
+Package of Device
+Package that covered with nice wrapper.
+Hardware Designs
+Demonstration of Outputs using LED
+In here as we have limited hardware components we have demonstrated outputs using LED bulbs. There is a buzzer for alerts, water inlet, water outlet, feed motor
+Sensors
+Two sensors are immersed in water here for testing. Temperature is measured using DS18B20 waterproof temperature sensor. Also there is a PH sensor.
+Power supply
+Power is supplied after converted into 12V DC. Then through voltage regulaters.
+Testing on Hardware
+Many tests have been done for hardware.
+Hardware Tests
+Following tests have been done
+1.
+Authentication test (Integrated
+security test)
+This is important for the security of the app and user accounts. In Fish Tank Control System security is far more important as someone can kill all the fish in seconds
+2. Data Mapping testing
+Database testing helps in protecting the most important component of the app which is data. The correct Structure is very
+import for the whole process of renewing and feeding
+3. Stored Procedures(Black box testing)
+Perform an operation from the front end (UI) of the application and check for the execution of the stored procedure and its results.
+4.
+Device compatibility testing
+Users will use android and ios with different versions and screen size
+Mobile App was tested across various mobile devices to confirm its compatibility.
+5.
+Wi-Fi Connection test
+Microcontroller connects to the server using Wifi. Therefore we done few test to make sure the communication happened perfectly.
+Download the test report here!
+Special Features
+Whatsapp Integration
+We are sending you a message if anything is out of ordinary
+Using Whatsapp API we have developed the app to send you an error message
+Security is the most important thing!
+If the PH value goes wrong
+You will get an error message saying that PH is not in a good range with the tank number.
+If the Temparature value goes wrong
+You will get an error message saying that Temparature is not in a good range with the tank number.
+Mobile App
+We built an app compatable with both Android and ios
+We are using several software Technologies like flutter, python etc.
+Mobile App View
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+Spread the word!
+Close
+We have done some testing testing
+These tests have done only for the software parts
+TEST NAME
+PURPOSE OF THE TESTING
+METHOD
+RESULTS
+CONCLUSION
+Signup route testing
+1.A user can enter duplicate or malicious email
+2.User can send wrong data types
+3.User can send a request with missing fields
+We used five python scripts with sign up requests
+1. Request with a wrong email address
+2. Request with a already signup email
+3.Request with wrong data types
+Ex number for the name
+4.Request without the email field
+5.Correct Request
+Case 1
+Response with
+Status code 422
+Case 2
+Response with status code 406
+Case 3
+Response with
+Status code 422
+Case 4
+Response with status code 422
+Case 5
+Response with
+Status code 200
+All test cases pass
+Login route testing
+1.User can enter wrong credentials
+2.User can send a request missing field
+3.A black hat user can try to sql injection
+4.Correct request
+5.User can send wrong data types
+We used four python scripts with login requests
+1.Request with wrong email
+2.Request with a wrong password
+3.Request that use password as “pass OR 'x'='x’”
+4.Request with correct credentials
+5.Request with a number as email
+Case 1
+Response with status code 401
+Case2
+Response with status code 401
+Case 3
+Response with status code 401
+Case 4
+Response with status code 200
+And user details
+Case 5
+Response with status code 422
+All test cases pass
+Control route
+1.Control route for feed particular tank fishes
+2.Control route for renew the water of particular tank
+We use dummy mqtt client to subscribe the tank id and looking for the mqtt message
+1.Send a feed
+Signal with valid token
+2.Send a feed signal with invalid token
+3.Send a feed signal with expired token
+4.Send a renew
+Signal with valid token
+5.Send a renew signal with invalid token
+6.Send a renew signal with expired token
+Case 1
+Response with status code 200
+Case  2
+Response with status code 401
+Case 3
+Response with status code 401
+Case 4
+Response with status code 200
+Case 5
+Response with status code 401
+Case 6
+Response with status code 401
+All test cases pass
+Tank routes
+1.Send data , tank to server
+1.Data with wrong tankid
+2.Data with correct request
+Case 1
+Response with
+s=0
+Response with status code 200
+All test cases pass
+Tank routes
+2.Get stable temperature of tank
+1.Send a request with tank id
+Case 1
+Response with a temperature
+Test Case pass
+Server reliability
+We need to check whether server can function under bulk of requests
+1.We use 3 python scripts that contain “for” loop with 1000 login requests
+Then we run that there python scripts at the same time
+After few time request got response code as 500 as server error
+Test case failed
+Solution :
+Earlier we used only one thread after this we increase it to 20 threads then we test again and test was successful
+Rate limit test
+We need to check rate limiting of our server
+.We use 4 python scripts that contain “for” loop with 1000 login requests
+Then we run that four python scripts at the same time
+Response with status code 200 also last request took some time to response
+Rate limiting functions properly
+App data view routes
+We check adding a new tank functionality
+1.Add tank request with wrong token
+2.Add tank request with expired token
+3.Add tank request with a not valid data type
+4. Add tank request with correct data and valid token
+Case 1
+Response with status code 401
+Case 2
+Response with status code 401
+Case 3
+Response with status code 422
+Case 4
+Response with status code 200
+All test cases passed
+Python Code Samples of  our Test Cases
+Test Results
+Swagger Ui Testing
+Also we use an inbuilt swagger uI tester that supplies by Fast API,to test and confirm our functionalities of our every router. This UI supplies an api caller for every route ,we have coded with a fast api object.Also it provides us with good documentation that contains required data type and requested responses.
+Some screenshots are given here
+Swagger UI is a good api testing platform with visual documentation that makes backend testing easier (Documentation for the link is given here https://swagger.io/tools/swagger-ui/)
+Also this comes as a inbuilt flatform in FastApi package(Details of fastapi with swagger https://fastapi.tiangolo.com/advanced/extending-openapi/#check-it)
+Unit Testing
+We did unit testing in front end code .In here we checked the graph viewing function that written in dart.First we make a dummy object of data that contains temperature and pH.Then we inject it in to our function and looking for the view showing in our mobile device
+Test Result: Visualize the graph correctly
+Time taken for the visualization is higher
+Modification:Increase the visualize time using flutter graph package
+Back end testing conclusions
+every end point validate the data
+Wrong data types give an error code and message
+No duplicate emails can create an account
+Login validation checking
+Every route checking through the swagger UI
+with 20 threads server gives superior efficiency
+...
+Dr. Upul Jayasinghe
+Advisor
+Dr. Asitha Bandaranayake
+Advisor
+Dr. Suneth Namal Karunarathna
+Advisor
+Dr. Isuru Nawinne
+Advisor
+Dr. Ziyan Maraikar
+Advisor
+Dr. Upul Jayasinghe
+Advisor
+Dr. Asitha Bandaranayake
+Advisor
+Dr. Suneth Namal Karunarathna
+Advisor
+Dr. Isuru Nawinne
+Advisor
+Dr. Ziyan Maraikar
+Advisor
+Dr. Upul Jayasinghe
+Advisor
+‹›
+Design
+Check our Designs
+This is a brief explanation about our design
+All
+Hardware
+Overall
+User Interface
+3D Design
+Drawn using tinkercad
+Circuit Diagram
+Designed using easyEDA
+NODE MCU ESP32 WROOM
+Pin Diagram (30pin version dev kit)
+Flow
+How nodes connected to each other
+UI Design
+User Interface of Login page
+Circuit Diagram
+Power Supply Circuit
+ER Diagram
+ER diagram of mongoDB
+Fighter Fish
+User Interface Design
+Our Hardworking Team
+Vindula I B S
+Harshana P Y S
+Samaraweera A A R V
+Budget
+Estimated Budget According to the market price
+F.A.Q
+Frequently Asked Questions
+These are some of the freequently asked questions
+How much will this cost?
+Around 18000LKR. Roughly 97.5 USD.
+Is it easy to control?
+You just need to download the app. This will be the easiest way you ever tried. Trust Us!
+What happen if the power goes down?
+This has inbuilt backup power which is enough for 2-3 Days. So it will be very much useful in household
+fish tanks as well as larger scale aquariums, companies etc.
+Contact
+Contact Us
+Fell free to contact regarding any matter
+Address
+Email Us
+e16377@eng.pdn.ac.lk
+Call Us
++94 77 88 75 74 7
+Loading
+Your message has been sent. Thank you!
+Send Message
+Github Repo
+Visit our project Repository
+github repo
+Pre-Order
+Enter the E-mail. One of our team member will contact you
+Peradeniya
+Sri Lanka
+Phone: +94 81 239 33 00
+Email: vc@pdn.ac.lk
+Web-site: http://www.pdn.ac.lk/
+Faculty of Engineering.
+Faculty of Engineering
+Peradeniya
+Sri Lanka
+Phone: +94 81 239 33 02
+Web-site: http://eng.pdn.ac.lk/
+Computer Engineering Department.
+Computer Engineering Department
+Faculty of Engineering
+Peradeniya
+Sri Lanka
+Phone: +94 81 239 39 14
+Web-site: http://www.ce.pdn.ac.lk/
+Designed by Group 4
+Home
+Hardware
+Mobile App
+Software Testing
+Design
+Budget
+Contact

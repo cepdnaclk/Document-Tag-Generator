@@ -1,0 +1,18 @@
+Hydroponics Automation System
+Hydroponics Automation System
+Table of Contents
+Solution Architecture
+Hardware & Software Designs
+Testing
+Conclusion
+Hydroponics is the method of growing plants in a nutrient-rich water-based environment which uses artificial lighting. This method is widely used in modern agriculture because of less space and conservation of water. But the main disadvantage of this system is the need of constant monitoring to get the maximum benefits from it.
+With this Hydroponics Automation System, the plants are supplied automatically with enough water, proper amount of light intensity and proper nutrients depending on the sensors’ feedback. And also the data obtained from the sensors is accessible through a web application.
+Solution Architecture
+Hardware and Software Designs
+The modified final data flow
+of the system
+Testing
+The data gathered from the sensors are sent to the NodeMCU and sent to a web server and stored in a database. User can access this data through a web application. The automatic control of the actuators is done by the webserver and the Node MCU. Also if the user wants to take the control decisions, he can control the system through the web application.
+Conclusion
+For the demonstration purpose for now we have implemented the structure of the hydroponics system with water circulation. We are going to further improve and develop it.
+Back to top
