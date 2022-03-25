@@ -86,6 +86,11 @@ When new project is added to the department project website, we need to run the 
 Since project pages and project repositories are update regularly, we hope to run the ML model weekly. 
 
 <br></br>
+
+# Sample Tag Cloud
+
+![Tag_Cloud](https://user-images.githubusercontent.com/73440714/160180704-98e2baf5-931a-42e6-b377-70fdf18b0191.png)
+
 ___
 ***Project Owner : Mr. Nuwan Jaliyagoda*<br>
 *Scrum Master: Mr. Thushara Bandara***
