@@ -1,0 +1,434 @@
+A GUI for controlling and supervising multiple robots remotely
+['gui', 'network', 'artificial intelligence']
+
+An Efficient System For Waste Collection
+['embedded system']
+
+An automated system for monitoring and controlling the water supply to a large farmland
+['embedded system']
+
+Automated Bike Sharing System
+['embedded system']
+
+Automated Book Management System Automated Book Carrying Robot
+['artificial intelligence', 'embedded system']
+
+Automated Vehicle Parking System
+['embedded system']
+
+Automated Water Quality Monitoring System
+['agriculture', 'embedded system', 'internet of things']
+
+Automatic Door Lock System
+['embedded system']
+
+E Checkup
+['health', 'gui', 'embedded system']
+
+Embedded system for detecting adverse gases
+['embedded system']
+
+Fire Detection and Alert System
+[]
+
+Health Watch
+['health']
+
+Hydroponics Automation System
+['agriculture', 'artificial intelligence', 'embedded system']
+
+Intelligent Road Traffic Control System
+['machine learning']
+
+Monitoring and Tracking System for Transportation of Pharmaceuticals
+Personal Physical Trainer PPT
+[]
+
+Safer Travel Utility SaVy
+['embedded system']
+
+Smart Educational Management System
+['embedded system', 'network']
+
+Smart Mirror
+[]
+
+Smart Monitoring and Automated Controlling System for an Aquarium
+['embedded system', 'internet of things']
+
+Air Quality Monitoring system
+['embedded system', 'health', 'network']
+
+Automated Attendance system
+['embedded system']
+
+Automated Bike Sharing System
+['embedded system']
+
+Automated Electricity Billing System
+['embedded system']
+
+Automated Fishing Bot
+[]
+
+Automated Greenhouse Fertilizing System
+['embedded system']
+
+Automated Monitoring of Hospital Patients
+['embedded system', 'health']
+
+Automatic Speed Trap
+[]
+
+Bus tracking system
+['embedded system', 'network']
+
+Control System for Heliostat Solar Power Plants
+['embedded system']
+
+Networked and Automated Weather Monitoring and Alerting System
+['embedded system']
+
+Real Time Water Qualtiy Measurement System
+['embedded system']
+
+River water level and speed monitoring and alert system
+['embedded system']
+
+Smart Breathalyzer Test
+['embedded system', 'gui']
+
+Smart Shopping Cart
+[]
+
+Smart Warehouse Monitoring for Paddy Storage
+['embedded system', 'network']
+
+Smart Waste Disposal Monitoring System
+['embedded system', 'health', 'internet of things', 'network']
+
+Telepresence Robot
+['artificial intelligence']
+
+Train Movement Tracking and Level Crossing Safety Control
+['embedded system']
+
+sleep apnea detection
+[]
+
+Covid Tracer
+['embedded system']
+
+E Parking System
+['embedded system']
+
+Landmine Detector
+['embedded system']
+
+Milk Testing and Collecting System
+[]
+
+Remote Gatekeeping System
+['embedded system']
+
+Secure Food Delivery
+['health', 'embedded system']
+
+Smart Cradle
+[]
+
+Smart Locker
+Smart Pet Feeder
+['health']
+
+Smart Pour
+[]
+
+Wild Life Tracker
+['embedded system']
+
+maker mate
+['embedded system']
+
+remote billiard
+[]
+
+remote keyboard tutoring system
+['embedded system', 'internet of things']
+
+remote medical diagnostics
+['health']
+
+remote proctoring system
+[]
+
+smart apartment security system
+['embedded system']
+
+smart garbage collection
+['embedded system', 'health']
+
+smart home
+smart shopping cart
+[]
+
+agribot
+['agriculture', 'artificial intelligence']
+
+automated railway ticketing system
+[]
+
+automatic fish tank control system
+['internet of things']
+
+chessMATE
+['network']
+
+computerized timetabling and attendance marking system
+['embedded system']
+
+digital signage based user targeted advertising
+full body motion tracking system
+[]
+
+gas level indicator and leakage detector
+['internet of things', 'embedded system']
+
+obstacle bots for swarm robots
+['artificial intelligence', 'machine learning']
+
+qurantine tracker
+['health']
+
+smart door lock
+['internet of things', 'embedded system']
+
+smart infared shooting sport
+[]
+
+smart meeting automaton
+['artificial intelligence', 'embedded system']
+
+smart payment system
+['embedded system']
+
+smart pharmaceutical warehousing
+['artificial intelligence', 'embedded system']
+
+smart pill manager
+[]
+
+smart shopping cart with automatic bill system
+['embedded system', 'internet of things']
+
+smart vending machine
+['internet of things']
+
+waiterbot system
+['embedded system', 'artificial intelligence', 'health', 'internet of things']
+
+water quality monitoring and usage monitoring system
+['embedded system', 'internet of things']
+
+Accelerating Adaptive Banded Event Alignment Algorithm with OpenCL on FPGA
+[]
+
+Brain Computer Interface for controlling virtual objects
+['gui', 'machine learning']
+
+Doppelganger Cartoon
+['machine learning', 'image processing']
+
+Explainable Machine Learning for Real World Resource Constrained Problems
+['machine learning', 'health']
+
+Hand Gesture Recognition using sEMG
+[]
+
+Identifying keywords in legal articles using ML techniques
+['embedded system', 'machine learning']
+
+Microservice Based Edge Computing Architecture
+Mixed Reality based Simulation Platform for Swarm Robotics
+['artificial intelligence', 'machine learning']
+
+Optimizing Mitochondria Genome Assembly And Annotation With Skim Sequencing Data
+[]
+
+Optimizing chloroplast genome assembly and annotation with skim sequencing data
+['machine learning']
+
+Pipeline for Isolation of Fast evolving ITS Regions from Skim Sequencing Data
+[]
+
+Real Time Data processing and AI for Distributed IoT
+['artificial intelligence', 'image processing', 'machine learning']
+
+Real Time Emotion Recognition using Electrocardiogram Analysis
+['health']
+
+Revealing miRNA Biomarkers for Alzheimer s Disease using NGS
+['health', 'machine learning']
+
+Wireles SDN Ad hoc Network For Vehicular Communication
+anonymous authentication
+[]
+
+cricket analysis
+['embedded system']
+
+human behavior prediction using cctv
+['embedded system']
+
+nearIR spectroscopy
+['health', 'embedded system']
+
+online proctoring system
+['embedded system', 'internet of things']
+
+sports action recognition
+['embedded system']
+
+CUDA_Fast_ICA
+[]
+
+building a testbed for power analysis attacks
+[]
+
+HBFT
+[]
+
+Temporal Attention Based MARL
+dark arts algorithms for low light image enhancement and interpretation
+['machine learning']
+
+f5n
+[]
+
+f5n_server
+['network']
+
+ipb
+['artificial intelligence']
+
+Agriculture Monitoring and Control System
+Remotely Controlled CNC Robot
+[]
+
+Analysis Tool for Industrial Images
+['image processing']
+
+Automated_Computerised_System
+ContactTracingApp
+Document Tag Generator
+[]
+
+Flood Forecasting System
+['embedded system']
+
+Greenhouse Monitoring System
+['embedded system', 'image processing', 'health']
+
+Greenhouse monitoring and controlling based on IOT sensor data
+['agriculture', 'embedded system', 'internet of things', 'gui']
+
+History of Music
+[]
+
+Host Pathogen Interaction
+['machine learning', 'gui']
+
+NGS Data AnalysingToolkit
+[]
+
+Oral Cavity Region Detection
+['internet of things']
+
+Prediction of heart disease using ECG
+['health']
+
+Prediction of risks associated with mass corona vaccination
+['health']
+
+Skim Sequencing Analysis
+[]
+
+Sobriety Detection Using Mobile Phone Gyroscope Data
+['embedded system']
+
+Visualization of Teacher Student Activities
+[]
+
+apparel industry performance analyser
+[]
+
+road accident analyzer
+[]
+
+Footwear Shop System
+[]
+
+Learning Management Systerm
+[]
+
+Movie Review System
+Pharmacy Management System
+Project Publication Platform
+[]
+
+Student Management System
+mystore
+GPSARSA gaussian process state action reward state actios based SITNSHOP
+['internet of things']
+
+Zero Trash
+[]
+
+Brain Tumor Detection
+Swarm Robot Monitoring System group A
+['embedded system', 'artificial intelligence']
+
+Swarm Robot Monitoring System group B
+['artificial intelligence', 'image processing']
+
+Swarm Robot Monitoring System group C
+['artificial intelligence']
+
+Mini Project Group H
+['embedded system']
+
+SL Number Plate Detection Group A
+[]
+
+Pera Knowledge Portal
+['internet of things']
+
+finite element based structural non linear analysis
+dynamic background cancellation in videos
+['machine learning']
+
+mabandit
+['machine learning']
+
+packet forwarding simulator
+['network']
+
+RISCV Pipeline CPU Implimentation Group2
+[]
+
+RISCV pipeline cpu implementation group04
+[]
+
+RV32IM NoC implementation
+RV32IM pipeline implementation group1
+[]
+
+RV32IM pipeline implementation group3
+['embedded system']
+
+balancing an inverted pendulum using a neural network
+[]
+
+business to business database
+[]
+
