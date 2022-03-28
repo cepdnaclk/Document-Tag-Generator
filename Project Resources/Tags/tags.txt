@@ -1,0 +1,10 @@
+machine learning
+artificial intelligence
+embedded system
+gui
+network
+internet of things
+image processing
+neural network
+health
+agriculture
